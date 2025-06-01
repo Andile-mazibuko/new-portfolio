@@ -1,0 +1,30 @@
+.navbar-brand {
+  font-family: "Pacifico",cursive;
+
+}
+.theme-btn {
+  background-color: grey;
+  height: 30px !important;
+  width: 40px;
+  border-radius: 15px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+.icon-container {
+  background-color: black;
+  height: 28px;
+  width: 28px;
+  margin-left: 0;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-icon {
+  font-size: large !important;
+  height: auto;
+  color: grey;
+}
+.dark-theme-icon {
+  color: grey;
+}
