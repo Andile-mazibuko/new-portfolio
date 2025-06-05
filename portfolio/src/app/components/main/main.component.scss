@@ -11,15 +11,14 @@
   z-index: 1;
   height: 90vh;
   width: 50vw;
- //margin-left: 10%;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0 20px;
   position: relative;
-  //background: wheat;
-  animation: moveContent 1s ease-in-out;
+  animation: leftToRight 1s ease-in-out;
   overflow: hidden;
   z-index: 2;
 }
@@ -29,21 +28,22 @@ p {
   justify-content: center;
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: rgb(180, 180, 180);
+  color: var(--sec-font-color);
 }
 h1 {
   width: 100%;
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: rgb(255, 255, 255);
+  color: var(--font-color);
 }
 .img-area {
+
   position: relative;
   height: 50vh;
   display: flex;
   margin-top: 8%;
   align-items: center;
-  animation: opacityTransition 1s ease-in-out;
+  animation: rightToLeft 1s ease-in-out;
 }
 img {
   height: 100%;
@@ -56,7 +56,7 @@ img {
   //background-color: red;
 }
 button {
-  background: rgb(124, 77, 255);
+  background: var(--btn-color);
   margin: 0 10px;
   color: white !important;
 }
@@ -73,37 +73,15 @@ i {
   width: 50px;
   font-size: xx-large;
   margin: 10px;
-  color: white;
+  color: var(--font-color);
 }
 
-@keyframes moveContent {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-@keyframes opacityTransition {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes opacityTrans {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 
 // Tablet devices(not tilted)
 @media (max-width: 820px) {
   .cont {
+    margin-top: 10%;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -139,5 +117,9 @@ i {
   h1{
     font-size: 1.5rem;
   }
+  .cont{
+    margin-top: 15%;
+  }
   
 }
+

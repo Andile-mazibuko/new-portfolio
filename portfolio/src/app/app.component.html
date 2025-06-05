@@ -26,21 +26,25 @@
       <li class="nav-item me-5">
         <a class="nav-link" routerLink="/projects">Experience</a>
       </li>
-      
+
       <li class="nav-item me-5">
         <a class="nav-link" routerLink="/contact">Contact</a>
       </li>
     </ul>
 
-    <button mat-button class="theme-btn" (click)="toogleTheme()">
+    <button
+      class="theme-btn"
+      [ngClass]="isDark ? 'dark-mode' : 'light-mode'"
+      (click)="toogleTheme()"
+      id="themeBtn"
+    >
       <div class="icon-container">
-        <mat-icon *ngIf="!isDark"> dark_mode </mat-icon>
-        <mat-icon *ngIf="isDark"> light_mode </mat-icon>
+        <mat-icon *ngIf="isDark"> dark_mode </mat-icon>
+        <mat-icon *ngIf="!isDark"> light_mode </mat-icon>
       </div>
     </button>
   </div>
 </nav>
 <div class="route-cont">
-  <router-outlet />
+  <router-outlet></router-outlet>
 </div>
-

@@ -1,25 +1,39 @@
 .navbar-brand {
   font-family: "Pacifico",cursive;
-
+  color: var(--font-color) !important;
 }
 .theme-btn {
-  background-color: grey;
-  height: 30px !important;
-  width: 40px;
+  background-color: var(--link-color) !important;
+  height: 20px !important;
+  width: 40px !important;
   border-radius: 15px !important;
   display: flex !important;
   justify-content: center !important;
+  align-items: center;
+  border: none;
 }
 .icon-container {
   background-color: black;
-  height: 28px;
-  width: 28px;
-  margin-left: 0;
-  border-radius: 14px;
+  height: 18px;
+  width: 18px;
+  border-radius: 9px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+/*
+.dark-mode{
+  margin-left: -5px;
+  animation: closeLightTheme .2s ease-in-out;
+}
+.light-mode{
+  
+   margin-left: 15px;
+   animation: openDarkLightTheme .2s ease-in-out;
+}
+*/
+
 mat-icon {
   font-size: large !important;
   height: auto;
@@ -31,4 +45,28 @@ mat-icon {
 .route-cont{
     width: 100%;
     margin-top: 0%;
+}
+nav{
+  background-color: var(--nav-bg-color) !important;
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+}
+
+
+@keyframes openDarkLightTheme {
+  from{
+    margin-left: -5px;
+  }
+  to{
+    margin-left: 15px;
+  }
+}
+@keyframes  closeLightTheme{
+  from{
+    margin-left: 15px;
+  }
+  to{
+    margin-left: -5px;
+  }
 }

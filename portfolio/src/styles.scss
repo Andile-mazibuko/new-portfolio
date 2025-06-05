@@ -1,20 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  // Default theme colors(dark-mode)
+  --bg-color: rgb(10, 10, 10, 0.9);
+  --font-color: rgb(255, 255, 255);
+  --sec-font-color: rgb(180, 180, 180);
+  --nav-bg-color: rgb(34, 37, 41, 0.5);
+  --btn-color: rgb(124, 77, 255);
+  --link-color: rgb(255, 255, 255,0.4);
+}
+.light-theme {
+  --bg-color: rgb(255, 255, 255,0.9);
+  --font-color: rgb(10, 10, 10);
+  --nav-bg-color: rgb(248, 249, 250); //
+  --sec-font-color: grey;
+  --nav-bg-color: rgba(194, 202, 211, 0.5);
+  --link-color: rgb(10, 10, 10, 0.4);
+}
+
 html,
 body {
   height: 100%;
-  background: rgb(10, 10, 10, 0.9);
-}
-body {
-  margin: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: var(--bg-color);
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 a {
   cursor: pointer;
   display: flex;
   justify-self: center;
   align-items: center;
+  color: var(--link-color) !important;
 }
+
+
+
 @keyframes rgbLight {
   0% {
     filter: drop-shadow(0 0 10px red);
@@ -30,5 +54,27 @@ a {
   }
 }
 
-/* Importing Bootstrap SCSS file. */
-//@import 'bootstrap/scss/bootstrap';
+@keyframes leftToRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes rightToLeft {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes opacityTrans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

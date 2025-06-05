@@ -13,9 +13,20 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   name: string = 'Andile Mazibuko';
-  isDark: boolean = true;
+  isDark: boolean = false;
 
   toogleTheme() {
+    const body = document.body;
+    const themeBtn = document.getElementById("themeBtn");
     this.isDark = !this.isDark;
+//add-lightTheme
+    if(this.isDark){
+      body.classList.add("light-theme");
+      
+    }else{
+      body.classList.remove("light-theme")
+      themeBtn?.classList.add("add-lightTheme");
+    }
+    
   }
 }
