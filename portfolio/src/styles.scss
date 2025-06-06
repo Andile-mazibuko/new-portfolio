@@ -8,6 +8,8 @@
   --nav-bg-color: rgb(34, 37, 41, 0.5);
   --btn-color: rgb(124, 77, 255);
   --link-color: rgb(255, 255, 255,0.4);
+  --bg-gradient: linear-gradient(135deg, rgba(31, 63, 61, 0.95), rgba(63, 6, 54, 0.9));
+
 }
 .light-theme {
   --bg-color: rgb(255, 255, 255,0.9);
@@ -16,6 +18,8 @@
   --sec-font-color: grey;
   --nav-bg-color: rgba(194, 202, 211, 0.5);
   --link-color: rgb(10, 10, 10, 0.4);
+  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.2), rgba(64, 255, 255, 0.2));
+
 }
 
 html,
@@ -29,12 +33,27 @@ body {
 body::-webkit-scrollbar{
   display: none;
 }
+.cont {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.cont::-webkit-scrollbar {
+  display: none;
+}
 a {
   cursor: pointer;
   display: flex;
   justify-self: center;
   align-items: center;
   color: var(--link-color) !important;
+}
+p{
+  color: var(--sec-font-color);
+}
+.center{
+  display: flex;
+  justify-content: center;
 }
 
 

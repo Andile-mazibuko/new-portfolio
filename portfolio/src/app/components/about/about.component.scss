@@ -1,0 +1,35 @@
+.cont {
+  margin-top: 55px;
+}
+.intro {
+  width: 90%;
+  margin-left:  5%;
+  //background-color: rgba(54, 54, 54, 0.24);
+}
+.intro h1 {
+  width: 100%;
+  display: flex;
+  color: var(--font-color);
+  justify-content: center;
+}
+p {
+  margin-bottom: 150px;
+}
+.description{
+  width: 100%;
+}
+.cards{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+mat-card{
+  margin: .5%;
+  height: 20px ;
+  display: flex;
+  justify-content: center;
+  color: var(--sec-font-color);
+  background: var(--bg-gradient);
+}
+
+
