@@ -1,41 +1,18 @@
 <div class="cont">
   <div class="intro">
-    <h1>About Me</h1>
+    <h1>About Me<span class="text-primary">.</span></h1>
     <div class="center description">
       {{ smallDescription }}
     </div>
     <div class="cards">
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
-        </mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-content>
-          asdasdasa
+      <mat-card *ngFor="let skill of skills">
+        <mat-card-content class="center">
+          <mat-icon class="center">
+            {{ skill.icon }}
+          </mat-icon>
+          {{ skill.name }}
         </mat-card-content>
       </mat-card>
     </div>
   </div>
-
 </div>

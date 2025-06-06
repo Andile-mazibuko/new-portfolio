@@ -7,9 +7,15 @@
   //background-color: rgba(54, 54, 54, 0.24);
 }
 .intro h1 {
+  margin-top: 70px;
+  font-size: clamp(2rem, 5vw, 4rem); // Responsive between 2rem and 4rem
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
   width: 100%;
   display: flex;
-  color: var(--font-color);
+  color: var(--tert-font-color);
+  //color: var(--font-color);
   justify-content: center;
 }
 p {
@@ -28,8 +34,27 @@ mat-card{
   height: 20px ;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: var(--sec-font-color);
   background: var(--bg-gradient);
+  font-size: larger;
+  
+}
+mat-card-content{
+  align-items: center;
+}
+mat-icon{
+  margin-right: 5px;
+  font-size: large;
+  align-items: center;
 }
 
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
