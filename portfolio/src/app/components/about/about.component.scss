@@ -3,76 +3,103 @@
 }
 .intro {
   width: 90%;
-  margin-left:  5%;
+  margin-left: 5%;
   //background-color: rgba(54, 54, 54, 0.24);
 }
-.intro h1 {
-  margin-top: 70px;
+h1 {
+  margin-top: 40px;
   font-size: clamp(2rem, 5vw, 4rem); // Responsive between 2rem and 4rem
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   width: 100%;
-  display: flex;
   color: var(--tert-font-color);
   //color: var(--font-color);
-  justify-content: center;
 }
-p {
-  margin-bottom: 150px;
+h2 {
+  color: var(--tert-font-color);
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
-.description{
+h2 mat-icon {
+  align-items: center;
+}
+.description {
   width: 100%;
 }
-.cards{
+.cards {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-mat-card{
-  margin: .5%;
-  height: 20px ;
+mat-card {
+  margin: 0.5%;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--sec-font-color);
   background: var(--bg-gradient);
   font-size: larger;
-  
 }
-mat-card-content{
+mat-card-content {
   align-items: center;
 }
-mat-icon{
+mat-icon {
   margin-right: 5px;
   font-size: large;
   align-items: center;
 }
-.about{
+.about {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin: 70px 0;
+  overflow: visible;
 }
-.text-area{
+.text-area {
   width: 50%;
   margin-left: 5%;
 }
-.img-area{
-  width: 30%;
+.img-area {
+  height: 300px;
+  width: 300px;
   overflow: hidden;
-  margin-left: 5%;
-  border-radius: 50%;
-  align-items: center;
+  margin: 0 5%;
+  border-radius: 150px;
+  align-items: baseline;
+  box-shadow: var(--box-shadow);
 }
-.img-area img{
+.img-area img {
   width: 100%;
-  
 }
-@keyframes typing {
-  from {
-    width: 0;
+
+@media (max-width: 820px) {
+  .about {
+    flex-direction: column;
   }
-  to {
+  .text-area {
+    width: 90vw;
+    margin-left: 0;
+  }
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .img-area {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  h2 {
+    margin: 0 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: x-small;
+  }
+  .text-area h2 {
+    font-size: large;
   }
 }

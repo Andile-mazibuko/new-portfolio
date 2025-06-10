@@ -8,9 +8,9 @@
   --nav-bg-color: rgb(34, 37, 41, 0.5);
   --btn-color: rgb(124, 77, 255);
   --link-color: rgb(255, 255, 255,0.4);
-  --bg-gradient: linear-gradient(135deg, rgba(31, 63, 61, 0.95), rgba(63, 6, 54, 0.9));
+  --bg-gradient: linear-gradient(45deg, rgba(3, 200, 235, 0.95), rgba(182, 0, 155, 0.9));
   --tert-font-color:rgb(216, 216, 216);
-
+  --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),0 0 100px rgba(0, 247, 255, 0.4);
 }
 .light-theme {
   --bg-color: rgb(255, 255, 255,0.9);
@@ -19,8 +19,9 @@
   --sec-font-color: grey;
   --nav-bg-color: rgba(194, 202, 211, 0.5);
   --link-color: rgb(10, 10, 10, 0.4);
-  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.2), rgba(64, 255, 255, 0.2));
+  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.5), rgba(0, 255, 255, 0.5));
   --tert-font-color: rgba(77, 98, 121, 0.5);
+  --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),0 0 100px rgba(135, 243, 33, 0.4);
 }
 
 html,
