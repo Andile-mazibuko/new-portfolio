@@ -1,0 +1,22 @@
+[
+  {
+    "startDate": "02 11 2023",
+    "EndDate": "02 11 2024",
+    "type": "Remote",
+    "logo_name": "tech_mahindra",
+    "job_type": "Internship",
+    "role": "Business Analyst Intern",
+    "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
+    "technologies": ["","","","","","",""]
+  },
+  {
+    "startDate": "2023-01",
+    "EndDate": "2023-12",
+    "type": "Hybrid",
+    "logo_name": "csir",
+    "job_type": "Internship",
+    "role": "Software Developer Intern",
+    "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
+    "technologies": ["Angular",""]
+  }
+]
