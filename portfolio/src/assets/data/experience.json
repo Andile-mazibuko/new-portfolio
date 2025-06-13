@@ -3,20 +3,28 @@
     "startDate": "02 11 2023",
     "EndDate": "02 11 2024",
     "type": "Remote",
-    "logo_name": "tech_mahindra",
+    "logo_name": "techM.png",
     "job_type": "Internship",
     "role": "Business Analyst Intern",
     "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
-    "technologies": ["","","","","","",""]
+    "technologies": ["", "", "", "", "", "", ""]
   },
   {
     "startDate": "01 03 2025",
     "EndDate": "01 03 2026",
     "type": "Hybrid",
-    "logo_name": "csir",
+    "logo_name": "csir.png",
     "job_type": "Internship",
     "role": "Software Developer Intern",
     "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
-    "technologies": ["Angular","Python","Postman","Firebase","PostGreSQL","Power Apps","Power Automate"]
+    "technologies": [
+      "Angular",
+      "Python",
+      "Postman",
+      "Firebase",
+      "PostGreSQL",
+      "Power Apps",
+      "Power Automate"
+    ]
   }
 ]
