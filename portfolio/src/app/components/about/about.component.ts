@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { CardSkill } from '../../models/skill';
+import { CardSkill } from '../../models/Models';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 
@@ -13,10 +13,15 @@ import { MatTabsModule } from '@angular/material/tabs';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent implements OnInit {
+  // Cards diplayed under the About title
   skills: CardSkill[] = [];
+
+  //My passion - displayed on the home route
   smallDescription =
     'Full Stack Developer passionate about building modern web experiences';
+
   ngOnInit(): void {
+    // add skills on init
     this.skills = [
       {
         icon: 'code',
