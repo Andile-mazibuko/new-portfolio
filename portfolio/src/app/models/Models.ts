@@ -10,5 +10,5 @@ export interface Experience {
     job_type: string,
     role: string,
     description: string,
-    technologies: CardSkill[]
+    technologies: string[]
 }

@@ -10,13 +10,13 @@
     "technologies": ["","","","","","",""]
   },
   {
-    "startDate": "2023-01",
-    "EndDate": "2023-12",
+    "startDate": "01 03 2025",
+    "EndDate": "01 03 2026",
     "type": "Hybrid",
     "logo_name": "csir",
     "job_type": "Internship",
     "role": "Software Developer Intern",
     "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
-    "technologies": ["Angular",""]
+    "technologies": ["Angular","Python","Postman","Firebase","PostGreSQL","Power Apps","Power Automate"]
   }
 ]

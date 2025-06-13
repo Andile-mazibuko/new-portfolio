@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { CardSkill } from '../../models/Models';
+import { CardSkill, Experience } from '../../models/Models';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ExperienceService } from '../../services/experience.service';
 
 @Component({
   selector: 'app-about',
@@ -15,10 +16,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 export class AboutComponent implements OnInit {
   // Cards diplayed under the About title
   skills: CardSkill[] = [];
+  experiences: Experience[] = []
 
   //My passion - displayed on the home route
   smallDescription =
     'Full Stack Developer passionate about building modern web experiences';
+
+    constructor(private exp: ExperienceService){}
 
   ngOnInit(): void {
     // add skills on init
@@ -44,5 +48,13 @@ export class AboutComponent implements OnInit {
         name: 'Diploma Holder',
       },
     ];
+    this.populateExpArray();
+  }
+
+  //get Data from the json file and store it inside the array
+  populateExpArray(): void{
+    this.exp.getExpiriences().subscribe( data => {
+      
+    })
   }
 }
