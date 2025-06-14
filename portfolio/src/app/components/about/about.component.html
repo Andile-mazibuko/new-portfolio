@@ -58,56 +58,37 @@
       </div>
     </div>
 
-
     <h2 class="center">Experience Section</h2>
     <div class="exp-section center">
-      <mat-card class="example-card">
+      <mat-card  *ngFor="let exp of experiences" class="exp">
         <mat-card-header>
           <mat-card-title-group>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Medium</mat-card-subtitle>
+            <mat-card-title>{{ exp.role }}</mat-card-title>
+            <mat-card-subtitle>{{ exp.job_type }}</mat-card-subtitle>
+            <mat-card-subtitle>{{ exp.type }}</mat-card-subtitle>
             <img
               mat-card-image
-              src="assets/images/techM.png"
+              [src]="exp.logo_path"
               alt="Image of a Shiba Inu"
             />
           </mat-card-title-group>
         </mat-card-header>
         <mat-card-content>
-          <p>2025 - present</p>
+          <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            eveniet vitae adipisci. Aperiam suscipit architecto dolore
-            praesentium, nostrum vitae optio sequi quia perspiciatis odit dolor
+            {{ exp.description }}
           </p>
-          
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Medium</mat-card-subtitle>
-            <img
-              mat-card-image
-              src="assets/images/csir.png"
-              alt="Image of a Shiba Inu"
-            />
-          </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-          <p>2025 - present</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            eveniet vitae adipisci. Aperiam suscipit architecto dolore
-            praesentium, nostrum vitae optio sequi quia perspiciatis odit dolor
-          </p>
-          
+          <div class="cards">
+            <mat-card *ngFor="let tech of exp.technologies">
+              <mat-card-content>
+                 {{ tech }}
+              </mat-card-content>
+
+             
+            </mat-card>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
-
-    
-    
   </div>
 </div>

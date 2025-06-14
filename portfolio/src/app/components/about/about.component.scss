@@ -37,6 +37,7 @@ h2 mat-icon {
 .cards  mat-card {
   margin: 0.5%;
   height: 20px;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,10 +82,15 @@ mat-icon {
   flex-wrap: wrap;
 }
 
-.exp-section mat-card{
+.exp-section .exp{
   width:40%;
   background-color: var(--nav-bg-color);
+  color: var(--sec-font-color) !important;
   margin: 0.5%;
+}
+mat-card-subtitle{
+  color: var(--tert-font-color);
+  font-style: italic;
 }
 
 mat-card img{
@@ -117,7 +123,7 @@ mat-card img{
    h2 {
     font-size: large;
   }
-  .exp-section mat-card{
+  .exp-section .exp{
   width:100%;
   background-color: var(--nav-bg-color);
   margin: 0.5%;

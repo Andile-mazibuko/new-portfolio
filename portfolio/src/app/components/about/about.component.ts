@@ -9,20 +9,26 @@ import { ExperienceService } from '../../services/experience.service';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, CommonModule, MatTabsModule],
+  imports: [
+    MatCardModule,
+    MatIconModule,
+    CommonModule,
+    MatTabsModule,
+    CommonModule,
+  ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
 export class AboutComponent implements OnInit {
   // Cards diplayed under the About title
   skills: CardSkill[] = [];
-  experiences: Experience[] = []
+  experiences: Experience[] = [];
 
   //My passion - displayed on the home route
   smallDescription =
     'Full Stack Developer passionate about building modern web experiences';
 
-    constructor(private exp: ExperienceService){}
+  constructor(private exp: ExperienceService) {}
 
   ngOnInit(): void {
     // add skills on init
@@ -52,9 +58,9 @@ export class AboutComponent implements OnInit {
   }
 
   //get Data from the json file and store it inside the array
-  populateExpArray(): void{
-    this.exp.getExpiriences().subscribe( data => {
-      
-    })
+  populateExpArray(): void {
+    this.exp.getExpiriences().subscribe((data: Experience[]) => {
+      this.experiences = data;
+    });
   }
 }

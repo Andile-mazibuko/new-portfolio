@@ -1,19 +1,10 @@
 [
+
   {
-    "startDate": "02 11 2023",
-    "EndDate": "02 11 2024",
-    "type": "Remote",
-    "logo_name": "techM.png",
-    "job_type": "Internship",
-    "role": "Business Analyst Intern",
-    "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
-    "technologies": ["", "", "", "", "", "", ""]
-  },
-  {
-    "startDate": "01 03 2025",
-    "EndDate": "01 03 2026",
+    "startDate": "March 2025",
+    "endDate": "present",
     "type": "Hybrid",
-    "logo_name": "csir.png",
+    "logo_path": "assets/images/csir.png",
     "job_type": "Internship",
     "role": "Software Developer Intern",
     "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
@@ -26,5 +17,22 @@
       "Power Apps",
       "Power Automate"
     ]
+  },
+  {
+    "startDate": "November 2023",
+    "endDate": "November 2024",
+    "type": "Remote",
+    "logo_path": "assets/images/techM.png",
+    "job_type": "Internship",
+    "role": "Business Analyst Intern",
+    "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
+    "technologies": [
+      "Requirements Gathering",
+      "Ms Projects",
+      "SQL",
+      "RPA",
+      "Cloud Computing"
+    ]
   }
+  
 ]

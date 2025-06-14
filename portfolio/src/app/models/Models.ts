@@ -4,9 +4,9 @@ export interface CardSkill {
 }
 export interface Experience {
     startDate: string,
-    EndDate: string,
-    type: "Remote"|"Hybrid"|"On-site",
-    logo_name: string,
+    endDate: string,
+    type: string,
+    logo_path: string,
     job_type: string,
     role: string,
     description: string,

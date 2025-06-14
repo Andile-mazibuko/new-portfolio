@@ -8,7 +8,7 @@
   --nav-bg-color: rgb(34, 37, 41, 0.9);
   --btn-color: rgb(124, 77, 255);
   --link-color: rgb(255, 255, 255,0.4);
-  --bg-gradient: linear-gradient(45deg, rgba(3, 200, 235, 0.95), rgba(182, 0, 155, 0.9));
+  --bg-gradient: linear-gradient(45deg, rgba(3, 200, 235, 0.39), rgba(182, 0, 155, 0.548));
   --tert-font-color:rgb(216, 216, 216);
   --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),0 0 100px rgba(0, 247, 255, 0.4);
 }
@@ -19,7 +19,7 @@
   --sec-font-color: grey;
   --nav-bg-color: rgba(194, 202, 211, 0.9);
   --link-color: rgb(10, 10, 10, 0.4);
-  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.5), rgba(0, 255, 255, 0.5));
+  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.5), rgba(0, 204, 255, 0.596));
   --tert-font-color: rgba(77, 98, 121, 0.5);
   --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),0 0 100px rgba(135, 243, 33, 0.4);
 }
@@ -42,6 +42,11 @@ body::-webkit-scrollbar{
 }
 .cont::-webkit-scrollbar {
   display: none;
+}
+button {
+  background: var(--btn-color) !important;
+  margin: 0 10px;
+  color: white !important;
 }
 a {
   cursor: pointer;

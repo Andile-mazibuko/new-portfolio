@@ -53,7 +53,9 @@ nav{
   position: fixed;
   width: 100%;
 }
-
+button{
+  background-color: unset !important;
+}
 
 @keyframes openDarkLightTheme {
   from{
