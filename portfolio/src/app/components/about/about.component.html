@@ -58,9 +58,9 @@
       </div>
     </div>
 
-    <h2 class="center">Experience Section</h2>
+    <h2 class="center">Experience & Education</h2>
     <div class="exp-section center">
-      <mat-card  *ngFor="let exp of experiences" class="exp">
+      <mat-card *ngFor="let exp of experiences" class="exp">
         <mat-card-header>
           <mat-card-title-group>
             <mat-card-title>{{ exp.role }}</mat-card-title>
@@ -81,14 +81,50 @@
           <div class="cards">
             <mat-card *ngFor="let tech of exp.technologies">
               <mat-card-content>
-                 {{ tech }}
+                {{ tech }}
               </mat-card-content>
-
-             
             </mat-card>
           </div>
         </mat-card-content>
       </mat-card>
+    </div>
+    
+    <div class="skills-tab">
+      <h2 class="center">Tech stack</h2>
+      <mat-tab-group animationDuration="1000ms">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-title">
+              <mat-icon class="center"> code </mat-icon>
+              <p>Back End</p>
+            </div>
+          </ng-template>
+
+          sadsadsadsad
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-title">
+              <mat-icon> code </mat-icon>
+              <p>Front End</p>
+            </div>
+          </ng-template>
+
+          sadsadsadsad
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-title">
+              <mat-icon> construction </mat-icon>
+              <p>tools</p>
+            </div> </ng-template
+          >s
+
+          <div class="tab-content">asajdkajdksajdksajdksjdlsajdl</div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </div>

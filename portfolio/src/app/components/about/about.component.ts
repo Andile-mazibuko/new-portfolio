@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { CardSkill, Experience } from '../../models/Models';
+import { CardSkill, Experience, Skill } from '../../models/Models';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ExperienceService } from '../../services/experience.service';
+import { AboutService } from '../../services/about.service';
 
 @Component({
   selector: 'app-about',
@@ -28,9 +29,10 @@ export class AboutComponent implements OnInit {
   smallDescription =
     'Full Stack Developer passionate about building modern web experiences';
 
-  constructor(private exp: ExperienceService) {}
+  constructor(private exp: ExperienceService, private about: AboutService) {}
 
   ngOnInit(): void {
+    this.getSkiils();
     // add skills on init
     this.skills = [
       {
@@ -61,6 +63,11 @@ export class AboutComponent implements OnInit {
   populateExpArray(): void {
     this.exp.getExpiriences().subscribe((data: Experience[]) => {
       this.experiences = data;
+    });
+  }
+  getSkiils(): void {
+    this.about.getSkills().subscribe((data: Skill[]) => {
+      console.log(data);
     });
   }
 }

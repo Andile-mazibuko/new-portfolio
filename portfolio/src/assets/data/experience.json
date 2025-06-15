@@ -1,5 +1,4 @@
 [
-
   {
     "startDate": "March 2025",
     "endDate": "present",
@@ -29,10 +28,21 @@
     "technologies": [
       "Requirements Gathering",
       "Ms Projects",
+      "R",
       "SQL",
+      "Power BI",
       "RPA",
       "Cloud Computing"
     ]
+  },
+  {
+    "startDate": "January 2020",
+    "endDate": "March 2024",
+    "type": "education",
+    "logo_path": "assets/images/tut.png",
+    "job_type": "Full-time",
+    "role": "Diploma in Computer Science",
+    "description": "Studied foundational and advanced topics in computer science including programming, databases, and software engineering.",
+    "technologies": ["Java", "SQL", "HTML", "CSS", "JavaScrpit", "PLSQL"]
   }
-  
 ]

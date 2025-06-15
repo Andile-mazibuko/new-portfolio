@@ -1,0 +1,47 @@
+{
+  "About": {
+    "firstName": "Andile",
+    "lastName": "Mazibuko",
+    "birthDay": "09 March 20xx",
+    "ambition": "Full Stack Developer passionate about building modern web experiences",
+    "profession": "Full Stack Developer"
+  },
+  "skills": [
+    {
+      "name": "Java",
+      "path": "assets/images/skills/java.ico",
+      "type": "backend",
+      "percentage": 87
+    },
+    {
+      "name": "JavaScript",
+      "path": "assets/images/skills/js.svg",
+      "type": "frontend",
+      "percentage": 70
+    },
+    {
+      "name": "TypeScript",
+      "path": "assets/images/skills/ts.svg",
+      "type": "frontend",
+      "percentage": 80
+    },
+    {
+      "name": "Python",
+      "path": "assets/images/skills/py.svg",
+      "type": "backend",
+      "percentage": 69
+    },
+    {
+      "name": "Git",
+      "path": "assets/images/skills/git-alt.svg",
+      "type": "tool",
+      "percentage": 69
+    },
+    {
+      "name": "firebase",
+      "path": "assets/images/skills/java.ico",
+      "type": "backend",
+      "percentage": 69
+    }
+  ]
+}
