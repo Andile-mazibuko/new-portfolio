@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ExperienceService } from '../../services/experience.service';
 import { AboutService } from '../../services/about.service';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-about',
@@ -16,6 +17,7 @@ import { AboutService } from '../../services/about.service';
     CommonModule,
     MatTabsModule,
     CommonModule,
+    MatProgressBarModule,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
@@ -24,6 +26,10 @@ export class AboutComponent implements OnInit {
   // Cards diplayed under the About title
   skills: CardSkill[] = [];
   experiences: Experience[] = [];
+  frontEndSkills: Skill[] = [];
+  backEndSkills: Skill[] = [];
+  tools: Skill[] = [];
+  allSkills: Skill[] = []; // To be used for mobile devices only
 
   //My passion - displayed on the home route
   smallDescription =
@@ -65,9 +71,13 @@ export class AboutComponent implements OnInit {
       this.experiences = data;
     });
   }
+
   getSkiils(): void {
     this.about.getSkills().subscribe((data: Skill[]) => {
-      console.log(data);
+      this.allSkills = data;
+      this.frontEndSkills = data.filter((skill) => skill.type === 'frontend');
+      this.backEndSkills = data.filter((skill) => skill.type === 'backend');
+      this.tools = data.filter((skill) => skill.type === 'tool');
     });
   }
 }

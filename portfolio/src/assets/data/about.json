@@ -8,16 +8,22 @@
   },
   "skills": [
     {
+      "name": "Angular",
+      "path": "assets/images/skills/angular.svg",
+      "type": "frontend",
+      "percentage": 90
+    },
+    {
       "name": "Java",
       "path": "assets/images/skills/java.ico",
       "type": "backend",
-      "percentage": 87
+      "percentage": 90
     },
     {
       "name": "JavaScript",
       "path": "assets/images/skills/js.svg",
       "type": "frontend",
-      "percentage": 70
+      "percentage": 80
     },
     {
       "name": "TypeScript",
@@ -29,19 +35,67 @@
       "name": "Python",
       "path": "assets/images/skills/py.svg",
       "type": "backend",
-      "percentage": 69
+      "percentage": 65
     },
     {
       "name": "Git",
       "path": "assets/images/skills/git-alt.svg",
       "type": "tool",
-      "percentage": 69
+      "percentage": 80
     },
     {
-      "name": "firebase",
-      "path": "assets/images/skills/java.ico",
+      "name": "Firebase",
+      "path": "assets/images/skills/firebase.svg",
       "type": "backend",
-      "percentage": 69
+      "percentage": 65
+    },
+    {
+      "name": "SQL",
+      "path": "assets/images/skills/sql.svg",
+      "type": "backend",
+      "percentage": 90
+    },
+    {
+      "name": "MySQL",
+      "path": "assets/images/skills/mysql.svg",
+      "type": "backend",
+      "percentage": 99
+    },
+    {
+      "name": "PostgreSQL",
+      "path": "assets/images/skills/postgresql.svg",
+      "type": "backend",
+      "percentage": 99
+    },
+    {
+      "name": "FastApi",
+      "path": "assets/images/skills/fastapi.png",
+      "type": "backend",
+      "percentage": 80
+    },
+    {
+      "name": "Html",
+      "path": "assets/images/skills/html5.svg",
+      "type": "frontend",
+      "percentage": 95
+    },
+    {
+      "name": "CSS",
+      "path": "assets/images/skills/css3-alt.svg",
+      "type": "frontend",
+      "percentage": 90
+    },
+    {
+      "name": "Bootstrap",
+      "path": "assets/images/skills/bootstrap.svg",
+      "type": "frontend",
+      "percentage": 65
+    },
+    {
+      "name": "Postman",
+      "path": "assets/images/skills/postman.svg",
+      "type": "tool",
+      "percentage": 80
     }
   ]
 }

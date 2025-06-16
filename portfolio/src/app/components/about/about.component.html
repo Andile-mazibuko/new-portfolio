@@ -88,9 +88,11 @@
         </mat-card-content>
       </mat-card>
     </div>
-    
+
     <div class="skills-tab">
       <h2 class="center">Tech stack</h2>
+
+      <!--FOR DESKTOP APPS-->
       <mat-tab-group animationDuration="1000ms">
         <mat-tab>
           <ng-template mat-tab-label>
@@ -100,7 +102,18 @@
             </div>
           </ng-template>
 
-          sadsadsadsad
+          <div class="skills-cont center">
+            <mat-card class="center" *ngFor="let skill of backEndSkills">
+              <img mat-card-image [src]="skill.path" alt="" />
+              <mat-card-subtitle class="center">
+                {{ skill.name }}
+              </mat-card-subtitle>
+              <mat-progress-bar
+                mode="determinate"
+                [value]="skill.percentage"
+              ></mat-progress-bar>
+            </mat-card>
+          </div>
         </mat-tab>
 
         <mat-tab>
@@ -111,7 +124,18 @@
             </div>
           </ng-template>
 
-          sadsadsadsad
+          <div class="skills-cont center">
+            <mat-card class="center" *ngFor="let skill of frontEndSkills">
+              <img mat-card-image [src]="skill.path" alt="" />
+              <mat-card-subtitle class="center">
+                {{ skill.name }}
+              </mat-card-subtitle>
+              <mat-progress-bar
+                mode="determinate"
+                [value]="skill.percentage"
+              ></mat-progress-bar>
+            </mat-card>
+          </div>
         </mat-tab>
 
         <mat-tab>
@@ -119,12 +143,36 @@
             <div class="tab-title">
               <mat-icon> construction </mat-icon>
               <p>tools</p>
-            </div> </ng-template
-          >s
-
-          <div class="tab-content">asajdkajdksajdksajdksjdlsajdl</div>
+            </div>
+          </ng-template>
+          <div class="skills-cont center">
+            <mat-card class="center" *ngFor="let skill of tools">
+              <img mat-card-image [src]="skill.path" alt="" />
+              <mat-card-subtitle class="center">
+                {{ skill.name }}
+              </mat-card-subtitle>
+              <mat-progress-bar
+                mode="determinate"
+                [value]="skill.percentage"
+              ></mat-progress-bar>
+            </mat-card>
+          </div>
         </mat-tab>
       </mat-tab-group>
+
+      <!--ONLY FOR MOBILE DEVICES-->
+      <div class="skills-cont center mobile-tech-stack">
+        <mat-card class="center" *ngFor="let skill of allSkills">
+          <img mat-card-image [src]="skill.path" alt="" />
+          <mat-card-subtitle class="center">
+            {{ skill.name }}
+          </mat-card-subtitle>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="skill.percentage"
+          ></mat-progress-bar>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
