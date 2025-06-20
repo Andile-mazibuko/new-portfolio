@@ -1,0 +1,45 @@
+
+/*
+DEBUGING PURPOSE
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.3); 
+}*/
+
+.form {
+  width: 500px;
+  background-color: var(--nav-bg-color);
+  overflow: hidden;
+}
+.form::-webkit-scrollbar{
+  display: none;
+}
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: var(--font-color) !important;
+  margin: 10px 0;
+}
+.close button {
+  background-color: transparent !important;
+  color: var(--font-color) !important;
+}
+
+form {
+  width: 100% !important;
+}
+mat-form-field {
+  width: 80%;
+  margin-left: 10%;
+  border: 2px red !important;
+}
+mat-form-field .mat-form-field-required-marker {
+  display: none;
+}
+button{
+  margin: 20px 0;
+}
+mat-label,input,mat-icon,textarea{
+  color: var(--font-color) !important;
+}
+

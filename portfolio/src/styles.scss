@@ -2,26 +2,48 @@
 
 :root {
   // Default theme colors(dark-mode)
-  --bg-color: rgb(10, 10, 10, 0.9);
-  --font-color: rgb(255, 255, 255);
+  //--bg-color: rgba(10, 10, 10, 0.9);
+  --bg-color: linear-gradient(
+    180deg,
+    rgba(12, 14, 22, 0.78),
+    rgba(10, 14, 14, 0.603)
+  );
+  --font-color: rgba(255, 255, 255, 0.445);
   --sec-font-color: rgb(180, 180, 180);
-  --nav-bg-color: rgb(34, 37, 41, 0.9);
-  --btn-color: rgb(124, 77, 255);
-  --link-color: rgb(255, 255, 255,0.4);
-  --bg-gradient: linear-gradient(45deg, rgba(3, 200, 235, 0.39), rgba(182, 0, 155, 0.548));
-  --tert-font-color:rgb(216, 216, 216);
-  --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),0 0 100px rgba(0, 247, 255, 0.4);
+  --nav-bg-color: rgba(12, 14, 22, 0.205);
+  --btn-color: linear-gradient(
+    45deg,
+    rgba(0, 255, 149, 0.2),
+    rgba(255, 0, 242, 0.3)
+  );
+  --link-color: rgb(255, 255, 255, 0.4);
+  --bg-gradient: linear-gradient(
+    45deg,
+    rgba(3, 200, 235, 0.39),
+    rgba(182, 0, 155, 0.548)
+  );
+  --tert-font-color: rgb(216, 216, 216);
+  --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),
+    0 0 100px rgba(0, 247, 255, 0.4);
+  --theme-icon: rgb(123, 255, 0);
 }
 .light-theme {
-  --bg-color: rgb(255, 255, 255,0.9);
+  --bg-color: rgb(255, 255, 255, 0.9);
   --font-color: rgb(10, 10, 10);
   --nav-bg-color: rgb(248, 249, 250); //
   --sec-font-color: grey;
+  --btn-color: rgb(0, 3, 192);
   --nav-bg-color: rgba(194, 202, 211, 0.9);
   --link-color: rgb(10, 10, 10, 0.4);
-  --bg-gradient: linear-gradient(45deg, rgba(0, 158, 150, 0.5), rgba(0, 204, 255, 0.596));
+  --bg-gradient: linear-gradient(
+    45deg,
+    rgba(0, 158, 150, 0.5),
+    rgba(0, 204, 255, 0.596)
+  );
   --tert-font-color: rgba(77, 98, 121, 0.5);
-  --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),0 0 100px rgba(135, 243, 33, 0.4);
+  --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),
+    0 0 100px rgba(135, 243, 33, 0.4);
+  --theme-icon: rgba(0, 0, 0, 0.466);
 }
 
 html,
@@ -32,7 +54,7 @@ body {
   background: var(--bg-color);
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 .cont {
@@ -56,17 +78,23 @@ a {
   color: var(--link-color) !important;
 }
 
-p{
+p {
   color: var(--sec-font-color);
   font-size: larger;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.center{
+.center {
   display: flex !important;
   justify-content: center !important;
 }
-
-
+.dialogClass {
+  background-color: var(--nav-bg-color) !important;
+  border-radius: 8px;
+  padding: 20px;
+}
+.dialogBackdrop {
+  background-color: var(--nav-bg-color) !important;
+}
 
 @keyframes rgbLight {
   0% {
@@ -105,5 +133,16 @@ p{
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

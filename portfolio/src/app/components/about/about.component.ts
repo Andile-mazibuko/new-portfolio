@@ -59,7 +59,7 @@ export class AboutComponent implements OnInit {
       },
       {
         icon: 'school',
-        name: 'Diploma Holder',
+        name: 'CS Graduate',
       },
     ];
     this.populateExpArray();

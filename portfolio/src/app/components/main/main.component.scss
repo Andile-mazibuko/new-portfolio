@@ -39,7 +39,7 @@ h1 {
 }
 img {
   height: 100%;
-  animation: rgbLight 3s infinite linear;
+  animation: rgbLight 3s infinite linear , floatEffect 3s ease-in-out infinite;;
   opacity: 0.9;
 }
 
@@ -63,8 +63,11 @@ i {
   margin: 10px;
   color: var(--font-color);
 }
-
-
+::ng-deep .dialogClass .mat-dialog-container {
+  background-color: red !important;
+  border-radius: 8px;
+  padding: 20px;
+}
 
 // Tablet devices(not tilted)
 @media (max-width: 820px) {

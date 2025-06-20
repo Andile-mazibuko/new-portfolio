@@ -18,3 +18,8 @@ export interface Skill {
   type: string;
   percentage: number;
 }
+export interface Email {
+  emailAddress: string;
+  subject: string;
+  message: string;
+}

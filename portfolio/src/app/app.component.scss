@@ -13,7 +13,7 @@
   border: none;
 }
 .icon-container {
-  background-color: black;
+  //background-color: black;
   height: 18px;
   width: 18px;
   border-radius: 9px;
@@ -37,11 +37,9 @@
 mat-icon {
   font-size: large !important;
   height: auto;
-  color: grey;
+  color: var(--theme-icon);
 }
-.dark-theme-icon {
-  color: grey;
-}
+
 .route-cont{
     width: 100%;
     margin-top: 0%;
@@ -49,14 +47,16 @@ mat-icon {
 }
 nav{
   background-color: var(--nav-bg-color) !important;
-  z-index: 5;
+  z-index: 10;
   position: fixed;
   width: 100%;
 }
 button{
   background-color: unset !important;
 }
-
+a{
+  font-size: larger;
+}
 @keyframes openDarkLightTheme {
   from{
     margin-left: -5px;

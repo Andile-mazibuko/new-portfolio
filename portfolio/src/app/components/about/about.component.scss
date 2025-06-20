@@ -4,7 +4,6 @@
 .intro {
   width: 90%;
   margin-left: 5%;
-  //background-color: rgba(54, 54, 54, 0.24);
 }
 h1 {
   margin-top: 40px;
@@ -14,7 +13,6 @@ h1 {
   letter-spacing: 1px;
   width: 100%;
   color: var(--tert-font-color);
-  //color: var(--font-color);
 }
 h2 {
   color: var(--tert-font-color);
@@ -33,6 +31,7 @@ h2 mat-icon {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  animation: opacityTrans 6s ease-in;
 }
 .cards mat-card {
   margin: 0.5%;
@@ -49,7 +48,6 @@ mat-card-content {
   align-items: center;
 }
 mat-icon {
-  //margin-right: 5px;
   font-size: large;
   align-items: center;
   height: fit-content;
@@ -64,6 +62,7 @@ mat-icon {
 .text-area {
   width: 50%;
   margin-left: 5%;
+  animation: opacityTrans 0.5s ease-in;
 }
 .img-area {
   height: 300px;
@@ -73,6 +72,7 @@ mat-icon {
   border-radius: 150px;
   align-items: baseline;
   box-shadow: var(--box-shadow);
+  animation: opacityTrans 5s ease-in,floatEffect 3s ease infinite;
 }
 .img-area img {
   width: 100%;
@@ -89,7 +89,7 @@ mat-icon {
   color: var(--sec-font-color) !important;
   margin: 0.5%;
 }
-.exp-section .cards mat-card{
+.exp-section .cards mat-card {
   background: var(--card-sec-color) !important;
 }
 mat-card-subtitle {
@@ -102,7 +102,6 @@ mat-card-subtitle {
 }
 .skills-tab {
   margin-top: 70px;
-  margin-bottom: 300px; //To be removed
 }
 .tab-title {
   color: var(--sec-font-color);
@@ -134,7 +133,7 @@ mat-progress-bar {
   margin: 5% 10%;
   width: 80% !important;
 }
-.mobile-tech-stack{
+.mobile-tech-stack {
   display: none !important;
 }
 
@@ -172,27 +171,48 @@ mat-progress-bar {
     background-color: var(--nav-bg-color);
     margin: 0.5%;
   }
-  
-  .exp-section mat-card img{
+
+  .exp-section mat-card img {
     max-width: 80px !important;
   }
-  
-  mat-tab-group{
+
+  mat-tab-group {
     display: none;
   }
-  
-  .skills-tab{
+
+  .skills-tab {
     width: 100%;
   }
-  .skills-cont{
+  .skills-cont {
     width: 100%;
-    //display: flex;
     margin: 0;
   }
-  .skills-cont mat-card{
+  .skills-cont mat-card {
     width: 30%;
   }
-  .mobile-tech-stack{
-  display: flex !important;
+  .mobile-tech-stack {
+    display: flex !important;
+  }
 }
+
+//TRANSITIONS
+@keyframes moveInageArea {
+  from {
+    margin-left: -100%;
+    margin-top: -50%;
+  }
+  to {
+    margin: 0 5%;
+  }
+}
+
+@keyframes moveTextArea {
+  from {
+    margin-left: 200%;
+    width: 100%;
+  }
+  to {
+    margin-left: 5%;
+    width: 50%;
+  }
 }
