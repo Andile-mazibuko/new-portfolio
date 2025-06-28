@@ -1,6 +1,7 @@
 .navbar-brand {
-  font-family: "Pacifico",cursive;
+  font-family: "Pacifico", cursive;
   color: var(--font-color) !important;
+  animation: none;
 }
 .theme-btn {
   background-color: var(--link-color) !important;
@@ -20,7 +21,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 /*
 .dark-mode{
@@ -40,36 +40,56 @@ mat-icon {
   color: var(--theme-icon);
 }
 
-.route-cont{
-    width: 100%;
-    margin-top: 0%;
-    margin-bottom: 80px; // Create space between content and footer
+.route-cont {
+  width: 100%;
+  margin-top: 0%;
+  margin-bottom: 80px; // Create space between content and footer
 }
-nav{
+nav {
   background-color: var(--nav-bg-color) !important;
   z-index: 10;
   position: fixed;
   width: 100%;
 }
-button{
+button {
   background-color: unset !important;
 }
-a{
-  font-size: larger;
+a {
+  transform: scale(1.2);
+  //animation: link-animation .2s ease-in-out;
+  
+}
+a:hover {
+  color: var(--theme-icon) !important;
+  font-size: x-large;
+  font-weight: 900;
+  animation: none;
 }
 @keyframes openDarkLightTheme {
-  from{
+  from {
     margin-left: -5px;
   }
-  to{
+  to {
     margin-left: 15px;
   }
 }
-@keyframes  closeLightTheme{
-  from{
+@keyframes closeLightTheme {
+  from {
     margin-left: 15px;
   }
-  to{
+  to {
     margin-left: -5px;
   }
 }
+@keyframes link-animation {
+  0% {
+    font-size: xx-large;
+  }
+  50% {
+    font-size: x-large;
+  }
+  100% {
+    font-size: large;
+  }
+}
+

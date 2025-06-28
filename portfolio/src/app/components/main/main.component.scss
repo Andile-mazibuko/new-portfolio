@@ -14,6 +14,7 @@
   overflow: hidden;
   z-index: 2;
 }
+
 p {
   width: 100%;
   display: flex;
@@ -26,7 +27,8 @@ h1 {
   width: 100%;
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: var(--font-color);
+  color: var(--tert-font-color);
+  font-weight: 700;
 }
 .img-area {
 

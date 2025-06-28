@@ -6,7 +6,7 @@ DEBUGING PURPOSE
 }*/
 
 .form {
-  width: 500px;
+  width: 100%;
   background-color: var(--nav-bg-color);
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ mat-form-field .mat-form-field-required-marker {
   display: none;
 }
 button{
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 mat-label,input,mat-icon,textarea{
   color: var(--font-color) !important;
