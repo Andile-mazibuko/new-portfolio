@@ -53,7 +53,6 @@ export class EmailComponent implements OnInit {
   }
 
   sendEmail(): void {
-    console.log('EMAIL TEST', this.formGroup.value);
 
     this.snackBar.open('Email sent ', '', {
       duration: 3000,

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { EmailComponent } from '../email/email.component';
+import { AboutService } from '../../services/about.service';
+import { About } from '../../models/Models';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -9,8 +11,16 @@ import { EmailComponent } from '../email/email.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
-export class MainComponent {
-  constructor(private dialog: MatDialog) {}
+export class MainComponent implements OnInit {
+  constructor(private dialog: MatDialog, private aboutServ: AboutService) {}
+  about!: About 
+
+  ngOnInit(): void {
+     this.aboutServ.getUserAbout().subscribe((resp:About) => {
+      this.about = resp
+    })
+  }
+
   openEmailDialog(): void {
     this.dialog.open(EmailComponent, {
       enterAnimationDuration: '1s',

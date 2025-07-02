@@ -72,7 +72,7 @@ mat-icon {
   border-radius: 150px;
   align-items: baseline;
   box-shadow: var(--box-shadow);
-  animation: opacityTrans 5s ease-in,floatEffect 3s ease infinite;
+  animation: /*opacityTrans 5s ease-in,*/floatEffect 3s ease infinite;
 }
 .img-area img {
   width: 100%;

@@ -23,3 +23,10 @@ export interface Email {
   subject: string;
   message: string;
 }
+export interface About {
+  firstName: string;
+  lastName: string;
+  birthDay: string;
+  ambition: string;
+  profession: string;
+}

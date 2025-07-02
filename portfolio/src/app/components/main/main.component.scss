@@ -31,7 +31,6 @@ h1 {
   font-weight: 700;
 }
 .img-area {
-
   position: relative;
   height: 50vh;
   display: flex;
@@ -41,7 +40,7 @@ h1 {
 }
 img {
   height: 100%;
-  animation: rgbLight 3s infinite linear , floatEffect 3s ease-in-out infinite;;
+  animation: rgbLight 3s infinite linear;
   opacity: 0.9;
 }
 
@@ -58,6 +57,27 @@ img {
   display: flex;
   justify-content: center;
   animation: opacityTrans 5s ease-in-out;
+}
+.socials a {
+  display: block;
+  margin: 0 1%;
+  z-index: 0;
+  text-decoration: none;
+}
+.link-label {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  font-style: normal;
+  color: transparent;
+}
+.socials a:hover .link-label {
+  justify-content: center;
+  animation: ease-in-out;
+  color: var(--font-color);
+  background-color: (--nav-bg-color) !important;
+  padding: 0 10px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
 }
 i {
   width: 50px;
@@ -90,16 +110,16 @@ i {
     height: 35vh;
     display: flex;
     justify-content: center;
-    align-items: end; //TODO: SET TO BOTTOM 
+    align-items: end; //TODO: SET TO BOTTOM
     margin-top: 0;
   }
-  .socials{
-    margin: 0 auto ;
+  .socials {
+    margin: 10% auto;
   }
   img {
     height: 70%;
   }
-  i{
+  i {
     font-size: x-large;
     margin: 30px 5px;
   }
@@ -107,12 +127,22 @@ i {
 
 // Mobile Devices
 @media (max-width: 480px) {
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
-  .cont{
+  .cont {
     margin-top: 15%;
   }
-  
 }
 
+@keyframes textHover {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: #fff;
+  }
+}

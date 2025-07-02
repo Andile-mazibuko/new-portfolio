@@ -6,7 +6,7 @@
   --bg-color: linear-gradient(
     180deg,
     rgba(12, 14, 22, 0.78),
-    rgba(10, 14, 14, 0.603)
+    rgba(63, 75, 75, 0.603)
   );
   --font-color: rgb(255, 255, 255);
   --sec-font-color: rgba(145, 145, 145, 0.945);
@@ -25,12 +25,21 @@
   --tert-font-color: rgba(145, 185, 185, 0.719);
   --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),
     0 0 100px rgba(0, 247, 255, 0.4);
-  --theme-icon: rgb(123, 255, 0);
+  --theme-icon: #ffd900;
+  --theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
+    0 0 100px rgba(255, 251, 0, 0.4);
+   --weather-colors: radial-gradient(
+    circle at 30% 30%,
+    #ffffff,
+    #ffffff,
+    #a8a8a760,
+    #363636
+  );
 }
 .light-theme {
-  --bg-color: rgb(255, 255, 255, 0.9);
+  --bg-color: rgb(255, 255, 255, 0.6);
   --font-color: rgb(10, 10, 10);
-  --nav-bg-color: rgb(248, 249, 250); //
+  --nav-bg-color: rgba(165, 165, 165, 0.973); //
   --sec-font-color: grey;
   --btn-color: rgb(0, 3, 192);
   --nav-bg-color: rgba(194, 202, 211, 0.9);
@@ -43,7 +52,17 @@
   --tert-font-color: rgba(77, 98, 121, 0.5);
   --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),
     0 0 100px rgba(135, 243, 33, 0.4);
+  
   --theme-icon: rgba(0, 0, 0, 0.466);
+  --weather-colors: radial-gradient(
+    circle at center,
+    #fff700,     
+    #ffd900 40%, 
+    #ffbb00 80%, 
+    transparent 100%
+  );
+  --theme-shadow: 0 0 500px rgb(255, 238, 0),
+    0 0 100px rgba(72, 255, 0, 0.4);
 }
 
 html,
@@ -51,7 +70,9 @@ body {
   height: 100%;
   overflow: hidden;
   overflow-y: scroll;
-  background: var(--bg-color); // TODO: animation to introduce the color: Maybe on the div that contains the route
+  background: var(
+    --bg-color
+  ); // TODO: animation to introduce the color: Maybe on the div that contains the route
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 body::-webkit-scrollbar {
@@ -97,7 +118,6 @@ p {
 .dialogBackdrop {
   background-color: var(--nav-bg-color) !important;
 }
-
 
 @keyframes rgbLight {
   0% {

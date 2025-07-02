@@ -33,7 +33,7 @@
     </ul>
 
     <button
-    mat-button-raised
+      mat-button-raised
       type="button"
       class="theme-btn"
       [ngClass]="isDark ? 'dark-mode' : 'light-mode'"
@@ -49,4 +49,41 @@
 </nav>
 <div class="route-cont">
   <router-outlet></router-outlet>
+</div>
+<div class="weather"></div>
+
+<div *ngIf="!isDark" class="witch night">
+  <img src="assets/images/witch.svg" alt="" />
+</div>
+<div *ngIf="isDark" class="witch day">
+  <img src="assets/images/witch.svg" alt="" />
+</div>
+<div *ngIf="!isDark" class="starry-sky"></div>
+<div  *ngIf="isDark" class="clouds-container">
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="">
+    </div>
+</div>
+<div  *ngIf="isDark" class="clouds-container moving-clouds">
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_2.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_2.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="">
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="">
+    </div>
 </div>
