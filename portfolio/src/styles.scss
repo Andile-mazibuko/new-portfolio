@@ -37,19 +37,25 @@
   );
 }
 .light-theme {
-  --bg-color: rgb(255, 255, 255, 0.6);
+    --bg-color: linear-gradient(
+    180deg,
+    rgba(175, 219, 255, 0.445),
+    rgba(204, 218, 255, 0.253)
+  );
+  //--bg-color: rgb(255, 255, 255, 0.6);
   --font-color: rgb(10, 10, 10);
-  --nav-bg-color: rgba(165, 165, 165, 0.973); //
+  //--nav-bg-color: rgba(183, 220, 255, 0.5); //
   --sec-font-color: grey;
   --btn-color: rgb(0, 3, 192);
-  --nav-bg-color: rgba(194, 202, 211, 0.9);
+  --nav-bg-color: rgba(168, 178, 211, 0.404);
+  //--nav-bg-color: rgba(226, 255, 255, 0.459);
   --link-color: rgb(10, 10, 10, 0.4);
   --bg-gradient: linear-gradient(
     45deg,
     rgba(0, 158, 150, 0.5),
     rgba(0, 204, 255, 0.596)
   );
-  --tert-font-color: rgba(77, 98, 121, 0.5);
+  --tert-font-color: rgba(0, 4, 58, 0.678);
   --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),
     0 0 100px rgba(135, 243, 33, 0.4);
   

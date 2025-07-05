@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { About, Skill } from '../models/Models';
 import { response } from 'express';
 
@@ -9,6 +9,18 @@ import { response } from 'express';
 })
 export class AboutService {
   private apiUrl = 'assets/data/about.json';
+  about!: About;
+  aboutSubject = new BehaviorSubject<About>({
+    firstName: '',
+    lastName: '',
+    birthDay: '',
+    ambition: '',
+    profession: '',
+    cellphone: '',
+    email: '',
+    address: '',
+  });
+
   constructor(private http: HttpClient) {}
 
   getSkills(): Observable<Skill[]> {
@@ -16,9 +28,16 @@ export class AboutService {
       .get<{ skills: Skill[] }>(this.apiUrl)
       .pipe(map((response) => response.skills));
   }
-  getUserAbout(): Observable<About> {
-    return this.http
+  setUserAbout(): void {
+    this.http
       .get<{ About: About }>(this.apiUrl)
-      .pipe(map((response) => response.About));
+      .pipe(map((response) => response.About))
+      .subscribe((resp: About) => {
+        this.aboutSubject.next(resp);
+      });
+  }
+  getUserAbout(): Observable<About> {
+    //this.setUserAbout()
+    return this.aboutSubject;
   }
 }

@@ -29,4 +29,7 @@ export interface About {
   birthDay: string;
   ambition: string;
   profession: string;
+  cellphone: string
+  email: string
+  address: string
 }

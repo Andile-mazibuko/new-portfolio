@@ -4,7 +4,10 @@
     "lastName": "Mazibuko",
     "birthDay": "09 March 20xx",
     "ambition": "Full Stack Developer passionate about building modern web experiences",
-    "profession": "Full Stack Developer"
+    "profession": "Full Stack Developer",
+    "cellphone": "063 597 0787",
+    "email": "andilelethumusa@gmail.com",
+    "address": "Arcadia, Johan street"
   },
   "skills": [
     {

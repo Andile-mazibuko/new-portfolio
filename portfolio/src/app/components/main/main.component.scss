@@ -49,42 +49,6 @@ img {
   //background-color: red;
 }
 
-.socials {
-  margin-top: 2%;
-  width: 80%;
-  margin-left: 10%;
-  //background-color: rgb(7, 7, 7,.5);
-  display: flex;
-  justify-content: center;
-  animation: opacityTrans 5s ease-in-out;
-}
-.socials a {
-  display: block;
-  margin: 0 1%;
-  z-index: 0;
-  text-decoration: none;
-}
-.link-label {
-  width: 100%;
-  display: flex;
-  text-decoration: none;
-  font-style: normal;
-  color: transparent;
-}
-.socials a:hover .link-label {
-  justify-content: center;
-  animation: ease-in-out;
-  color: var(--font-color);
-  background-color: (--nav-bg-color) !important;
-  padding: 0 10px;
-  transition: transform 0.3s ease, font-size 0.3s ease;
-}
-i {
-  width: 50px;
-  font-size: xx-large;
-  margin: 10px;
-  color: var(--font-color);
-}
 ::ng-deep .dialogClass .mat-dialog-container {
   background-color: red !important;
   border-radius: 8px;
