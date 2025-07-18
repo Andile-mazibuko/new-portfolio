@@ -3,6 +3,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { SocialsComponent } from './components/socials/socials.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     CommonModule,
     RouterLink,
+    SocialsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -28,7 +30,7 @@ export class AppComponent {
 
     //add-lightTheme
     if (this.isDark) {
-        body.classList.add('light-theme');
+      body.classList.add('light-theme');
     } else {
       body.classList.remove('light-theme');
       themeBtn?.classList.add('add-lightTheme');

@@ -3,10 +3,12 @@ import { MainComponent } from './components/main/main.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 export const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: NotFoundComponent },
 ];

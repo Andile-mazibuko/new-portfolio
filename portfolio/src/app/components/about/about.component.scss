@@ -26,24 +26,7 @@ h2 mat-icon {
 .description {
   width: 100%;
 }
-.cards {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: opacityTrans 6s ease-in;
-}
-.cards mat-card {
-  margin: 0.5%;
-  height: 20px;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--sec-font-color);
-  background: var(--bg-gradient);
-  font-size: larger;
-}
+
 mat-card-content {
   align-items: center;
 }
@@ -157,11 +140,13 @@ mat-progress-bar {
     margin-bottom: 50px;
   }
   h2 {
-    margin: 0 0;
-    width: 100%;
+    margin: 0 10%;
+    width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: x-small;
+    flex-wrap: wrap;
   }
   h2 {
     font-size: large;

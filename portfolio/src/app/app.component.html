@@ -24,7 +24,7 @@
         <a class="nav-link" routerLink="/projects">Projects</a>
       </li>
       <li class="nav-item me-5">
-        <a class="nav-link" routerLink="/projects">Experience</a>
+        <a class="nav-link" routerLink="/exp">Experience</a>
       </li>
 
       <li class="nav-item me-5">
@@ -50,6 +50,13 @@
 <div class="route-cont">
   <router-outlet></router-outlet>
 </div>
+<!--
+<div class="footer">
+  <div class="dev-info">
+    <p>© 2025 Andile Mazibuko — Full Stack Developer</p>
+  </div>
+</div>
+-->
 <div class="weather"></div>
 
 <div *ngIf="!isDark" class="witch night">
@@ -59,31 +66,31 @@
   <img src="assets/images/witch.svg" alt="" />
 </div>
 <div *ngIf="!isDark" class="starry-sky"></div>
-<div  *ngIf="isDark" class="clouds-container">
-    <div class="cloud">
-      <img src="assets/images/cloud_1.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_3.png" alt="">
-    </div>
+<div *ngIf="isDark" class="clouds-container">
+  <div class="cloud">
+    <img src="assets/images/cloud_1.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_3.png" alt="" />
+  </div>
 </div>
-<div  *ngIf="isDark" class="clouds-container moving-clouds">
-    <div class="cloud">
-      <img src="assets/images/cloud_1.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_3.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_2.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_2.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_1.png" alt="">
-    </div>
-    <div class="cloud">
-      <img src="assets/images/cloud_3.png" alt="">
-    </div>
+<div *ngIf="isDark" class="clouds-container moving-clouds">
+  <div class="cloud">
+    <img src="assets/images/cloud_1.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_3.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_2.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_2.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_1.png" alt="" />
+  </div>
+  <div class="cloud">
+    <img src="assets/images/cloud_3.png" alt="" />
+  </div>
 </div>
