@@ -6,12 +6,20 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ThemeService {
   themeSubject = new BehaviorSubject<boolean>(true);
-
+  theme: string = "dark" //Default
   changeTheme() {
-    this.themeSubject.next(!this.themeSubject.value);
+
+    if(localStorage.getItem("Theme") == "dark"){
+      localStorage.setItem("Theme","light")
+    }else{
+      localStorage.setItem("Theme","dark")
+    }
+    //this.themeSubject.next(!this.themeSubject.value);
+    
   }
   
   getTheme() {
-    return this.themeSubject.asObservable;
+    return localStorage.getItem("Theme")
+    //return this.themeSubject.asObservable;
   }
 }

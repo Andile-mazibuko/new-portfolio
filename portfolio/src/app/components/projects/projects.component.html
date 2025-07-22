@@ -10,30 +10,45 @@
   </div>
   <h1 class="subtitle center">Projects</h1>
   <div class="projects-container center">
-    <div class="project">
+    <div *ngFor="let project of projects" class="project">
       <div class="media-cont center">
-        <img src="assets/images/projects/p1/p1.png" alt="" />
-        <div class="tech-used">asdadsaasdasda</div>
+        <img
+          *ngIf="project.projectTpe === 'Web-App'"
+          [src]="project.filePaths[0]"
+          alt=""
+          class="proj-img Web-App-img"
+        />
+        <img
+          *ngIf="project.projectTpe === 'Mobile'"
+          [src]="project.filePaths[0]"
+          alt=""
+          class="proj-img Mobile-img"
+        />
+        <img
+          *ngIf="project.projectTpe === 'Mobile'"
+          [src]="project.filePaths[1]"
+          alt=""
+          class="proj-img Mobile-img"
+        />
+        <div class="second-pic">
+          <img
+          *ngIf="project.projectTpe === 'Web-App'"
+          [src]="project.filePaths[1]"
+          alt=""
+          class="proj-img Web-App-img"
+        />
+        </div>
       </div>
       <div class="about-proj">
-        <h1 class="subtitle center">About Project</h1>
+        <h1 class="subtitle center">{{ project.name }}</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
-          blanditiis vero doloribus eius sed enim similique laudantium,
-          quibusdam recusandae adipisci et. Et quidem consequuntur nesciunt
-          reprehenderit impedit ullam temporibus dignissimos!
+          {{ project.description }}
         </p>
         <div class="cards">
-          <mat-card>
+          <mat-card *ngFor="let card of project.techStack">
             <mat-card-content class="center">
-              <mat-icon class="center"> code </mat-icon>
-              name
-            </mat-card-content>
-          </mat-card>
-          <mat-card>
-            <mat-card-content class="center">
-              <mat-icon class="center"> code </mat-icon>
-              name
+              <mat-icon class="center"> {{ card.icon }} </mat-icon>
+              {{ card.name }}
             </mat-card-content>
           </mat-card>
         </div>
@@ -42,9 +57,6 @@
           <button mat-button>Live demo</button>
         </div>
       </div>
-    </div>
-    <div class="project">
-      <div class="media-cont">asd</div>
     </div>
   </div>
 </div>

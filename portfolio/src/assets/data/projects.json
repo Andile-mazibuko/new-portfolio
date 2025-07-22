@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Action Mall",
+    "description": "A full-featured platform where users can buy or rent cars and houses. Includes bidding options for buying.",
+    "repoLink": "https://github.com/Andile-mazibuko/WIL-PROJECT",
+    "liveLink": "",
+    "live": false,
+    "projectTpe": "Web-App",
+    "techStack": [
+      { "icon": "code", "name": "HTML 5" },
+      { "icon": "code", "name": "CSS" },
+      { "icon": "code", "name": "Javascript" },
+      { "icon": "code", "name": "Java" },
+      { "icon": "code", "name": "Derby" },
+      { "icon": "code", "name": "JPA" },
+      { "icon": "code", "name": "Glass Fish Server" }
+    ],
+    "filePaths": [
+      "assets/images/projects/p1/p1.png",
+      "assets/images/projects/p1/p2.png",
+      "assets/images/projects/p1/p3.png"
+    ]
+  },
+  {
+    "name": "ATECH",
+    "description": "An e-commerce platform dedicated to selling PC components like CPUs, GPUs, RAM, and storage devices. Designed for gamers and tech enthusiasts looking to build or upgrade their desktops",
+    "repoLink": "https://github.com/Andile-mazibuko/ATECH",
+    "liveLink": "",
+    "live": false,
+    "projectTpe": "Web-App",
+    "techStack": [
+      { "icon": "code", "name": "HTML 5" },
+      { "icon": "code", "name": "CSS" },
+      { "icon": "code", "name": "Javascript" },
+      { "icon": "code", "name": "Java" },
+      { "icon": "code", "name": "Derby" },
+      { "icon": "code", "name": "JPA" },
+      { "icon": "code", "name": "Glass Fish Server" }
+    ],
+    "filePaths": [
+      "assets/images/projects/p4/p1.png",
+      "assets/images/projects/p4/p2.png",
+      "assets/images/projects/p4/p3.png",
+      "assets/images/projects/p4/p4.png"
+    ]
+  },
+  {
+    "name": "Tick Tack Toe",
+    "description": "A classic Tic Tac Toe Android app developed in Java. Includes two-player mode, win detection, score tracking, and reset functionality. Designed with a clean UI, it's lightweight, responsive, and perfect for casual play",
+    "repoLink": "https://github.com/Andile-mazibuko/ATECH",
+    "liveLink": "",
+    "live": false,
+    "projectTpe": "Mobile",
+    "techStack": [
+      { "icon": "code", "name": "Android Studio" },
+      { "icon": "code", "name": "Java" }
+
+    ],
+    "filePaths": [
+      "assets/images/projects/p3/p1.png",
+      "assets/images/projects/p3/p2.png"
+    ]
+  }
+]

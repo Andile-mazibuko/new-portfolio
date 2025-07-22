@@ -29,7 +29,17 @@ export interface About {
   birthDay: string;
   ambition: string;
   profession: string;
-  cellphone: string
-  email: string
-  address: string
+  cellphone: string;
+  email: string;
+  address: string;
+}
+export interface Project {
+  name: string;
+  description: string;
+  repoLink?: string; //Optional: Might not want to provide a source code of a live project
+  liveLink?: string; //Optional: Not all projects will be live
+  live: boolean;
+  projectTpe: 'Web-App' | 'Mobile';
+  techStack: CardSkill[];
+  filePaths: string[];
 }
