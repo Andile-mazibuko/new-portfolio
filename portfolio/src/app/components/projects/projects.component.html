@@ -2,15 +2,12 @@
   <div class="route-head center">
     <h1 class="center">My Work</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat repellat
-      id magni maxime esse quam laboriosam autem consequatur eum! Quam quos
-      labore necessitatibus illum, perferendis eveniet. Fuga quae repellat
-      nesciunt?
+     Quest log of my coding journey — projects completed and XP earned
     </p>
   </div>
   <h1 class="subtitle center">Projects</h1>
   <div class="projects-container center">
-    <div *ngFor="let project of projects" class="project">
+    <div *ngFor="let project of projects;let i = index" class="project">
       <div class="media-cont center">
         <img
           *ngIf="project.projectTpe === 'Web-App'"
@@ -40,9 +37,10 @@
         </div>
       </div>
       <div class="about-proj">
+        <h1 class="number subtitle center">{{ formatNumber(i+1)}}</h1>
         <h1 class="subtitle center">{{ project.name }}</h1>
         <p>
-          {{ project.description }}
+          {{  project.description }}
         </p>
         <div class="cards">
           <mat-card *ngFor="let card of project.techStack">

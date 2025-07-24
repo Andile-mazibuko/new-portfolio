@@ -50,6 +50,7 @@
 <div class="route-cont">
   <router-outlet></router-outlet>
 </div>
+
 <!--
 <div class="footer">
   <div class="dev-info">
@@ -57,7 +58,11 @@
   </div>
 </div>
 -->
-<div class="weather"></div>
+<div class="weather">
+  <div *ngIf="!isDark" class="crater crater1"></div>
+  <div *ngIf="!isDark" class="crater crater2"></div>
+  <div *ngIf="!isDark" class="crater crater3"></div>
+</div>
 
 <div *ngIf="!isDark" class="witch night">
   <img src="assets/images/witch.svg" alt="" />

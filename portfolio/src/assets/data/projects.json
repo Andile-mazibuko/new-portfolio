@@ -47,7 +47,7 @@
   {
     "name": "Tick Tack Toe",
     "description": "A classic Tic Tac Toe Android app developed in Java. Includes two-player mode, win detection, score tracking, and reset functionality. Designed with a clean UI, it's lightweight, responsive, and perfect for casual play",
-    "repoLink": "https://github.com/Andile-mazibuko/ATECH",
+    "repoLink": "",
     "liveLink": "",
     "live": false,
     "projectTpe": "Mobile",
@@ -59,6 +59,23 @@
     "filePaths": [
       "assets/images/projects/p3/p1.png",
       "assets/images/projects/p3/p2.png"
+    ]
+  },
+  {
+    "name": "Note taking App",
+    "description": "A classic Tic Tac Toe Android app developed in Java. Includes two-player mode, win detection, score tracking, and reset functionality. Designed with a clean UI, it's lightweight, responsive, and perfect for casual play",
+    "repoLink": "",
+    "liveLink": "",
+    "live": false,
+    "projectTpe": "Mobile",
+    "techStack": [
+      { "icon": "code", "name": "Android Studio" },
+      { "icon": "code", "name": "Java" }
+
+    ],
+    "filePaths": [
+      "assets/images/projects/p5/p1.png",
+      "assets/images/projects/p5/p2.png"
     ]
   }
 ]

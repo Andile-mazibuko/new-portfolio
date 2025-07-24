@@ -4,8 +4,8 @@
   // Default theme colors(dark-mode)
   --bg-color: linear-gradient(
     180deg,
-    rgba(12, 14, 22, 0.78),
-    rgba(29, 29, 29, 0.562)
+    rgba(5, 7, 14, 0.799),
+    rgba(29, 29, 29, 0.599)
   );
   --font-color: rgb(255, 255, 255);
   --sec-font-color: rgba(145, 145, 145, 0.945);
@@ -25,14 +25,17 @@
   --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),
     0 0 100px rgba(0, 247, 255, 0.4);
   --theme-icon: #ffd900;
-  --theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
-    0 0 100px rgba(255, 251, 0, 0.4);
+  /*--theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
+    0 0 100px rgba(255, 251, 0, 0.4);*/
+  --theme-shadow: 0 0 40px 10px #ffffff88,
+        inset -10px -10px 30px #dcdcdc,
+        inset 10px 10px 20px #ffffffcc;;
   --weather-colors: radial-gradient(
     circle at 30% 30%,
     #ffffff,
-    #858585,
-    rgb(78, 78, 78),
-    #949494
+    #ffffff,
+    rgb(77, 77, 77),
+    #979797f6
   );
   --footer-background: rgb(27, 27, 27);
 }

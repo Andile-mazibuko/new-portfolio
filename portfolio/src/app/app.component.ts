@@ -4,6 +4,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { SocialsComponent } from './components/socials/socials.component';
+import { AboutComponent } from './components/about/about.component';
+import { MainComponent } from './components/main/main.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +17,7 @@ import { SocialsComponent } from './components/socials/socials.component';
     MatIconModule,
     CommonModule,
     RouterLink,
-    SocialsComponent,
+    SocialsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
