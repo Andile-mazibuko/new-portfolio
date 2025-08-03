@@ -27,9 +27,9 @@
   --theme-icon: #ffd900;
   /*--theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
     0 0 100px rgba(255, 251, 0, 0.4);*/
-  --theme-shadow: 0 0 40px 10px #ffffff88,
+  /*--theme-shadow: 0 0 40px 10px #ffffff88,
         inset -10px -10px 30px #dcdcdc,
-        inset 10px 10px 20px #ffffffcc;;
+        inset 10px 10px 20px #ffffffcc;*/
   --weather-colors: radial-gradient(
     circle at 30% 30%,
     #ffffff,
@@ -37,8 +37,11 @@
     rgb(77, 77, 77),
     #979797f6
   );
+  --theme-shadow: 0 0 500px rgb(196, 196, 196), 0 0 100px rgb(255, 255, 255);
   --footer-background: rgb(27, 27, 27);
 }
+
+
 .light-theme {
   --bg-color: linear-gradient(
     180deg,
@@ -208,5 +211,13 @@ p {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes rotate360 {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }

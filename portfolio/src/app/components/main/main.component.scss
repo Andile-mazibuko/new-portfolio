@@ -32,15 +32,17 @@ h1 {
 }
 .img-area {
   position: relative;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   margin-top: 8%;
   align-items: center;
-  animation: rightToLeft 1s ease-in-out;
+  animation: rightToLeft 1s ease-in-out,rotateSkills 10s normal;;
+  //background-color: yellow;
+  padding: 20px;
 }
 img {
   height: 100%;
-  animation: rgbLight 3s infinite linear;
+  animation: rgbLight 3s infinite linear,rotateImage 10s  normal;
   opacity: 0.9;
 }
 
@@ -48,7 +50,46 @@ img {
   width: 100%;
   //background-color: red;
 }
+.skill-cont {
+  background-color: rgba(0, 0, 71, 0.445);
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle();
+  animation: rotateImage 10s normal, floatEffect 1s ease-in-out infinite;
+}
+.skill-cont:nth-child(3),.skill-cont:nth-child(2){
+  animation: rotateImage 10s normal, floatEffect 2s ease-in-out infinite;
+}
 
+.skill-cont img {
+  width: 30px;
+  height: 30px;
+  animation: none;
+}
+.top-right {
+  right: 0;
+  top: 0;
+}
+.top-left {
+  left: 0%;
+  top: 0%;
+}
+.bott-left {
+  left: 0%;
+  bottom: 0%;
+}
+
+.bott-right {
+  right: 0%;
+  bottom: 0%;
+}
 ::ng-deep .dialogClass .mat-dialog-container {
   background-color: red !important;
   border-radius: 8px;
@@ -76,12 +117,18 @@ img {
     justify-content: center;
     align-items: end; //TODO: SET TO BOTTOM
     margin-top: 0;
+    padding: 0;
+    animation: rightToLeft 1s ease-in-out;
   }
   .socials {
     margin: 10% auto;
   }
   img {
     height: 70%;
+    animation: rgbLight 3s infinite linear,;
+  }
+  .skill-cont{
+    display: none;
   }
   i {
     font-size: x-large;
@@ -108,5 +155,33 @@ img {
   }
   100% {
     color: #fff;
+  }
+}
+@keyframes moveTopright {
+  0% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
+  100% {
+    background-color: red;
+    right: 0;
+    top: 0;
+  }
+}
+@keyframes rotateSkills {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateImage {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

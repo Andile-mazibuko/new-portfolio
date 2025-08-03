@@ -38,7 +38,7 @@
       </div>
       <div class="about-proj">
         <h1 class="number subtitle center">{{ formatNumber(i+1)}}</h1>
-        <h1 class="subtitle center">{{ project.name }}</h1>
+        <h1 class="subtitle center" [id]="project.name">{{ project.name }}</h1>
         <p>
           {{  project.description }}
         </p>

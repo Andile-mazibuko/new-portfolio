@@ -33,6 +33,7 @@ import {
 export class EmailComponent implements OnInit {
   //email?: Email;
   formGroup!: FormGroup;
+  isVisible!: boolean ; // close button
 
   constructor(
     private fb: FormBuilder,
@@ -46,6 +47,10 @@ export class EmailComponent implements OnInit {
       subject: [''],
       message: ['', Validators.required],
     });
+    //console.log("ISVISIBLE VALUE", this.isVisible);
+  }
+  ngAfterViewInit(){
+    //
   }
 
   closeForm(): void {
@@ -53,7 +58,6 @@ export class EmailComponent implements OnInit {
   }
 
   sendEmail(): void {
-
     this.snackBar.open('Email sent ', '', {
       duration: 3000,
       verticalPosition: 'top',

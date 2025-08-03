@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EmailComponent } from '../email/email.component';
 import { AboutService } from '../../services/about.service';
 import { About } from '../../models/Models';
@@ -12,15 +12,20 @@ import { SocialsComponent } from '../socials/socials.component';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  @ViewChild(EmailComponent) child!: EmailComponent;
+
   constructor(private aboutServ: AboutService) {}
   about!: About;
 
   ngOnInit(): void {
+   
     this.aboutServ.setUserAbout(); //Just in case someone uses the search-bar to access this route
 
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
       this.about = resp;
       //console.log(this.about);
     });
+     //this.child.isVisible = false
   }
+  
 }

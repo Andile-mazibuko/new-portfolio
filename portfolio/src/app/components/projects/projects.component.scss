@@ -30,7 +30,7 @@
 .project {
   //position: absolute;
   width: 80%;
-  margin: 5% auto;
+  margin: 2.5% auto;
   display: flex;
   justify-content: center;
   //height: 550px;
@@ -41,7 +41,7 @@
 .project:nth-child(even) {
   flex-direction: row-reverse;
 }
-.project:nth-child(even) .about-proj p{
+.project:nth-child(even) .about-proj p {
   margin-left: auto;
   margin-right: 15%;
 }
@@ -61,7 +61,7 @@
   margin: 1%;
   border-radius: 10px;
 }
-.second-pic{
+.second-pic {
   width: 100%;
   position: absolute;
   background: var(--nav-bg-color);
@@ -77,9 +77,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  animation: moveCardsUp 4s ease-in-out;
+}
+.media-cont:hover img {
   animation: moveCardsUp 1s ease-in-out;
 }
-
 .about-proj {
   width: 50%;
   // background-color: red;
