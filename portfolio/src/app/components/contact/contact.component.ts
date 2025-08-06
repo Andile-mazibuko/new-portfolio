@@ -13,6 +13,7 @@ import { SocialsComponent } from '../socials/socials.component';
 })
 export class ContactComponent implements OnInit {
   @ViewChild(EmailComponent) child!: EmailComponent;
+  isDisabledVal = true
 
   constructor(private aboutServ: AboutService) {}
   about!: About;

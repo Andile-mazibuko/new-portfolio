@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, Input, OnInit, Optional } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,8 +32,9 @@ import {
 })
 export class EmailComponent implements OnInit {
   //email?: Email;
+   @Input() isDisabled = false
   formGroup!: FormGroup;
-  isVisible!: boolean ; // close button
+  //isVisible!: boolean ; // close button
 
   constructor(
     private fb: FormBuilder,
@@ -47,10 +48,10 @@ export class EmailComponent implements OnInit {
       subject: [''],
       message: ['', Validators.required],
     });
-    //console.log("ISVISIBLE VALUE", this.isVisible);
-  }
-  ngAfterViewInit(){
-    //
+    if(this.isDisabled){
+      document.getElementById('close-form')?.classList.add('no-display')
+    }
+
   }
 
   closeForm(): void {

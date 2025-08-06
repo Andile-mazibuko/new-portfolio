@@ -117,8 +117,11 @@ mat-progress-bar {
   width: 80% !important;
 }
 .mobile-tech-stack {
-  display: none !important;
+  display: flex !important;
 }
+mat-tab-group {
+    display: none;
+  }
 
 @media (max-width: 820px) {
   .intro {

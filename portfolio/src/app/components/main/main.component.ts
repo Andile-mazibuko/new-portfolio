@@ -70,7 +70,7 @@ export class MainComponent implements OnInit {
 
       let randomSkill: Skill = this.userSkills[randomN];
       // Check if skill is already in an array and generate a new one if true
-      if (this.displaySkills.some((skill) => skill == randomSkill)) {
+      if (this.displaySkills.some((skill) => skill === randomSkill)) {
         i--;
       } else {
         this.displaySkills.push(randomSkill);
@@ -79,9 +79,4 @@ export class MainComponent implements OnInit {
     }
   }
 
-  loopSkillsRearrangements(): void {
-    this.intervalId = setInterval(() => {
-      this.reArrangeSkills();
-    }, 5000);
-  }
 }
