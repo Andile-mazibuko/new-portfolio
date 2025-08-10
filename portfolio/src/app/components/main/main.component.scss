@@ -36,13 +36,13 @@ h1 {
   display: flex;
   margin-top: 8%;
   align-items: center;
-  animation: rightToLeft 1s ease-in-out,rotateSkills 10s normal;;
+  animation: rightToLeft 1s ease-in-out, rotateSkills 10s normal;
   //background-color: yellow;
   padding: 20px;
 }
 img {
   height: 100%;
-  animation: rgbLight 3s infinite linear,rotateImage 10s  normal;
+  animation: rgbLight 3s infinite linear, rotateImage 10s normal;
   opacity: 0.9;
 }
 
@@ -63,8 +63,16 @@ img {
   justify-content: center;
   clip-path: circle();
   animation: rotateImage 10s normal, floatEffect 1s ease-in-out infinite;
+  transition: ease-in-out 0.5s;
 }
-.skill-cont:nth-child(3),.skill-cont:nth-child(2){
+
+.skill-cont:hover {
+  width: 80px;
+  height: 80px;
+  transition: ease-in-out 0.5s;
+}
+.skill-cont:nth-child(3),
+.skill-cont:nth-child(2) {
   animation: rotateImage 10s normal, floatEffect 2s ease-in-out infinite;
 }
 
@@ -95,6 +103,25 @@ img {
   border-radius: 8px;
   padding: 20px;
 }
+.skill-cards{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+.skill-cards mat-card{
+  width: fit-content;
+  padding: 0 5%;
+  margin: 0 .5%;
+  animation: typing 1s ease-in-out;
+  background: var(--card-color);
+  color: var(--font-color) !important;
+  animation: bounce 1s ease-in-out infinite !important;
+  
+}
+.skill-cards mat-card:nth-child(even){
+  animation: bounce 2s ease-in-out infinite !important;
+}
 
 // Tablet devices(not tilted)
 @media (max-width: 820px) {
@@ -107,6 +134,7 @@ img {
     height: 40vh;
     width: 100vw;
     display: flex;
+    margin-top: 5%;
     justify-content: center;
     align-items: center;
     margin-left: 0;
@@ -125,14 +153,17 @@ img {
   }
   img {
     height: 70%;
-    animation: rgbLight 3s infinite linear,;
+    animation: rgbLight 3s infinite linear;
   }
-  .skill-cont{
+  .skill-cont {
     display: none;
   }
   i {
     font-size: x-large;
     margin: 30px 5px;
+  }
+  h1{
+    overflow: visible;
   }
 }
 
@@ -183,5 +214,13 @@ img {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }

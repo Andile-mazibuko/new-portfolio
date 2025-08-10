@@ -7,6 +7,7 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { AboutComponent } from './components/about/about.component';
 import { MainComponent } from './components/main/main.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     MatIconModule,
     CommonModule,
     RouterLink,
-    SocialsComponent
+    SocialsComponent,
+    MatCardModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -29,6 +31,7 @@ export class AppComponent {
   toogleTheme() {
     const body = document.body;
     const themeBtn = document.getElementById('themeBtn');
+    const weather = document.getElementById('weather');
     this.isDark = !this.isDark;
 
     //add-lightTheme
@@ -37,6 +40,13 @@ export class AppComponent {
     } else {
       body.classList.remove('light-theme');
       themeBtn?.classList.add('add-lightTheme');
+    }
+    // AIM: Restart the animation
+    if (weather) {
+      weather.classList.remove('weather');
+      weather.classList.add('weather');
+      weather.style.animation =
+        'moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite';
     }
   }
 }

@@ -15,6 +15,7 @@ export class AboutService {
     lastName: '',
     birthDay: '',
     ambition: '',
+    summary: '',
     profession: '',
     cellphone: '',
     email: '',
@@ -37,7 +38,7 @@ export class AboutService {
       });
   }
   getUserAbout(): Observable<About> {
-    //this.setUserAbout()
+    this.setUserAbout()
     return this.aboutSubject;
   }
 }

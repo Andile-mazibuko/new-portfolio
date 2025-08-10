@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { CardSkill, Experience, Skill } from '../../models/Models';
+import { About, CardSkill, Experience, Skill } from '../../models/Models';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ExperienceService } from '../../services/experience.service';
@@ -30,15 +30,17 @@ export class AboutComponent implements OnInit {
   backEndSkills: Skill[] = [];
   tools: Skill[] = [];
   allSkills: Skill[] = []; // To be used for mobile devices only
+  about!: About
 
   //My passion - displayed on the home route
   smallDescription =
     'Full Stack Developer passionate about building modern web experiences';
 
-  constructor(private exp: ExperienceService, private about: AboutService) {}
+  constructor(private exp: ExperienceService, private aboutServ: AboutService) {}
 
   ngOnInit(): void {
     this.getSkiils();
+    this.getUserAbout()
     // add skills on init
     this.skills = [
       {
@@ -73,11 +75,16 @@ export class AboutComponent implements OnInit {
   }
 
   getSkiils(): void {
-    this.about.getSkills().subscribe((data: Skill[]) => {
+    this.aboutServ.getSkills().subscribe((data: Skill[]) => {
       this.allSkills = data;
       this.frontEndSkills = data.filter((skill) => skill.type === 'frontend');
       this.backEndSkills = data.filter((skill) => skill.type === 'backend');
       this.tools = data.filter((skill) => skill.type === 'tool');
     });
+  }
+  getUserAbout(): void{
+    this.aboutServ.getUserAbout().subscribe(data =>{
+      this.about = data
+    })
   }
 }
