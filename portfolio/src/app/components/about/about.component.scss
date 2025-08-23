@@ -113,6 +113,8 @@ mat-icon {
   background-color: var(--nav-bg-color);
   color: var(--sec-font-color) !important;
   margin: 0.5%;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 .exp-section .cards mat-card {
   background: var(--card-sec-color) !important;
@@ -146,6 +148,8 @@ mat-card-subtitle {
   width: 15%;
   background-color: var(--nav-bg-color);
   margin: 1%;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 
 .skills mat-card img {
