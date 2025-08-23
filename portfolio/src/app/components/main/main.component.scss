@@ -1,15 +1,19 @@
+.cont{
+  overflow: visible;
+}
+
 .content {
   position: relative;
   z-index: 1;
-  height: 90vh;
+  height: 75vh;
   width: 50vw;
   margin-left: 10%;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0 20px;
-  position: relative;
   animation: leftToRight 1s ease-in-out;
   overflow: hidden;
   z-index: 2;
@@ -34,7 +38,7 @@ h1 {
   position: relative;
   height: 55vh;
   display: flex;
-  margin-top: 8%;
+  margin-top: 6%;
   align-items: center;
   animation: rightToLeft 1s ease-in-out, rotateSkills 10s normal;
   //background-color: yellow;
@@ -115,6 +119,8 @@ img {
   margin: 0 .5%;
   animation: typing 1s ease-in-out;
   background: var(--card-color);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   color: var(--font-color) !important;
   animation: bounce 1s ease-in-out infinite !important;
   

@@ -9,7 +9,7 @@
   );
   --font-color: rgb(255, 255, 255);
   --sec-font-color: rgba(145, 145, 145, 0.945);
-  --nav-bg-color: rgba(12, 14, 22, 0.5);
+  --nav-bg-color: rgba(105, 105, 105, 0.15);
   --btn-color: linear-gradient(
     45deg,
     rgba(0, 255, 149, 0.2),
@@ -51,7 +51,7 @@
   --font-color: rgb(10, 10, 10);
   --sec-font-color: rgb(0, 57, 83);
   --btn-color: rgb(0, 3, 192);
-  --nav-bg-color: rgba(168, 178, 211, 0.404);
+  --nav-bg-color: rgba(168, 178, 211, 0.15);
   --link-color: rgb(10, 10, 10, 0.4);
   --bg-gradient: linear-gradient(
     45deg,
@@ -116,6 +116,8 @@ body::-webkit-scrollbar {
 }
 button {
   background: var(--btn-color) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   margin: 0 10px;
   color: white !important;
 }
