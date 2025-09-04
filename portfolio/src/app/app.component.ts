@@ -19,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     RouterLink,
     SocialsComponent,
-    MatCardModule,
+    MatCardModule,MainComponent,AboutComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,5 +1,6 @@
 .cont {
   margin-top: 55px;
+  //background-color: red;
 }
 .intro {
   width: 90%;
@@ -63,20 +64,23 @@ mat-icon {
   color: var(--font-color);
   //display: flex !important;
   //align-items: center;
+  width: 100%;
   justify-content: space-evenly !important;
 }
 .category mat-card mat-icon {
   width: 20%;
+  margin: 0 5%;
   font-size: x-large;
   position: relative;
 }
 .category mat-card h2 {
-  width: 70%;
+  width: 75%;
   height: fit-content;
-  background-color: #fff;
+  // background-color: #fff;
   margin: 0 auto;
   align-items: center;
-  font-size: medium;
+  font-size: small;
+  font-style: oblique;
   position: relative;
 }
 .category-title {
@@ -84,7 +88,7 @@ mat-icon {
   height: 100%;
   align-items: center;
   justify-content: space-evenly !important;
-  background-color: red;
+  //background-color: red;
 }
 .category ul li {
   color: var(--sec-font-color);
@@ -129,6 +133,8 @@ mat-card-subtitle {
 }
 .skills-tab {
   margin-top: 70px;
+  width: 100%;
+  //background-color: red;
 }
 .tab-title {
   color: var(--sec-font-color);
@@ -138,28 +144,35 @@ mat-card-subtitle {
 }
 
 .skills-cont {
-  margin-left: 15%;
+  //margin-left: 15%;
   margin-top: 2%;
-  width: 70%;
+  width: 100%;
+  //background-color: red;
   flex-wrap: wrap;
 }
 
 .skills-cont mat-card {
-  width: 15%;
+  width: 12%;
   background-color: var(--nav-bg-color);
-  margin: 1%;
+  margin: 0.5%;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
 }
 
-.skills mat-card img {
+.skills-cont mat-card img {
   width: 90%;
   margin-left: 5%;
-  background-color: red;
+  margin-top: auto;
 }
-
+.profficiency{
+ // position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: auto;
+}
 mat-progress-bar {
-  margin: 5% 10%;
+  margin: 5% 0%;
   width: 80% !important;
 }
 .mobile-tech-stack {

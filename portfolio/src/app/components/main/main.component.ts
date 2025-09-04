@@ -21,7 +21,17 @@ export class MainComponent implements OnInit {
     private ngZone: NgZone,
     private changeDetector: ChangeDetectorRef
   ) {}
-  about!: About;
+  about: About = {
+    firstName: '',
+    address: '',
+    birthDay: '',
+    cellphone: '',
+    email: '',
+    lastName: '',
+    ambition: '',
+    profession: '',
+    summary: '',
+  };
   userSkills: Skill[] = [];
   displaySkills: Skill[] = [];
   numbers: number[] = [];
@@ -34,15 +44,14 @@ export class MainComponent implements OnInit {
     });
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
-      const nameCardCont = document.getElementById('nameCardCont')
-      if(nameCardCont){
-
-        nameCardCont.style.animation = 'none'
+      const nameCardCont = document.getElementById('nameCardCont');
+      if (nameCardCont) {
+        nameCardCont.style.animation = 'none';
       }
-      
+
       this.reArrangeSkills();
-      nameCardCont!.style.animation = 'opacityTrans 3s ease-in-out'
-      
+      nameCardCont!.style.animation = 'opacityTrans 3s ease-in-out';
+
       //this.loopSkillsRearrangements()
     });
 

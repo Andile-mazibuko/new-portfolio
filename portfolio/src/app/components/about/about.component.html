@@ -24,15 +24,16 @@
           <mat-icon class="center">contact_page</mat-icon>Professional summary
         </h2>
         <p>
-          {{about.summary}}
+          {{ about.summary }}
         </p>
         <div class="about-summary center">
           <div class="category">
             <mat-card>
               <div class="category-title center">
                 <mat-icon>engineering</mat-icon>
-              <h2 class="center">Professional Summary</h2>
-            </div></mat-card>
+                <h2 class="center">Professional Summary</h2>
+              </div></mat-card
+            >
             <ul>
               <li>Computer Science Graduate</li>
               <li>Software Developer</li>
@@ -41,10 +42,32 @@
             </ul>
           </div>
           <div class="category">
-            <mat-card><mat-icon>fitness_center</mat-icon><h2>Skills & Strengths</h2></mat-card>
+            <mat-card>
+              <div class="category-title center">
+                <mat-icon>engineering</mat-icon>
+                <h2 class="center">Professional Summary</h2>
+              </div></mat-card
+            >
+            <ul>
+              <li>Computer Science Graduate</li>
+              <li>Software Developer</li>
+              <li>Full Stack Development</li>
+              <li>Passionate About Tech</li>
+            </ul>
           </div>
           <div class="category">
-            <mat-card class="center"> <mat-icon>gamepad</mat-icon> <h2>Personal Interests</h2></mat-card>
+            <mat-card>
+              <div class="category-title center">
+                <mat-icon>engineering</mat-icon>
+                <h2 class="center">Professional Summary</h2>
+              </div></mat-card
+            >
+            <ul>
+              <li>Computer Science Graduate</li>
+              <li>Software Developer</li>
+              <li>Full Stack Development</li>
+              <li>Passionate About Tech</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -159,10 +182,13 @@
           <mat-card-subtitle class="center">
             {{ skill.name }}
           </mat-card-subtitle>
-          <mat-progress-bar
-            mode="determinate"
-            [value]="skill.percentage"
-          ></mat-progress-bar>
+          <div class="profficiency">
+            <mat-progress-bar
+              mode="determinate"
+              [value]="skill.percentage"
+            ></mat-progress-bar>
+            <p>{{ skill.percentage }}%</p>
+          </div>
         </mat-card>
       </div>
     </div>
