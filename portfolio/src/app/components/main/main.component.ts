@@ -36,8 +36,19 @@ export class MainComponent implements OnInit {
   displaySkills: Skill[] = [];
   numbers: number[] = [];
   intervalId: any;
+  displaySkill: Skill = this.displaySkills[0]
+
+  // random number containers
+  randLeft!: string;
+  randTop!: string;
+  randDisplay: number = 0;
 
   ngOnInit(): void {
+    this.randLeft = 10 + Math.floor(Math.random() * 90)- 10 + '%';
+    this.randTop = Math.floor(Math.random() * 90) + '%';
+    this.randDisplay = Math.floor(Math.random() * 4);
+    
+
     this.aboutServ.setUserAbout();
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
       this.about = resp;
@@ -50,6 +61,7 @@ export class MainComponent implements OnInit {
       }
 
       this.reArrangeSkills();
+      this.displaySkill = this.displaySkills[this.randDisplay]
       nameCardCont!.style.animation = 'opacityTrans 3s ease-in-out';
 
       //this.loopSkillsRearrangements()
@@ -58,9 +70,12 @@ export class MainComponent implements OnInit {
     this.ngZone.runOutsideAngular(() => {
       this.intervalId = setInterval(() => {
         this.reArrangeSkills();
+        this.displaySkill = this.displaySkills[this.randDisplay]
+        this.randLeft = Math.floor(Math.random() * 90) + '%';
+        this.randTop = 10 + Math.floor(Math.random() * 90) + '%'; // to not display anything above the nav bar
         //console.log(this.displaySkills)
         this.changeDetector.detectChanges(); // Detect changes and update the array on html side
-      }, 5000);
+      }, 2000);
     });
   }
   ngOnDestroy(): void {

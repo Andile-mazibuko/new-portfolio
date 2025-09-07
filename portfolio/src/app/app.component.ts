@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,6 +25,11 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  @ViewChild('homeRoute') home!: ElementRef;
+  @ViewChild('aboutRoute') about!: ElementRef;
+  @ViewChild('contactRouter') contact!: ElementRef;
+  @ViewChild('projectsRoute') projects!: ElementRef;
+  
   name: string = 'Andile Mazibuko';
   isDark: boolean = false;
 
@@ -48,5 +53,8 @@ export class AppComponent {
       weather.style.animation =
         'moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite';
     }
+  }
+  isRouteActive(){
+    
   }
 }
