@@ -3,10 +3,10 @@
     <h1 class="h1">Hey, I'm {{ about.firstName + " " + about.lastName }}</h1>
     <p>{{ about.ambition }}</p>
     <div class="skill-cards center" id="nameCardCont">
-      <mat-card>{{displaySkills[0].name}}</mat-card>
-      <mat-card>{{displaySkills[1].name}}</mat-card>
-      <mat-card>{{displaySkills[2].name}}</mat-card>
-      <mat-card>{{displaySkills[3].name}}</mat-card>
+      <mat-card>{{displaySkills[0]?.name}}</mat-card>
+      <mat-card>{{displaySkills[1]?.name}}</mat-card>
+      <mat-card>{{displaySkills[2]?.name}}</mat-card>
+      <mat-card>{{displaySkills[3]?.name}}</mat-card>
     </div>
     <div class="btn-cont">
       <button mat-button class="btn">Download CV</button>
@@ -20,20 +20,20 @@
   </div>
   <div class="img-area">
     <div class="skill-cont top-left">
-      <img [src]="displaySkills[0].path" alt="" />
+      <img [src]="displaySkills[0]?.path" alt="" />
     </div>
     <div class="skill-cont top-right">
-      <img [src]="displaySkills[1].path" alt="" />
+      <img [src]="displaySkills[1]?.path" alt="" />
     </div>
     <div class="skill-cont bott-left">
-      <img [src]="displaySkills[2].path" alt="" />
+      <img [src]="displaySkills[2]?.path" alt="" />
     </div>
     <div class="skill-cont bott-right">
-      <img [src]="displaySkills[3].path" alt="" />
+      <img [src]="displaySkills[3]?.path" alt="" />
     </div>
     <img src="assets/images/copy.png" alt="" />
   </div>
-  <div [style.left]="randLeft" [style.top]="randTop" class="skill-cont random-skill center">
-      <img [src]="displaySkill.path" alt="" />
+  <div [style.left]="randLeft" [style.top]="randTop" class="random-skill center">
+      <img [src]="displaySkill?.path" alt="" />
   </div>
 </div>

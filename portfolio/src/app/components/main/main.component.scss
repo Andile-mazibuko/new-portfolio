@@ -138,7 +138,7 @@ img {
 }
 // only appear on mobile device
 .random-skill {
-  display: none;
+  display: none !important;
 }
 // Tablet devices(not tilted)
 @media (max-width: 820px) {
@@ -185,8 +185,8 @@ img {
   // Will only appear on mobile devices
   .random-skill {
     position: absolute;
-    width: 100px !important;
-    //height: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
     background-color: transparent !important;
     overflow: hidden !important;
     z-index: 10; // above all
@@ -194,6 +194,9 @@ img {
     align-items: center;
     //background-color: red;
     animation: pop-up 0.4s !important;
+  }
+  .random-skill img{
+    animation: none !important;
   }
 }
 

@@ -44,15 +44,16 @@ export class MainComponent implements OnInit {
   randDisplay: number = 0;
 
   ngOnInit(): void {
+    this.aboutServ.setUserAbout();
+    this.aboutServ.getUserAbout().subscribe((resp: About) => {
+      this.about = resp;
+    });
     this.randLeft = 10 + Math.floor(Math.random() * 90)- 10 + '%';
     this.randTop = Math.floor(Math.random() * 90) + '%';
     this.randDisplay = Math.floor(Math.random() * 4);
     
 
-    this.aboutServ.setUserAbout();
-    this.aboutServ.getUserAbout().subscribe((resp: About) => {
-      this.about = resp;
-    });
+    
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
       const nameCardCont = document.getElementById('nameCardCont');
