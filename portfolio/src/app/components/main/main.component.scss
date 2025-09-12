@@ -140,6 +140,14 @@ img {
 .random-skill {
   display: none !important;
 }
+.flip-cards{
+  width: 30%;
+  margin-left: 20%;
+  height: 20%;
+  background-color: red;
+  bottom: 20%;
+  position: absolute;
+}
 // Tablet devices(not tilted)
 @media (max-width: 820px) {
   .cont {

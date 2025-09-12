@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
   <a class="navbar-brand" routerLink="/"
-    ><span class="text-secondary">{{ name.split(' ')[0].toUpperCase() }}</span>{{ name.split(' ')[1].toUpperCase() }}<span class="text-primary">.</span></a
+    ><span class="text-secondary">{{ name.split(" ")[0].toUpperCase() }}</span
+    >{{ name.split(" ")[1].toUpperCase()
+    }}<span class="text-primary">.</span></a
   >
 
   <button
@@ -47,19 +49,19 @@
     </button>
   </div>
 </nav>
-<div class="route-cont">
-  <router-outlet></router-outlet>
-</div>
-
-<!--
-<div class="footer">
-  <div class="dev-info">
-    <p>© 2025 Andile Mazibuko — Full Stack Developer</p>
+<div class="app-container">
+  <div class="route-cont">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+    <div class="dev-info">
+      <app-footer></app-footer>
+    </div>
   </div>
 </div>
--->
+
 <div class="weather" id="weather">
-  <img *ngIf="!isDark" src="assets/images/moon.png" alt="">
+  <img *ngIf="!isDark" src="assets/images/moon.png" alt="" />
 </div>
 
 <div *ngIf="!isDark" class="witch night">

@@ -76,7 +76,7 @@ export class MainComponent implements OnInit {
         this.randTop = 10 + Math.floor(Math.random() * 90) + '%'; // to not display anything above the nav bar
         //console.log(this.displaySkills)
         this.changeDetector.detectChanges(); // Detect changes and update the array on html side
-      }, 2000);
+      }, 5000);
     });
   }
   ngOnDestroy(): void {

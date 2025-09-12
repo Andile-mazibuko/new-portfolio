@@ -8,6 +8,8 @@ import { AboutComponent } from './components/about/about.component';
 import { MainComponent } from './components/main/main.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { MatCardModule } from '@angular/material/card';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     RouterLink,
     SocialsComponent,
-    MatCardModule,MainComponent,AboutComponent
+    MatCardModule,MainComponent,AboutComponent,FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
