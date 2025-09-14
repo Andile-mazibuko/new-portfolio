@@ -1,7 +1,9 @@
+
 .cont {
   overflow: hidden;
   width: 100%;
   position: fixed;
+  
 }
 .change-arr {
   width: 50%;
@@ -13,7 +15,7 @@
 .content {
   position: relative;
   z-index: 1;
-  height: 75vh;
+  height: 70vh;
   width: 50vw;
   margin-left: 10%;
   margin-top: 0;
@@ -25,7 +27,8 @@
   animation: leftToRight 1s ease-in-out;
   overflow: hidden;
   z-index: 2;
-  margin-bottom: 15vh;
+  margin-bottom: 15%;
+  //margin-bottom: 15vh;
 }
 
 p {
@@ -147,7 +150,7 @@ img {
   //background-color: var(--nav-bg-color);
   //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 10px;
-  bottom: 20%;
+  bottom: 10%;
   position: absolute;
   display: flex;
   //justify-content: space-evenly;
@@ -288,7 +291,10 @@ img {
   0% {
     bottom: -40%;
   }
-  100% {
+  50% {
     bottom: 20%;
+  }
+  100%{
+    bottom: 10%;
   }
 }

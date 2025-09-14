@@ -50,7 +50,7 @@ mat-icon {
 .footer {
   position: relative;
   display: flex;
-  margin-top: 0%;
+  margin-top: 10%;
   width: 100%;
   background-color: var(--nav-bg-color);
 }
@@ -77,13 +77,16 @@ a {
   color: var(--font-color) !important;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
-a:hover {
+a:hover , .active-route{
   color: var(--theme-icon) !important;
   font-size: x-large;
   font-weight: 900;
   animation: rgbLight 3s ease-in-out infinite;
   border-bottom: 1px solid var(--theme-icon);
   transition: transform 0.3s ease, font-size 0.3s ease;
+}
+.active-route{
+  animation: none;
 }
 .weather {
   position: absolute;

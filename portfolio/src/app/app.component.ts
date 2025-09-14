@@ -35,10 +35,6 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  @ViewChild('homeRoute') home!: ElementRef;
-  @ViewChild('aboutRoute') about!: ElementRef;
-  @ViewChild('contactRouter') contact!: ElementRef;
-  @ViewChild('projectsRoute') projects!: ElementRef;
   @ViewChild('Stars') stars!: ElementRef;
   name: string = 'Andile Mazibuko';
   isDark: boolean = false;
@@ -52,7 +48,7 @@ export class AppComponent implements OnInit {
   }
   ngAfterViewInit() {
     this.createRandomStars();
-    this.flashRandomStars()
+    this.flashRandomStars();
   }
 
   toogleTheme() {
@@ -106,14 +102,34 @@ export class AppComponent implements OnInit {
     }
   }
   flashRandomStars(): void {
-    this.createRandomIds()
-    this.randStars.forEach(starId => {
-      //console.log('STAR ID:',starId)
-      const div = document.getElementById(starId)
-      div!.style.background = 'yellow'
-      div!.style.zIndex = '10'
-      div!.style.position = 'fixed'
+    this.createRandomIds();
+    this.randStars.forEach((starId) => {
+      const div = document.getElementById(starId);
+      div!.style.background = 'yellow';
+      div!.style.zIndex = '10';
+      div!.style.position = 'fixed';
     });
   }
-  isRouteActive() {}
+  isRouteActive(route: string): void {
+    const clickedRoute = document.getElementById(route);
+    const navLinksNodeList = document.querySelectorAll('.nav-link'); // NodeList
+    navLinksNodeList.forEach((element) => {
+      console.log(element.id);
+    });
+    if (!clickedRoute) {
+      return;
+    }
+    //alert(route)
+
+    navLinksNodeList.forEach((element) => {
+      alert
+      if (element.id == route) {
+        element.classList.add('active-route');
+        
+        
+      }else{
+        element.classList.remove('active-route');
+      }
+    });
+  }
 }

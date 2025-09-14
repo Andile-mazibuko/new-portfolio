@@ -24,11 +24,16 @@
 }
 .sum-item h1,h2{
     width: 100%;
-    
+    color: grey;
     font-weight: 900;
 }
 h1{
     height: 50%;
     color: var(--weather-colors);
-    font-size: 80px;
+    font-size: 50px;
+}
+@media (max-width: 820px) {
+    *{
+        display: none !important;
+    }
 }

@@ -17,20 +17,20 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
       <li class="nav-item">
-        <a class="nav-link me-5" routerLink="/">Home</a>
+        <a class="nav-link me-5 active-route" routerLink="/" (click)="isRouteActive('home')" id="home">Home</a>
       </li>
       <li class="nav-item me-5">
-        <a class="nav-link" routerLink="/about">About</a>
+        <a class="nav-link" routerLink="/about" (click)="isRouteActive('about')" id="about">About</a>
       </li>
       <li class="nav-item me-5">
-        <a class="nav-link" routerLink="/projects">Projects</a>
+        <a class="nav-link" routerLink="/projects" (click)="isRouteActive('projects')" id="projects">Projects</a>
       </li>
       <!-- <li class="nav-item me-5">
         <a class="nav-link" routerLink="/exp">Experience</a>
       </li> -->
 
       <li class="nav-item me-5">
-        <a class="nav-link" routerLink="/contact">Contact</a>
+        <a class="nav-link" routerLink="/contact" (click)="isRouteActive('contact')" id="contact">Contact</a>
       </li>
     </ul>
 
