@@ -4,7 +4,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
 }
 .navbar-brand {
   font-style: bold;
@@ -13,6 +12,7 @@
   color: var(--font-color) !important;
   margin-left: 2%;
   animation: none;
+  z-index: 10; //above all
 }
 .theme-btn {
   background-color: var(--link-color) !important;
@@ -45,7 +45,7 @@ mat-icon {
   margin-top: 0%;
   z-index: 5;
   position: relative;
-  flex: 1
+  flex: 1;
 }
 .footer {
   position: relative;
@@ -91,6 +91,7 @@ a:hover {
   height: 80%;
   //background-color: rgba(201, 201, 201, 0.2);
   background: var(--weather-colors);
+  //z-index: -5;
   z-index: -5;
   top: 10%;
   left: 30%;
@@ -102,6 +103,7 @@ a:hover {
   animation: moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite;
   box-shadow: var(--theme-shadow);
   overflow: hidden !important;
+  opacity: 0.9;
 }
 .weather img {
   display: flex;
@@ -130,18 +132,14 @@ a:hover {
 .night img {
   transform: rotateY(180deg);
 }
-.starry-sky {
-  content: "";
+.stars-containter {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 55px;
-  background-image: radial-gradient(white 1px, transparent 1px),
-    radial-gradient(white 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
-  animation: moveStars 60s linear infinite;
-  opacity: 0.6;
+  opacity: .9;
   z-index: -6;
 }
 
@@ -309,25 +307,6 @@ a:hover {
   }
 }
 
-@keyframes moveStars {
-  from {
-    background-position: 0 0, 25px 25px;
-  }
-  to {
-    background-position: 1000px 1000px, 1025px 1025px;
-  }
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
 @keyframes move-clouds {
   0% {
     margin-bottom: -20%;
@@ -352,5 +331,19 @@ a:hover {
   }
   100% {
     margin-left: -100%;
+  }
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    background-color: red;
+    // opacity: 1;
+    // transform: scale(1);
+  }
+  50% {
+    background-color: white;
+    // opacity: 0.2;
+    // transform: scale(1.2);
   }
 }

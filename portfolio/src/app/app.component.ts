@@ -1,4 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +16,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './components/footer/footer.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,19 +26,34 @@ import { FooterComponent } from './components/footer/footer.component';
     CommonModule,
     RouterLink,
     SocialsComponent,
-    MatCardModule,MainComponent,AboutComponent,FooterComponent
+    MatCardModule,
+    MainComponent,
+    AboutComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   @ViewChild('homeRoute') home!: ElementRef;
   @ViewChild('aboutRoute') about!: ElementRef;
   @ViewChild('contactRouter') contact!: ElementRef;
   @ViewChild('projectsRoute') projects!: ElementRef;
-  
+  @ViewChild('Stars') stars!: ElementRef;
   name: string = 'Andile Mazibuko';
   isDark: boolean = false;
+  randStars: string[] = [];
+
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit(): void {
+    //throw new Error('Method not implemented.');
+    //Create 100 stars not equal in size
+  }
+  ngAfterViewInit() {
+    this.createRandomStars();
+    this.flashRandomStars()
+  }
 
   toogleTheme() {
     const body = document.body;
@@ -44,6 +64,7 @@ export class AppComponent {
     //add-lightTheme
     if (this.isDark) {
       body.classList.add('light-theme');
+      this.createRandomStars();
     } else {
       body.classList.remove('light-theme');
       themeBtn?.classList.add('add-lightTheme');
@@ -56,7 +77,43 @@ export class AppComponent {
         'moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite';
     }
   }
-  isRouteActive(){
-    
+  createRandomStars() {
+    for (let index = 0; index < 80; index++) {
+      const div = document.createElement('div');
+      div.id = `star_${index}`;
+      div.style.width = '5px';
+      div.style.height = '5px';
+      div.style.borderRadius = '2.5px';
+      div.style.background = '#ffffffff';
+      div.style.position = 'absolute';
+      div.style.left = Math.floor(Math.random() * 100) + '%';
+      div.style.top = Math.floor(Math.random() * 100) + '%';
+      div.style.animation = `flash 3s ease-in ${Math.random() * 3}s infinite`;
+      div.style.boxShadow = ' box-shadow: var(--theme-shadow)';
+      this.stars.nativeElement.appendChild(div);
+    }
   }
+  /**
+   * Generate random numbers to represent div ids
+   * @returns an array of formatterd random div ids
+   */
+  createRandomIds(): void {
+    for (let index = 0; index < 10; index++) {
+      const randDivId = 'star_' + Math.floor(Math.random() * 80);
+      if (!this.randStars.includes(randDivId)) {
+        this.randStars[index] = randDivId;
+      }
+    }
+  }
+  flashRandomStars(): void {
+    this.createRandomIds()
+    this.randStars.forEach(starId => {
+      //console.log('STAR ID:',starId)
+      const div = document.getElementById(starId)
+      div!.style.background = 'yellow'
+      div!.style.zIndex = '10'
+      div!.style.position = 'fixed'
+    });
+  }
+  isRouteActive() {}
 }

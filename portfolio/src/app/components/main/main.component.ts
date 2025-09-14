@@ -7,10 +7,11 @@ import { About, Skill } from '../../models/Models';
 import { SocialsComponent } from '../socials/socials.component';
 import { interval } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
+import { SummaryComponent } from '../summary/summary.component';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [MatButtonModule, MatDialogModule, SocialsComponent, MatCardModule],
+  imports: [MatButtonModule, MatDialogModule, SocialsComponent, MatCardModule,SummaryComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })

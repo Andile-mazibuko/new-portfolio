@@ -25,9 +25,9 @@
       <li class="nav-item me-5">
         <a class="nav-link" routerLink="/projects">Projects</a>
       </li>
-      <li class="nav-item me-5">
+      <!-- <li class="nav-item me-5">
         <a class="nav-link" routerLink="/exp">Experience</a>
-      </li>
+      </li> -->
 
       <li class="nav-item me-5">
         <a class="nav-link" routerLink="/contact">Contact</a>
@@ -70,7 +70,11 @@
 <div *ngIf="isDark" class="witch day">
   <img src="assets/images/witch.svg" alt="" />
 </div>
-<div *ngIf="!isDark" class="starry-sky"></div>
+<!-- Contain random stars *ngIf="!isDark"-->
+<div  class="stars-containter" #Stars></div>
+
+
+
 <div *ngIf="isDark" class="clouds-container">
   <div class="cloud">
     <img src="assets/images/cloud_1.png" alt="" />
