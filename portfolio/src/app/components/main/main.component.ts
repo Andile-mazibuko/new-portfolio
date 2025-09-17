@@ -1,4 +1,12 @@
-import { ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  NgZone,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { EmailComponent } from '../email/email.component';
@@ -8,36 +16,37 @@ import { SocialsComponent } from '../socials/socials.component';
 import { interval } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { SummaryComponent } from '../summary/summary.component';
+import { CategoriesComponent } from '../categories/categories.component';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [MatButtonModule, MatDialogModule, SocialsComponent, MatCardModule,SummaryComponent],
+  imports: [
+    MatButtonModule,
+    MatDialogModule,
+    SocialsComponent,
+    MatCardModule,
+    SummaryComponent,
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
 export class MainComponent implements OnInit {
+  @ViewChild('componentContainer', { read: ViewContainerRef })
+  componentContainer!: ViewContainerRef;
   constructor(
     private dialog: MatDialog,
     private aboutServ: AboutService,
     private ngZone: NgZone,
     private changeDetector: ChangeDetectorRef
   ) {}
-  about: About = {
-    firstName: '',
-    address: '',
-    birthDay: '',
-    cellphone: '',
-    email: '',
-    lastName: '',
-    ambition: '',
-    profession: '',
-    summary: '',
-  };
+  about!: About;
   userSkills: Skill[] = [];
   displaySkills: Skill[] = [];
   numbers: number[] = [];
   intervalId: any;
-  displaySkill: Skill = this.displaySkills[0]
+  displaySkill: Skill = this.displaySkills[0];
+  secondsCounter = 0;
+  summaryComponents = [CategoriesComponent, SummaryComponent];
 
   // random number containers
   randLeft!: string;
@@ -49,12 +58,10 @@ export class MainComponent implements OnInit {
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
       this.about = resp;
     });
-    this.randLeft = 10 + Math.floor(Math.random() * 90)- 10 + '%';
+    this.randLeft = 10 + Math.floor(Math.random() * 90) - 10 + '%';
     this.randTop = Math.floor(Math.random() * 90) + '%';
     this.randDisplay = Math.floor(Math.random() * 4);
-    
 
-    
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
       const nameCardCont = document.getElementById('nameCardCont');
@@ -63,20 +70,31 @@ export class MainComponent implements OnInit {
       }
 
       this.reArrangeSkills();
-      this.displaySkill = this.displaySkills[this.randDisplay]
+      this.displaySkill = this.displaySkills[this.randDisplay];
       nameCardCont!.style.animation = 'opacityTrans 3s ease-in-out';
-
-      //this.loopSkillsRearrangements()
     });
 
     this.ngZone.runOutsideAngular(() => {
       this.intervalId = setInterval(() => {
         this.reArrangeSkills();
-        this.displaySkill = this.displaySkills[this.randDisplay]
+        this.displaySkill = this.displaySkills[this.randDisplay];
         this.randLeft = Math.floor(Math.random() * 90) + '%';
         this.randTop = 10 + Math.floor(Math.random() * 90) + '%'; // to not display anything above the nav bar
         //console.log(this.displaySkills)
         this.changeDetector.detectChanges(); // Detect changes and update the array on html side
+        this.secondsCounter++;
+        if (this.secondsCounter % 2 === 0) {
+          this.componentContainer.clear();
+          if (this.secondsCounter - 2 >= this.summaryComponents.length) {
+             this.componentContainer.createComponent(
+              this.summaryComponents[0]
+            );
+          } else {
+            this.componentContainer.createComponent(
+              this.summaryComponents[this.secondsCounter - 2]
+            );
+          }
+        }
       }, 5000);
     });
   }
@@ -84,6 +102,9 @@ export class MainComponent implements OnInit {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
+  }
+  ngAfterViewInit() {
+    this.componentContainer.createComponent(SummaryComponent);
   }
 
   //Open Email Dialog box component

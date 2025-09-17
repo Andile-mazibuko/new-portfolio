@@ -50,9 +50,11 @@ mat-icon {
 .footer {
   position: relative;
   display: flex;
-  margin-top: 10%;
+  margin-top:20%;
   width: 100%;
   background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
 }
 nav {
   background-color: var(--nav-bg-color) !important;
@@ -95,7 +97,7 @@ a:hover , .active-route{
   //background-color: rgba(201, 201, 201, 0.2);
   background: var(--weather-colors);
   //z-index: -5;
-  z-index: -5;
+  z-index: -3;
   top: 10%;
   left: 30%;
   border: none;
@@ -142,8 +144,17 @@ a:hover , .active-route{
   top: 55px;
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
-  opacity: .9;
-  z-index: -6;
+  opacity: 1;
+  pointer-events: none;
+  z-index: -4;
+}
+.twinkle {
+  animation: twinkle 1s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: rotate(45deg) scale(1); }
+  50% { opacity: 0.2; transform: rotate(45deg) scale(1.3); }
 }
 
 .clouds-container {

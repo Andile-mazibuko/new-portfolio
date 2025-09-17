@@ -17,6 +17,7 @@
     <div class="socials">
       <app-socials></app-socials>
     </div>
+    
   </div>
   <div class="img-area">
     <div class="skill-cont top-left">
@@ -36,7 +37,9 @@
   <div [style.left]="randLeft" [style.top]="randTop" class="random-skill center">
       <img [src]="displaySkill?.path" alt="" />
   </div>
-</div>
- <div class="flip-cards">
-    <app-summary></app-summary>
+  <div class="flip-cards" >
+    <ng-container #componentContainer></ng-container>
+    <!-- <app-summary></app-summary> -->
   </div>
+</div>
+ 

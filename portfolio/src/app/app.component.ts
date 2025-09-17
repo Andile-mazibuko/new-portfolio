@@ -60,10 +60,12 @@ export class AppComponent implements OnInit {
     //add-lightTheme
     if (this.isDark) {
       body.classList.add('light-theme');
-      this.createRandomStars();
+      //this.createRandomStars();
+      this.stars.nativeElement.style.display = 'none'
     } else {
       body.classList.remove('light-theme');
       themeBtn?.classList.add('add-lightTheme');
+      this.stars.nativeElement.style.display = 'flex'
     }
     // AIM: Restart the animation
     if (weather) {
@@ -74,7 +76,7 @@ export class AppComponent implements OnInit {
     }
   }
   createRandomStars() {
-    for (let index = 0; index < 80; index++) {
+    for (let index = 0; index < 100; index++) {
       const div = document.createElement('div');
       div.id = `star_${index}`;
       div.style.width = '5px';
@@ -105,28 +107,28 @@ export class AppComponent implements OnInit {
     this.createRandomIds();
     this.randStars.forEach((starId) => {
       const div = document.getElementById(starId);
-      div!.style.background = 'yellow';
-      div!.style.zIndex = '10';
-      div!.style.position = 'fixed';
+      if(!div){
+        return
+      }
+      div.style.borderRadius = "0"
+      div.style.transform = 'rotate(45deg)'
+      div.style.background = 'yellow';
+      div.style.zIndex = '10';
+      div.style.position = 'fixed';
+      div.classList.add("twinkle")
     });
   }
   isRouteActive(route: string): void {
     const clickedRoute = document.getElementById(route);
     const navLinksNodeList = document.querySelectorAll('.nav-link'); // NodeList
-    navLinksNodeList.forEach((element) => {
-      console.log(element.id);
-    });
     if (!clickedRoute) {
       return;
     }
-    //alert(route)
 
     navLinksNodeList.forEach((element) => {
       alert
       if (element.id == route) {
         element.classList.add('active-route');
-        
-        
       }else{
         element.classList.remove('active-route');
       }

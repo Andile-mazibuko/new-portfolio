@@ -1,5 +1,5 @@
-*{
-    align-items: end;
+* {
+  align-items: end;
 }
 .sum-container {
   position: absolute;
@@ -16,24 +16,38 @@
 .sum-item {
   width: 30%;
   height: 80%;
-  display: block;
   border-radius: 10px;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.11111);
+  animation: flip-card 3s ease-in-out;
+  animation-delay: 8s;
 }
-.sum-item h1,h2{
-    width: 100%;
-    color: grey;
-    font-weight: 900;
+.sum-item h1,
+h2 {
+  width: 100%;
+  color: grey;
+  font-weight: 900;
 }
-h1{
-    height: 50%;
-    color: var(--weather-colors);
-    font-size: 50px;
+h1 {
+  height: 50%;
+  color: var(--weather-colors);
+  font-size: 50px;
 }
 @media (max-width: 820px) {
-    *{
-        display: none !important;
-    }
+  * {
+    display: none !important;
+  }
+}
+@keyframes flip-card {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+    margin-top: 10%;
+  }
+  100%{
+    transform: rotateX(90deg) translateY(40px);
+    opacity: 0;
+    margin-top: 50%;
+  }
 }
