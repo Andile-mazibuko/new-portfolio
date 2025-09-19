@@ -17,6 +17,7 @@ import { interval } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { SummaryComponent } from '../summary/summary.component';
 import { CategoriesComponent } from '../categories/categories.component';
+import { count } from 'node:console';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -52,6 +53,7 @@ export class MainComponent implements OnInit {
   randLeft!: string;
   randTop!: string;
   randDisplay: number = 0;
+  arrCount = 0;
 
   ngOnInit(): void {
     this.aboutServ.setUserAbout();
@@ -83,17 +85,23 @@ export class MainComponent implements OnInit {
         //console.log(this.displaySkills)
         this.changeDetector.detectChanges(); // Detect changes and update the array on html side
         this.secondsCounter++;
-        if (this.secondsCounter % 2 === 0) {
+
+        if (this.secondsCounter % 3 === 0) {
           this.componentContainer.clear();
-          if (this.secondsCounter - 2 >= this.summaryComponents.length) {
-             this.componentContainer.createComponent(
-              this.summaryComponents[0]
-            );
-          } else {
+
+          if (this.arrCount === this.summaryComponents.length-1) {
             this.componentContainer.createComponent(
-              this.summaryComponents[this.secondsCounter - 2]
+              this.summaryComponents[this.arrCount]
             );
+
+            this.arrCount = 0;
+          }else{
+            this.componentContainer.createComponent(
+              this.summaryComponents[this.arrCount]
+            );
+            this.arrCount++;
           }
+          
         }
       }, 5000);
     });

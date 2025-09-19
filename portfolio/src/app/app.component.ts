@@ -61,11 +61,11 @@ export class AppComponent implements OnInit {
     if (this.isDark) {
       body.classList.add('light-theme');
       //this.createRandomStars();
-      this.stars.nativeElement.style.display = 'none'
+      this.stars.nativeElement.style.display = 'none';
     } else {
       body.classList.remove('light-theme');
       themeBtn?.classList.add('add-lightTheme');
-      this.stars.nativeElement.style.display = 'flex'
+      this.stars.nativeElement.style.display = 'flex';
     }
     // AIM: Restart the animation
     if (weather) {
@@ -77,16 +77,50 @@ export class AppComponent implements OnInit {
   }
   createRandomStars() {
     for (let index = 0; index < 100; index++) {
+      const style = document.createElement('style');
+      const left = Math.floor(Math.random() * 100);
+      const top = Math.floor(Math.random() * 100);
+      const randFloat =  Math.floor(Math.random() * 200);
+      style.innerHTML = `
+      @keyframes twinkle {
+        0%, 100% 
+        { 
+          opacity: 1; transform: scale(1);
+          z-index: 5;
+          width: 5px;
+          height: 5px;
+        }
+        50% 
+        { 
+          opacity: 0.3; transform: scale(1.2); 
+          z-index: -6;
+          width: 8px;
+          height: 8px;
+        }
+      }
+      @keyframes star-float {
+        0%,100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(${randFloat}px);
+        }
+      }
+      `;
+
+      document.head.appendChild(style);
       const div = document.createElement('div');
       div.id = `star_${index}`;
       div.style.width = '5px';
       div.style.height = '5px';
-      div.style.borderRadius = '2.5px';
+      div.style.borderRadius = '50%';
       div.style.background = '#ffffffff';
       div.style.position = 'absolute';
-      div.style.left = Math.floor(Math.random() * 100) + '%';
-      div.style.top = Math.floor(Math.random() * 100) + '%';
-      div.style.animation = `flash 3s ease-in ${Math.random() * 3}s infinite`;
+      div.style.left = left + '%';
+      div.style.top = top + '%';
+      div.style.animation = `twinkle 3s ease-in ${
+        Math.random() * 3
+      }s infinite`;
       div.style.boxShadow = ' box-shadow: var(--theme-shadow)';
       this.stars.nativeElement.appendChild(div);
     }
@@ -96,7 +130,7 @@ export class AppComponent implements OnInit {
    * @returns an array of formatterd random div ids
    */
   createRandomIds(): void {
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 30; index++) {
       const randDivId = 'star_' + Math.floor(Math.random() * 80);
       if (!this.randStars.includes(randDivId)) {
         this.randStars[index] = randDivId;
@@ -107,15 +141,13 @@ export class AppComponent implements OnInit {
     this.createRandomIds();
     this.randStars.forEach((starId) => {
       const div = document.getElementById(starId);
-      if(!div){
-        return
+      if (!div) {
+        return;
       }
-      div.style.borderRadius = "0"
-      div.style.transform = 'rotate(45deg)'
-      div.style.background = 'yellow';
-      div.style.zIndex = '10';
-      div.style.position = 'fixed';
-      div.classList.add("twinkle")
+
+      div.style.animation = `twinkle 3s ease-in ${
+        Math.random() * 3
+      }s infinite ,star-float ${10+ Math.floor(Math.random() * 30)}s  ease-in ${Math.floor(Math.random() * 10)}s infinite`
     });
   }
   isRouteActive(route: string): void {
@@ -126,10 +158,10 @@ export class AppComponent implements OnInit {
     }
 
     navLinksNodeList.forEach((element) => {
-      alert
+      alert;
       if (element.id == route) {
         element.classList.add('active-route');
-      }else{
+      } else {
         element.classList.remove('active-route');
       }
     });

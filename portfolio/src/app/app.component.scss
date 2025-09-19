@@ -50,7 +50,7 @@ mat-icon {
 .footer {
   position: relative;
   display: flex;
-  margin-top:20%;
+  margin-top: 20%;
   width: 100%;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px) !important;
@@ -79,7 +79,8 @@ a {
   color: var(--font-color) !important;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
-a:hover , .active-route{
+a:hover,
+.active-route {
   color: var(--theme-icon) !important;
   font-size: x-large;
   font-weight: 900;
@@ -87,7 +88,7 @@ a:hover , .active-route{
   border-bottom: 1px solid var(--theme-icon);
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
-.active-route{
+.active-route {
   animation: none;
 }
 .weather {
@@ -97,7 +98,7 @@ a:hover , .active-route{
   //background-color: rgba(201, 201, 201, 0.2);
   background: var(--weather-colors);
   //z-index: -5;
-  z-index: -3;
+  z-index: -5;
   top: 10%;
   left: 30%;
   border: none;
@@ -137,7 +138,7 @@ a:hover , .active-route{
 .night img {
   transform: rotateY(180deg);
 }
-.stars-containter {
+.stars-container {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -146,15 +147,23 @@ a:hover , .active-route{
   background-position: 0 0, 25px 25px;
   opacity: 1;
   pointer-events: none;
-  z-index: -4;
+  z-index: -6;
+  inset: 0;
 }
 .twinkle {
   animation: twinkle 1s infinite ease-in-out;
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 1; transform: rotate(45deg) scale(1); }
-  50% { opacity: 0.2; transform: rotate(45deg) scale(1.3); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: rotate(45deg) scale(1.3);
+  }
 }
 
 .clouds-container {
@@ -352,12 +361,8 @@ a:hover , .active-route{
   0%,
   100% {
     background-color: red;
-    // opacity: 1;
-    // transform: scale(1);
   }
   50% {
     background-color: white;
-    // opacity: 0.2;
-    // transform: scale(1.2);
   }
 }
