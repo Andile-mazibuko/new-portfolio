@@ -111,6 +111,29 @@ a:hover,
   overflow: hidden !important;
   opacity: 0.9;
 }
+.change-theme-weather {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  background: var(--weather-colors);
+  z-index: -5;
+  top: 100%;
+  left: 100%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveThemeDown 2s ease-in;
+  box-shadow: var(--theme-shadow);
+  overflow: hidden !important;
+  opacity: 0.9;
+}
+/**
+ weather.style.left = '90%';
+weather.style.top = '70%';
+*/
+
 .weather img {
   display: flex;
   width: 200% !important;
@@ -281,13 +304,23 @@ a:hover,
 @keyframes moveUpTheme {
   0% {
     //top: 80%
-    left: 90%;
-    top: -10%;
+    left: -30%;
+    top: 100%;
   }
   100% {
     //top: 10%
     top: 10%;
     left: 30%;
+  }
+}
+@keyframes moveThemeDown {
+  0% {
+    left: 30%;
+    top: 10%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
   }
 }
 @keyframes moveUpThemeMobile {

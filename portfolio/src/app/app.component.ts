@@ -55,32 +55,38 @@ export class AppComponent implements OnInit {
     const body = document.body;
     const themeBtn = document.getElementById('themeBtn');
     const weather = document.getElementById('weather');
-    this.isDark = !this.isDark;
 
-    //add-lightTheme
-    if (this.isDark) {
-      body.classList.add('light-theme');
-      //this.createRandomStars();
-      this.stars.nativeElement.style.display = 'none';
-    } else {
-      body.classList.remove('light-theme');
-      themeBtn?.classList.add('add-lightTheme');
-      this.stars.nativeElement.style.display = 'flex';
+    if (!weather) {
+      alert('Theme can not be changed at this time');
+      return;
     }
-    // AIM: Restart the animation
-    if (weather) {
-      weather.classList.remove('weather');
+    body.classList.add('changeTheme')
+    weather.classList.remove('weather');
+    weather.classList.add('change-theme-weather');
+
+    setTimeout(() => {
+      this.isDark = !this.isDark;
+
+      if (this.isDark) {
+        body.classList.add('light-theme');
+        this.stars.nativeElement.style.display = 'none';
+      } else {
+        body.classList.remove('light-theme');
+        themeBtn?.classList.add('add-lightTheme');
+        this.stars.nativeElement.style.display = 'flex';
+      }
+      // weather.style.left = '30%';
+      // weather.style.top = '10%';
+      weather.classList.remove('change-theme-weather');
       weather.classList.add('weather');
-      weather.style.animation =
-        'moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite';
-    }
+    }, 2000);
   }
   createRandomStars() {
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < 80; index++) {
       const style = document.createElement('style');
       const left = Math.floor(Math.random() * 100);
       const top = Math.floor(Math.random() * 100);
-      const randFloat =  Math.floor(Math.random() * 200);
+      const randFloat = Math.floor(Math.random() * 200);
       style.innerHTML = `
       @keyframes twinkle {
         0%, 100% 
@@ -118,9 +124,7 @@ export class AppComponent implements OnInit {
       div.style.position = 'absolute';
       div.style.left = left + '%';
       div.style.top = top + '%';
-      div.style.animation = `twinkle 3s ease-in ${
-        Math.random() * 3
-      }s infinite`;
+      div.style.animation = `twinkle 3s ease-in ${Math.random() * 3}s infinite`;
       div.style.boxShadow = ' box-shadow: var(--theme-shadow)';
       this.stars.nativeElement.appendChild(div);
     }
@@ -147,7 +151,9 @@ export class AppComponent implements OnInit {
 
       div.style.animation = `twinkle 3s ease-in ${
         Math.random() * 3
-      }s infinite ,star-float ${10+ Math.floor(Math.random() * 30)}s  ease-in ${Math.floor(Math.random() * 10)}s infinite`
+      }s infinite ,star-float ${
+        10 + Math.floor(Math.random() * 30)
+      }s  ease-in ${Math.floor(Math.random() * 10)}s infinite`;
     });
   }
   isRouteActive(route: string): void {
