@@ -86,23 +86,23 @@ export class MainComponent implements OnInit {
         this.changeDetector.detectChanges(); // Detect changes and update the array on html side
         this.secondsCounter++;
 
-        if (this.secondsCounter % 3 === 0) {
-          this.componentContainer.clear();
+        // if (this.secondsCounter % 3 === 0) {
+        //   this.componentContainer.clear();
 
-          if (this.arrCount === this.summaryComponents.length-1) {
-            this.componentContainer.createComponent(
-              this.summaryComponents[this.arrCount]
-            );
+        //   if (this.arrCount === this.summaryComponents.length-1) {
+        //     this.componentContainer.createComponent(
+        //       this.summaryComponents[this.arrCount]
+        //     );
 
-            this.arrCount = 0;
-          }else{
-            this.componentContainer.createComponent(
-              this.summaryComponents[this.arrCount]
-            );
-            this.arrCount++;
-          }
+        //     this.arrCount = 0;
+        //   }else{
+        //     this.componentContainer.createComponent(
+        //       this.summaryComponents[this.arrCount]
+        //     );
+        //     this.arrCount++;
+        //   }
           
-        }
+        // }
       }, 5000);
     });
   }
@@ -112,7 +112,7 @@ export class MainComponent implements OnInit {
     }
   }
   ngAfterViewInit() {
-    this.componentContainer.createComponent(SummaryComponent);
+    // this.componentContainer.createComponent(SummaryComponent);
   }
 
   //Open Email Dialog box component

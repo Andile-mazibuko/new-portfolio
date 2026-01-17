@@ -50,8 +50,9 @@ mat-icon {
 .footer {
   position: relative;
   display: flex;
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
+  height: 200px;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
@@ -65,9 +66,9 @@ nav {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.123);
   z-index: 10;
   position: fixed;
-  top: 1%;
-  left: 10%;
-  width: 80%;
+  top: 3%;
+  left: 20%;
+  width: 60%;
 }
 button {
   background-color: unset !important;
@@ -95,9 +96,7 @@ a:hover,
   position: absolute;
   width: 40%;
   height: 80%;
-  //background-color: rgba(201, 201, 201, 0.2);
   background: var(--weather-colors);
-  //z-index: -5;
   z-index: -5;
   top: 10%;
   left: 30%;
@@ -168,7 +167,7 @@ weather.style.top = '70%';
   top: 55px;
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
-  opacity: 1;
+  opacity: 1 ;
   pointer-events: none;
   z-index: -6;
   inset: 0;

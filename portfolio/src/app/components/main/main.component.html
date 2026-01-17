@@ -1,24 +1,28 @@
 <div class="cont">
   <div class="content">
     <h1 class="h1">Hey, I'm {{ about.firstName + " " + about.lastName }}</h1>
+    <h2>
+      {{about.profession}}
+    </h2>
     <p>{{ about.ambition }}</p>
-    <div class="skill-cards center" id="nameCardCont">
-      <mat-card>{{displaySkills[0]?.name}}</mat-card>
-      <mat-card>{{displaySkills[1]?.name}}</mat-card>
-      <mat-card>{{displaySkills[2]?.name}}</mat-card>
-      <mat-card>{{displaySkills[3]?.name}}</mat-card>
-    </div>
-    <div class="btn-cont">
-      <button mat-button class="btn">Download CV</button>
-      <button mat-button class="btn" (click)="openEmailDialog()">
-        Contact Me
-      </button>
-    </div>
     <div class="socials">
       <app-socials></app-socials>
     </div>
+    <div class="skill-cards" id="nameCardCont">
+      <mat-card>{{ displaySkills[0]?.name || 'Linux OS'}}</mat-card>
+      <mat-card>{{ displaySkills[1]?.name || 'Powerapps'}}</mat-card>
+      <mat-card>{{ displaySkills[2]?.name || 'PowerAutomate'}}</mat-card>
+      <mat-card>{{ displaySkills[3]?.name || 'R'}}</mat-card>
+    </div>
+    <div class="btn-cont">
+      <button mat-button class="btn download">Download CV</button>
+      <button mat-button class="btn contact" (click)="openEmailDialog()">
+        Contact Me
+      </button>
+    </div>
     
   </div>
+
   <div class="img-area">
     <div class="skill-cont top-left">
       <img [src]="displaySkills[0]?.path" alt="" />
@@ -34,12 +38,11 @@
     </div>
     <img src="assets/images/copy.png" alt="" />
   </div>
-  <div [style.left]="randLeft" [style.top]="randTop" class="random-skill center">
-      <img [src]="displaySkill?.path" alt="" />
-  </div>
-  <div class="flip-cards" >
-    <ng-container #componentContainer></ng-container>
-    <!-- <app-summary></app-summary> -->
+  <div
+    [style.left]="randLeft"
+    [style.top]="randTop"
+    class="random-skill center"
+  >
+    <img [src]="displaySkill?.path " alt="" />
   </div>
 </div>
- 

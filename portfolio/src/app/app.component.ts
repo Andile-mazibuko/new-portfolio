@@ -47,6 +47,7 @@ export class AppComponent implements OnInit {
     //Create 100 stars not equal in size
   }
   ngAfterViewInit() {
+    
     this.createRandomStars();
     this.flashRandomStars();
   }
@@ -81,8 +82,15 @@ export class AppComponent implements OnInit {
       weather.classList.add('weather');
     }, 2000);
   }
+
+  /**
+   * Generate 120 stars for mobile devices 
+   * Generate 80 for other types of devices
+   */
   createRandomStars() {
-    for (let index = 0; index < 80; index++) {
+    if (typeof window === 'undefined') return; // skip on server
+
+    for (let index = 0; index < (window.innerWidth < 820 ? 120: 80); index++) {
       const style = document.createElement('style');
       const left = Math.floor(Math.random() * 100);
       const top = Math.floor(Math.random() * 100);
@@ -93,15 +101,16 @@ export class AppComponent implements OnInit {
         { 
           opacity: 1; transform: scale(1);
           z-index: 5;
-          width: 5px;
-          height: 5px;
+          width: ${window.innerWidth < 820 ? "2px": "5px"};
+          height:${ window.innerWidth < 820 ? "2px": "5px"};
         }
         50% 
         { 
           opacity: 0.3; transform: scale(1.2); 
           z-index: -6;
-          width: 8px;
-          height: 8px;
+          width: ${window.innerWidth < 820 ? "5px": "8px"};
+          height:${ window.innerWidth < 820 ? "5px": "8px"};
+          
         }
       }
       @keyframes star-float {
@@ -117,8 +126,8 @@ export class AppComponent implements OnInit {
       document.head.appendChild(style);
       const div = document.createElement('div');
       div.id = `star_${index}`;
-      div.style.width = '5px';
-      div.style.height = '5px';
+      div.style.width = window.innerWidth < 820 ? "2px": "5px"
+      div.style.height = window.innerWidth < 820 ? "2px": "5px"
       div.style.borderRadius = '50%';
       div.style.background = '#ffffffff';
       div.style.position = 'absolute';
@@ -134,6 +143,8 @@ export class AppComponent implements OnInit {
    * @returns an array of formatterd random div ids
    */
   createRandomIds(): void {
+    if (typeof window === 'undefined') return; // skip on server
+    
     for (let index = 0; index < 30; index++) {
       const randDivId = 'star_' + Math.floor(Math.random() * 80);
       if (!this.randStars.includes(randDivId)) {
@@ -142,6 +153,7 @@ export class AppComponent implements OnInit {
     }
   }
   flashRandomStars(): void {
+    if (typeof window === 'undefined') return; // skip on server
     this.createRandomIds();
     this.randStars.forEach((starId) => {
       const div = document.getElementById(starId);

@@ -4,16 +4,16 @@
   // Default theme colors(dark-mode)
   --bg-color: linear-gradient(
     180deg,
-    rgba(5, 7, 14, 0.899),
-    rgba(3, 3, 3, 0.712)
+    rgba(0, 0, 2, 0.904),
+    rgba(0, 0, 0, 0.900)
   );
   --font-color: rgb(255, 255, 255);
   --sec-font-color: rgba(145, 145, 145, 0.945);
   --nav-bg-color: rgba(105, 105, 105, 0.15);
   --btn-color: linear-gradient(
     45deg,
-    rgba(0, 255, 149, 0.2),
-    rgba(255, 0, 242, 0.3)
+    rgba(0, 104, 61, 0.356),
+    rgba(0, 231, 135, 0.384)
   );
   --link-color: rgb(255, 255, 255, 0.4);
   --bg-gradient: linear-gradient(
@@ -44,14 +44,14 @@
 
 .light-theme {
   --bg-color: linear-gradient(
-    180deg,
-    rgba(175, 219, 255, 0.445),
-    rgba(204, 218, 255, 0.253)
+    180deg,#f5f7fae8,
+   #f5f7fac0
+    
   );
   --font-color: rgb(10, 10, 10);
   --sec-font-color: rgb(0, 57, 83);
   --btn-color: rgb(0, 3, 192);
-  --nav-bg-color: rgba(168, 178, 211, 0.15);
+  --nav-bg-color:#ffffff9f;
   --link-color: rgb(10, 10, 10, 0.4);
   --bg-gradient: linear-gradient(
     45deg,
