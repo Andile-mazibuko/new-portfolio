@@ -1,7 +1,7 @@
 [
   {
     "name": "Action Mall",
-    "description": "A full-featured platform where users can buy or rent cars and houses. Includes bidding options for buying.",
+    "description": "Full-featured marketplace for cars and houses, including bidding options.",
     "repoLink": "https://github.com/Andile-mazibuko/WIL-PROJECT",
     "liveLink": "",
     "live": false,
@@ -22,8 +22,8 @@
     ]
   },
   {
-    "name": "ATECH",
-    "description": "An e-commerce platform dedicated to selling PC components like CPUs, GPUs, RAM, and storage devices. Designed for gamers and tech enthusiasts looking to build or upgrade their desktops",
+    "name": "Atech E-commerce",
+    "description": "E-commerce for PC parts, perfect for gamers and tech enthusiasts.",
     "repoLink": "https://github.com/Andile-mazibuko/ATECH",
     "liveLink": "",
     "live": false,
@@ -46,7 +46,7 @@
   },
   {
     "name": "Tick Tack Toe",
-    "description": "A classic Tic Tac Toe Android app developed in Java. Includes two-player mode, win detection, score tracking, and reset functionality. Designed with a clean UI, it's lightweight, responsive, and perfect for casual play",
+    "description": "Clean and simple Tic Tac Toe game made for casual play.",
     "repoLink": "",
     "liveLink": "",
     "live": false,
@@ -63,7 +63,7 @@
   },
   {
     "name": "Note taking App",
-    "description": "A classic Tic Tac Toe Android app developed in Java. Includes two-player mode, win detection, score tracking, and reset functionality. Designed with a clean UI, it's lightweight, responsive, and perfect for casual play",
+    "description": "Simple, fast app to create, organize, and manage your notes.",
     "repoLink": "",
     "liveLink": "",
     "live": false,

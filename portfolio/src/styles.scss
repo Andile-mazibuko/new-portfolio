@@ -1,12 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+* {
+  font-family: "Poppins", sans-serif;
+}
 :root {
   // Default theme colors(dark-mode)
-  --bg-color: linear-gradient(
-    180deg,
-    rgba(0, 0, 2, 0.904),
-    rgba(0, 0, 0, 0.900)
-  );
+  --bg-color: linear-gradient(180deg, rgba(0, 0, 2, 0.904), rgba(0, 0, 0, 0.9));
   --font-color: rgb(255, 255, 255);
   --sec-font-color: rgba(145, 145, 145, 0.945);
   --nav-bg-color: rgba(105, 105, 105, 0.15);
@@ -22,8 +20,8 @@
     rgba(182, 0, 155, 0.548)
   );
   --tert-font-color: rgba(145, 185, 185, 0.719);
-  --box-shadow: 0 0 100px rgba(4, 142, 255, 0.815),
-    0 0 100px rgba(0, 247, 255, 0.4);
+  --box-shadow:
+    0 0 100px rgba(4, 142, 255, 0.815), 0 0 100px rgba(0, 247, 255, 0.4);
   --theme-icon: #ffd900;
   /*--theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
     0 0 100px rgba(255, 251, 0, 0.4);*/
@@ -41,17 +39,12 @@
   --footer-background: rgb(27, 27, 27);
 }
 
-
 .light-theme {
-  --bg-color: linear-gradient(
-    180deg,#f5f7fae8,
-   #f5f7fac0
-    
-  );
+  --bg-color: linear-gradient(180deg, #f5f7fae8, #f5f7fac0);
   --font-color: rgb(10, 10, 10);
   --sec-font-color: rgb(0, 57, 83);
   --btn-color: rgb(0, 3, 192);
-  --nav-bg-color:#ffffff9f;
+  --nav-bg-color: #ffffff9f;
   --link-color: rgb(10, 10, 10, 0.4);
   --bg-gradient: linear-gradient(
     45deg,
@@ -59,8 +52,8 @@
     rgba(0, 204, 255, 0.15)
   );
   --tert-font-color: rgba(0, 4, 58, 0.678);
-  --box-shadow: 0 0 100px rgba(33, 149, 243, 0.815),
-    0 0 100px rgba(135, 243, 33, 0.4);
+  --box-shadow:
+    0 0 100px rgba(33, 149, 243, 0.815), 0 0 100px rgba(135, 243, 33, 0.4);
 
   --theme-icon: rgba(0, 0, 0, 0.466);
   --weather-colors: radial-gradient(
@@ -77,6 +70,8 @@
 html,
 body {
   height: 100%;
+  width: 100%;
+  // position: fixed;
   overflow: hidden;
   overflow-y: scroll;
   background: var(
@@ -98,7 +93,7 @@ body::-webkit-scrollbar {
   width: 80%;
   background-color: var(--nav-bg-color);
   margin-left: 10%;
-  margin-top: .3%;
+  margin-top: 0.3%;
   border-radius: 20px;
   animation: borderEffect 2s normal;
 }
@@ -217,14 +212,18 @@ p {
   }
 }
 @keyframes rotate360 {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  from {
+    width: 0;
   }
+  to {
+    width: 100%;
+  }
+}
