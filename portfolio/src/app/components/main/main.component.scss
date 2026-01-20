@@ -33,9 +33,10 @@
 p,
 h1,
 h2,
+h3,
 .socials,
 .btn-cont,
-.skill-cards{
+.skill-cards {
   width: 60%;
   margin-left: 20%;
 }
@@ -50,15 +51,20 @@ p {
 h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  margin-top: 26%;
-  color: var(--tert-font-color);
+  color: var(--sec-font-color);
   font-weight: 700;
   // background-color: red;
 }
 h2 {
   margin-bottom: 0 !important;
-  color: var(--font-color);
+  color: var(--tert-font-color);
   font-weight: 700;
+}
+h3 {
+  margin-top: 26%;
+  color: var(--tert-font-color);
+  font-size: 1.0rem;
+  font-weight: 500;
 }
 .socials {
   margin-bottom: 1%;
@@ -87,11 +93,10 @@ img {
   background-color: rgba(0, 0, 128, 0.178) !important;
   border: 2px solid var(--font-color);
 }
-.btn{
+.btn {
   width: 40% !important;
   border-radius: 50px !important;
   margin-left: 0 !important;
-  
 }
 .skill-cont {
   background-color: rgba(0, 0, 71, 0.445);
@@ -175,7 +180,6 @@ img {
   -webkit-backdrop-filter: blur(10px) !important;
 }
 
-  
 .skill-cards mat-card:nth-child(even) {
   //  animation: bounce 2s ease-in-out infinite !important;
 }
