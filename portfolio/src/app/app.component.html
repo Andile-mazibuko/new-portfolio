@@ -1,130 +1,145 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-  <a class="navbar-brand" routerLink="/"
-    ><span class="text-secondary">{{ name.split(" ")[0].toUpperCase() }}</span
-    >{{ name.split(" ")[1].toUpperCase()
-    }}<span class="text-primary">.</span></a
-  >
+<div class="body">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" routerLink="/"
+      ><span class="text-secondary">{{ name.split(" ")[0].toUpperCase() }}</span
+      >{{ name.split(" ")[1].toUpperCase()
+      }}<span class="text-primary">.</span></a
+    >
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarNav"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-      <li class="nav-item">
-        <a
-          class="nav-link me-5 active-route"
-          routerLink="/"
-          (click)="isRouteActive('home')"
-          id="home"
-          >Home</a
-        >
-      </li>
-      <li class="nav-item me-5">
-        <a
-          class="nav-link"
-          routerLink="/about"
-          (click)="isRouteActive('about')"
-          id="about"
-          >About</a
-        >
-      </li>
-      <li class="nav-item me-5">
-        <a
-          class="nav-link"
-          routerLink="/projects"
-          (click)="isRouteActive('projects')"
-          id="projects"
-          >Projects</a
-        >
-      </li>
-      <!-- <li class="nav-item me-5">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link me-5 active-route"
+            routerLink="/"
+            (click)="isRouteActive('home')"
+            id="home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link"
+            routerLink="/about"
+            (click)="isRouteActive('about')"
+            id="about"
+            >About</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link"
+            routerLink="/projects"
+            (click)="isRouteActive('projects')"
+            id="projects"
+            >Projects</a
+          >
+        </li>
+        <!-- <li class="nav-item me-5">
         <a class="nav-link" routerLink="/exp">Experience</a>
       </li> -->
 
-      <li class="nav-item me-5">
-        <a
-          class="nav-link"
-          routerLink="/contact"
-          (click)="isRouteActive('contact')"
-          id="contact"
-          >Contact</a
-        >
-      </li>
-    </ul>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link"
+            routerLink="/contact"
+            (click)="isRouteActive('contact')"
+            id="contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
 
-    <button
-      mat-button-raised
-      type="button"
-      class="theme-btn"
-      [ngClass]="isDark ? 'dark-mode' : 'light-mode'"
-      (click)="toogleTheme()"
-      id="themeBtn"
-    >
-      <div class="icon-container">
-        <mat-icon *ngIf="isDark"> dark_mode </mat-icon>
-        <mat-icon *ngIf="!isDark"> light_mode </mat-icon>
-      </div>
-    </button>
-  </div>
-</nav>
-<div class="app-container">
-  <div class="route-cont">
-    <router-outlet></router-outlet>
-  </div>
-  <!-- <div class="footer">
+      <button
+        mat-button-raised
+        type="button"
+        class="theme-btn"
+        [ngClass]="isDark ? 'dark-mode' : 'light-mode'"
+        (click)="toogleTheme()"
+        id="themeBtn"
+      >
+        <div class="icon-container">
+          <mat-icon *ngIf="isDark"> dark_mode </mat-icon>
+          <mat-icon *ngIf="!isDark"> light_mode </mat-icon>
+        </div>
+      </button>
+    </div>
+  </nav>
+  <div class="app-container">
+    <div class="route-cont">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <div class="footer">
     <div class="dev-info">
     <p>© 2025 Andile Mazibuko — Full Stack Developer</p>
     </div>
   </div> -->
-</div>
+  </div>
 
-<div class="weather" id="weather">
-  <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
-</div>
-<div class="weather2" id="weather">
-  <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
-</div>
+  <div class="weather" id="weather">
+    <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
+  </div>
 
-<div *ngIf="!isDark" class="witch night">
-  <img src="assets/images/witch.svg" alt="" />
-</div>
-<div *ngIf="isDark" class="witch day">
-  <img src="assets/images/witch.svg" alt="" />
-</div>
-<!-- Contain random stars *ngIf="!isDark"-->
-<div class="stars-container" #Stars></div>
+  <div *ngIf="!isDark" class="weather2" id="weather">
+    <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
+  </div>
 
-<div *ngIf="isDark" class="clouds-container">
-  <div class="cloud">
-    <img src="assets/images/cloud_1.png" alt="" />
+  <div *ngIf="!isDark" class="weather3" id="weather">
+    <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
   </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_3.png" alt="" />
+
+  <div *ngIf="!isDark" class="weather4" id="weather">
+    <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
   </div>
-</div>
-<div *ngIf="isDark" class="clouds-container moving-clouds">
-  <div class="cloud">
-    <img src="assets/images/cloud_1.png" alt="" />
+
+  <div *ngIf="!isDark" class="weather5" id="weather">
+    <!-- <img *ngIf="!isDark" src="assets/images/moon.png" alt="" /> -->
   </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_3.png" alt="" />
+
+  <div *ngIf="!isDark" class="witch night">
+    <img src="assets/images/witch.svg" alt="" />
   </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_2.png" alt="" />
+  <div *ngIf="isDark" class="witch day">
+    <img src="assets/images/witch.svg" alt="" />
   </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_2.png" alt="" />
+  <!-- Contain random stars *ngIf="!isDark"-->
+  <div class="stars-container" #Stars></div>
+
+  <div *ngIf="isDark" class="clouds-container">
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="" />
+    </div>
   </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_1.png" alt="" />
-  </div>
-  <div class="cloud">
-    <img src="assets/images/cloud_3.png" alt="" />
+  <div *ngIf="isDark" class="clouds-container moving-clouds">
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_2.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_2.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_1.png" alt="" />
+    </div>
+    <div class="cloud">
+      <img src="assets/images/cloud_3.png" alt="" />
+    </div>
   </div>
 </div>

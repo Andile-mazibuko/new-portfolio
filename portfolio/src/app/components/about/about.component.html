@@ -1,195 +1,197 @@
-<div class="cont">
-  <div class="intro">
-    <h1 class="center">About Me<span class="text-primary">.</span></h1>
-    <div class="center description">
-      <h2>{{ smallDescription }}</h2>
-    </div>
-    <div class="cards">
-      <mat-card *ngFor="let skill of skills">
-        <mat-card-content class="center">
-          <mat-icon class="center">
-            {{ skill.icon }}
-          </mat-icon>
-          {{ skill.name }}
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="about">
-      <div class="img-area center">
-        <img src="assets/images/andile.jpg" alt="" />
+<div class="body">
+  <div class="cont">
+    <div class="intro">
+      <h1 class="center">About Me<span class="text-primary">.</span></h1>
+      <div class="center description">
+        <h2>{{ smallDescription }}</h2>
       </div>
-      <div class="text-area">
-        <h2>
-          <mat-icon class="center">contact_page</mat-icon>Professional summary
-        </h2>
-        <p>
-          {{ about.summary }}
-        </p>
-        <div class="about-summary center">
-          <div class="category">
-            <mat-card>
-              <div class="category-title center">
-                <mat-icon class="center">engineering</mat-icon>
-                <h2 class="">Professional Summary</h2>
-              </div></mat-card
-            >
-            <ul>
-              <li>Computer Science Graduate</li>
-              <li>Software Developer</li>
-              <li>Full Stack Development</li>
-              <li>Passionate About Tech</li>
-            </ul>
-          </div>
-          <div class="category">
-            <mat-card>
-              <div class="category-title center">
-                <mat-icon class="center">engineering</mat-icon>
-                <h2>Professional Summary</h2>
-              </div></mat-card
-            >
-            <ul>
-              <li>Computer Science Graduate</li>
-              <li>Software Developer</li>
-              <li>Full Stack Development</li>
-              <li>Passionate About Tech</li>
-            </ul>
-          </div>
-          <div class="category">
-            <mat-card>
-              <div class="category-title center">
-                <mat-icon class="center">engineering</mat-icon>
-                <h2 >Professional Summary</h2>
-              </div></mat-card
-            >
-            <ul>
-              <li>Computer Science Graduate</li>
-              <li>Software Developer</li>
-              <li>Full Stack Development</li>
-              <li>Passionate About Tech</li>
-            </ul>
+      <div class="cards">
+        <mat-card *ngFor="let skill of skills">
+          <mat-card-content class="center">
+            <mat-icon class="center">
+              {{ skill.icon }}
+            </mat-icon>
+            {{ skill.name }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="about">
+        <div class="img-area center">
+          <img src="assets/images/andile.jpg" alt="" />
+        </div>
+        <div class="text-area">
+          <h2>
+            <mat-icon class="center">contact_page</mat-icon>Professional summary
+          </h2>
+          <p>
+            {{ about.summary }}
+          </p>
+          <div class="about-summary center">
+            <div class="category">
+              <mat-card>
+                <div class="category-title center">
+                  <mat-icon class="center">engineering</mat-icon>
+                  <h2 class="">Professional Summary</h2>
+                </div></mat-card
+              >
+              <ul>
+                <li>Computer Science Graduate</li>
+                <li>Software Developer</li>
+                <li>Full Stack Development</li>
+                <li>Passionate About Tech</li>
+              </ul>
+            </div>
+            <div class="category">
+              <mat-card>
+                <div class="category-title center">
+                  <mat-icon class="center">engineering</mat-icon>
+                  <h2>Professional Summary</h2>
+                </div></mat-card
+              >
+              <ul>
+                <li>Computer Science Graduate</li>
+                <li>Software Developer</li>
+                <li>Full Stack Development</li>
+                <li>Passionate About Tech</li>
+              </ul>
+            </div>
+            <div class="category">
+              <mat-card>
+                <div class="category-title center">
+                  <mat-icon class="center">engineering</mat-icon>
+                  <h2>Professional Summary</h2>
+                </div></mat-card
+              >
+              <ul>
+                <li>Computer Science Graduate</li>
+                <li>Software Developer</li>
+                <li>Full Stack Development</li>
+                <li>Passionate About Tech</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <h2 class="center">Experience & Education</h2>
-    <div class="exp-section center">
-      <mat-card *ngFor="let exp of experiences" class="exp">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>{{ exp.role }}</mat-card-title>
-            <mat-card-subtitle>{{ exp.job_type }}</mat-card-subtitle>
-            <mat-card-subtitle>{{ exp.type }}</mat-card-subtitle>
-            <img
-              mat-card-image
-              [src]="exp.logo_path"
-              alt="Image of a Shiba Inu"
-            />
-          </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
-          <p>
-            {{ exp.description }}
-          </p>
-          <div class="cards">
-            <mat-card *ngFor="let tech of exp.technologies">
-              <mat-card-content>
-                {{ tech }}
-              </mat-card-content>
-            </mat-card>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="skills-tab">
-      <h2 class="center">Tech stack</h2>
-
-      <!--FOR DESKTOP APPS-->
-      <mat-tab-group animationDuration="1000ms">
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="tab-title">
-              <mat-icon class="center"> code </mat-icon>
-              <p>Back End</p>
+      <h2 class="center">Experience & Education</h2>
+      <div class="exp-section center">
+        <mat-card *ngFor="let exp of experiences" class="exp">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>{{ exp.role }}</mat-card-title>
+              <mat-card-subtitle>{{ exp.job_type }}</mat-card-subtitle>
+              <mat-card-subtitle>{{ exp.type }}</mat-card-subtitle>
+              <img
+                mat-card-image
+                [src]="exp.logo_path"
+                alt="Image of a Shiba Inu"
+              />
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+            <p>
+              {{ exp.description }}
+            </p>
+            <div class="cards">
+              <mat-card *ngFor="let tech of exp.technologies">
+                <mat-card-content>
+                  {{ tech }}
+                </mat-card-content>
+              </mat-card>
             </div>
-          </ng-template>
-
-          <div class="skills-cont center">
-            <mat-card class="center" *ngFor="let skill of backEndSkills">
-              <img mat-card-image [src]="skill.path" alt="" />
-              <mat-card-subtitle class="center">
-                {{ skill.name }}
-              </mat-card-subtitle>
-              <mat-progress-bar
-                mode="determinate"
-                [value]="skill.percentage"
-              ></mat-progress-bar>
-            </mat-card>
-          </div>
-        </mat-tab>
-
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="tab-title">
-              <mat-icon> code </mat-icon>
-              <p>Front End</p>
-            </div>
-          </ng-template>
-
-          <div class="skills-cont center">
-            <mat-card class="center" *ngFor="let skill of frontEndSkills">
-              <img mat-card-image [src]="skill.path" alt="" />
-              <mat-card-subtitle class="center">
-                {{ skill.name }}
-              </mat-card-subtitle>
-              <mat-progress-bar
-                mode="determinate"
-                [value]="skill.percentage"
-              ></mat-progress-bar>
-            </mat-card>
-          </div>
-        </mat-tab>
-
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="tab-title">
-              <mat-icon> construction </mat-icon>
-              <p>tools</p>
-            </div>
-          </ng-template>
-          <div class="skills-cont center">
-            <mat-card class="center" *ngFor="let skill of tools">
-              <img mat-card-image [src]="skill.path" alt="" />
-              <mat-card-subtitle class="center">
-                {{ skill.name }}
-              </mat-card-subtitle>
-              <mat-progress-bar
-                mode="determinate"
-                [value]="skill.percentage"
-              ></mat-progress-bar>
-            </mat-card>
-          </div>
-        </mat-tab>
-      </mat-tab-group>
-
-      <!--ONLY FOR MOBILE DEVICES-->
-      <div class="skills-cont center mobile-tech-stack">
-        <mat-card class="center" *ngFor="let skill of allSkills">
-          <img mat-card-image [src]="skill.path" alt="" />
-          <mat-card-subtitle class="center">
-            {{ skill.name }}
-          </mat-card-subtitle>
-          <div class="profficiency">
-            <mat-progress-bar
-              mode="determinate"
-              [value]="skill.percentage"
-            ></mat-progress-bar>
-            <p>{{ skill.percentage }}%</p>
-          </div>
+          </mat-card-content>
         </mat-card>
+      </div>
+
+      <div class="skills-tab">
+        <h2 class="center">Tech stack</h2>
+
+        <!--FOR DESKTOP APPS-->
+        <mat-tab-group animationDuration="1000ms">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <div class="tab-title">
+                <mat-icon class="center"> code </mat-icon>
+                <p>Back End</p>
+              </div>
+            </ng-template>
+
+            <div class="skills-cont center">
+              <mat-card class="center" *ngFor="let skill of backEndSkills">
+                <img mat-card-image [src]="skill.path" alt="" />
+                <mat-card-subtitle class="center">
+                  {{ skill.name }}
+                </mat-card-subtitle>
+                <mat-progress-bar
+                  mode="determinate"
+                  [value]="skill.percentage"
+                ></mat-progress-bar>
+              </mat-card>
+            </div>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <div class="tab-title">
+                <mat-icon> code </mat-icon>
+                <p>Front End</p>
+              </div>
+            </ng-template>
+
+            <div class="skills-cont center">
+              <mat-card class="center" *ngFor="let skill of frontEndSkills">
+                <img mat-card-image [src]="skill.path" alt="" />
+                <mat-card-subtitle class="center">
+                  {{ skill.name }}
+                </mat-card-subtitle>
+                <mat-progress-bar
+                  mode="determinate"
+                  [value]="skill.percentage"
+                ></mat-progress-bar>
+              </mat-card>
+            </div>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <div class="tab-title">
+                <mat-icon> construction </mat-icon>
+                <p>tools</p>
+              </div>
+            </ng-template>
+            <div class="skills-cont center">
+              <mat-card class="center" *ngFor="let skill of tools">
+                <img mat-card-image [src]="skill.path" alt="" />
+                <mat-card-subtitle class="center">
+                  {{ skill.name }}
+                </mat-card-subtitle>
+                <mat-progress-bar
+                  mode="determinate"
+                  [value]="skill.percentage"
+                ></mat-progress-bar>
+              </mat-card>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+
+        <!--ONLY FOR MOBILE DEVICES-->
+        <div class="skills-cont center mobile-tech-stack">
+          <mat-card class="center" *ngFor="let skill of allSkills">
+            <img mat-card-image [src]="skill.path" alt="" />
+            <mat-card-subtitle class="center">
+              {{ skill.name }}
+            </mat-card-subtitle>
+            <div class="profficiency">
+              <mat-progress-bar
+                mode="determinate"
+                [value]="skill.percentage"
+              ></mat-progress-bar>
+              <p>{{ skill.percentage }}%</p>
+            </div>
+          </mat-card>
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,11 @@
+// *{
+//   overflow: hidden;
+//   overflow-y: scroll;
+// }
 .cont {
   margin-top: 55px;
   //background-color: red;
+  overflow-y: scroll;
 }
 .intro {
   width: 90%;
