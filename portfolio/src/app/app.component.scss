@@ -115,6 +115,25 @@ a:hover,
   overflow: hidden !important;
   opacity: 0.9;
 }
+
+.weather2 {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  background: #ffffff;
+  z-index: -5;
+  top: 10%;
+  right: 10%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // animation: moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite;
+  box-shadow: var(--theme-shadow);
+  overflow: hidden !important;
+  opacity: 0.9;
+}
 .change-theme-weather {
   position: absolute;
   width: 40%;
