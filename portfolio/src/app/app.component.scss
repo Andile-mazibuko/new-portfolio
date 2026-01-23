@@ -147,7 +147,13 @@ a:hover,
   position: absolute;
   width: 15%;
   height: 30%;
-  background: #00312769;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #005e1fb4,
+    #003d55,
+    rgba(0, 5, 77, 0.781),
+    #005e83f6
+  );;
   z-index: -5;
   bottom: -5%;
   left: 5%;
@@ -185,7 +191,13 @@ a:hover,
   position: absolute;
   width: 3%;
   height: 6%;
-  background: #ff8000eb;
+  background: radial-gradient(
+    circle at 30% 50%,
+    #ff7c02,
+    #fa5c00,
+    rgba(212, 129, 3, 0.781),
+    #bb7878f6
+  );
   z-index: -6;
   top: 15%;
   left: 29%;
