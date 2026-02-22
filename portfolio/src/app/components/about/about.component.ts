@@ -7,6 +7,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ExperienceService } from '../../services/experience.service';
 import { AboutService } from '../../services/about.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-about',
@@ -18,7 +19,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatTabsModule,
     CommonModule,
     MatProgressBarModule,
-  ],
+    FooterComponent
+],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

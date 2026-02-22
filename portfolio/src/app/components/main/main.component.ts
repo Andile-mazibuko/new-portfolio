@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 import { SummaryComponent } from '../summary/summary.component';
 import { CategoriesComponent } from '../categories/categories.component';
 import { count } from 'node:console';
+import { FooterComponent } from "../footer/footer.component";
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -27,7 +28,8 @@ import { count } from 'node:console';
     SocialsComponent,
     MatCardModule,
     SummaryComponent,
-  ],
+    FooterComponent
+],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
