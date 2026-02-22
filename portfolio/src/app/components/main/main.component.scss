@@ -10,7 +10,7 @@
 }
 .change-arr {
   width: 50%;
-  background-color: red;
+  
   margin-left: 50%;
   height: 25vh;
   //margin-top: 30%;
@@ -52,13 +52,16 @@ p {
   color: var(--sec-font-color);
 }
 h1 {
-  font-size: 2.8rem;
+  margin-top: 20%;
+  font-size: 4rem;
+  width: 80%;
   margin-bottom: 10px;
   color: var(--sec-font-color);
   font-weight: 700;
-  // background-color: red;
+  // 
 }
 h2 {
+  font-size: 2rem;
   margin-bottom: 0 !important;
   color: var(--tert-font-color);
   font-weight: 700;
@@ -164,7 +167,7 @@ img {
   display: flex;
   // flex-wrap: wrap;
   margin-bottom: 2%;
-  // background-color: red;
+  // 
 }
 .skill-cards mat-card {
   width: fit-content;
@@ -195,7 +198,7 @@ img {
   width: 100%;
   // margin-left: 20%;
   height: 30%;
-  // background-color: red;
+  // 
   border-radius: 10px;
   justify-content: center;
   bottom: 30%;
@@ -263,7 +266,7 @@ img {
     z-index: 10; // above all
     opacity: 0.1;
     align-items: center;
-    //background-color: red;
+    //
     animation: pop-up 0.4s !important;
   }
   .random-skill img {
@@ -294,12 +297,12 @@ img {
 }
 @keyframes moveTopright {
   0% {
-    background-color: red;
+    
     left: 0;
     top: 0;
   }
   100% {
-    background-color: red;
+    
     right: 0;
     top: 0;
   }
