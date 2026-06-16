@@ -320,6 +320,10 @@ weather.style.top = '70%';
 }
 
 @media (max-width: 1200px) {
+  nav{
+    width: 80%;
+    left: 10%;
+  }
   .weather {
     border-radius: 0;
     clip-path: circle();

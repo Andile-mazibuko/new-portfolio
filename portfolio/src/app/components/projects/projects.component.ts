@@ -5,11 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../models/Models';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatButtonModule, CommonModule],
+  imports: [MatCardModule, MatIconModule, MatButtonModule, CommonModule, FooterComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
