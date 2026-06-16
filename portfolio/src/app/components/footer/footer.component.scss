@@ -9,9 +9,7 @@
   margin-top: auto;
   flex-shrink: 0;
 
-  @media (max-width: 820px) {
-    padding: 40px 20px 20px;
-  }
+
 }
 
 .footer-content {
@@ -21,10 +19,6 @@
   max-width: 1200px;
   margin: 0 auto 40px;
 
-  @media (max-width: 820px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
 }
 
 .footer-section {
@@ -111,11 +105,6 @@
     color: var(--sec-font-color);
   }
 
-  @media (max-width: 820px) {
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 .designed-by {
@@ -128,9 +117,6 @@
     animation: heartbeat 1.5s ease infinite;
   }
 
-  @media (max-width: 820px) {
-    justify-content: center;
-  }
 }
 
 @keyframes heartbeat {
@@ -143,5 +129,21 @@
   }
   50% {
     transform: scale(1);
+  }
+}
+
+
+@media (max-width: 820px) {
+
+
+  li,h4,h3,p{
+    margin: auto auto !important;
+    display: flex;
+    justify-content: center;
+  }
+  .social-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 }
