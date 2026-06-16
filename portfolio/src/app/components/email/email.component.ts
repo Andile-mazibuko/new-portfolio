@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Optional } from '@angular/core';
+import { Component, Inject, Input, OnInit, Optional, PLATFORM_ID } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,6 +13,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-email',
@@ -39,7 +40,8 @@ export class EmailComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
-    @Optional() private dialogRef: MatDialogRef<EmailComponent>
+    @Optional() private dialogRef: MatDialogRef<EmailComponent>,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -48,8 +50,8 @@ export class EmailComponent implements OnInit {
       subject: [''],
       message: ['', Validators.required],
     });
-    if(this.isDisabled){
-      document.getElementById('close-form')?.classList.add('no-display')
+    if (this.isDisabled && isPlatformBrowser(this.platformId)) {
+      document.getElementById('close-form')?.classList.add('no-display');
     }
 
   }

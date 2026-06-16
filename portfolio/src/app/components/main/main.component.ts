@@ -2,8 +2,10 @@ import {
   ChangeDetectorRef,
   Component,
   ElementRef,
+  Inject,
   NgZone,
   OnInit,
+  PLATFORM_ID,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
@@ -17,8 +19,8 @@ import { interval } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { SummaryComponent } from '../summary/summary.component';
 import { CategoriesComponent } from '../categories/categories.component';
-import { count } from 'node:console';
 import { FooterComponent } from "../footer/footer.component";
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -40,7 +42,8 @@ export class MainComponent implements OnInit {
     private dialog: MatDialog,
     private aboutServ: AboutService,
     private ngZone: NgZone,
-    private changeDetector: ChangeDetectorRef
+    private changeDetector: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
   about!: About;
   userSkills: Skill[] = [];
@@ -56,7 +59,7 @@ export class MainComponent implements OnInit {
   randTop!: string;
   randDisplay: number = 0;
   arrCount = 0;
-
+ 
   ngOnInit(): void {
     this.aboutServ.setUserAbout();
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
@@ -68,18 +71,24 @@ export class MainComponent implements OnInit {
 
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
-      const nameCardCont = document.getElementById('nameCardCont');
-      if (nameCardCont) {
-        nameCardCont.style.animation = 'none';
-      }
+      if (isPlatformBrowser(this.platformId)) {
+        const nameCardCont = document.getElementById('nameCardCont');
+        if (nameCardCont) {
+          nameCardCont.style.animation = 'none';
+        }
 
-      this.reArrangeSkills();
-      this.displaySkill = this.displaySkills[this.randDisplay];
-      nameCardCont!.style.animation = 'opacityTrans 3s ease-in-out';
+        this.reArrangeSkills();
+        this.displaySkill = this.displaySkills[this.randDisplay];
+        nameCardCont?.style.setProperty('animation', 'opacityTrans 3s ease-in-out');
+      } else {
+        this.reArrangeSkills();
+        this.displaySkill = this.displaySkills[this.randDisplay];
+      }
     });
 
-    this.ngZone.runOutsideAngular(() => {
-      this.intervalId = setInterval(() => {
+    if (isPlatformBrowser(this.platformId)) {
+      this.ngZone.runOutsideAngular(() => {
+        this.intervalId = setInterval(() => {
         this.reArrangeSkills();
         this.displaySkill = this.displaySkills[this.randDisplay];
         this.randLeft = Math.floor(Math.random() * 90) + '%';
@@ -106,7 +115,8 @@ export class MainComponent implements OnInit {
           
         // }
       }, 5000);
-    });
+      });
+    }
   }
   ngOnDestroy(): void {
     if (this.intervalId) {

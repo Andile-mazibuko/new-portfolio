@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../models/Models';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -15,7 +15,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
-  constructor(private projServ: ProjectsService) {}
+  constructor(
+    private projServ: ProjectsService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
   titleColors: string[] = ['Orangered', '', 'Lime'];
 
   ngOnInit(): void {
@@ -26,13 +29,15 @@ export class ProjectsComponent implements OnInit {
       
       
     });
-    // Change Hearder colors to match the primary color of a project
-    for (let index = 0; index < this.projects.length; index++) {
+    // Change Header colors to match the primary color of a project
+    if (isPlatformBrowser(this.platformId)) {
+      for (let index = 0; index < this.projects.length; index++) {
         const header = document.getElementById(this.projects[index].name);
         if (header) {
           header.style.color = this.titleColors[index];
         }
       }
+    }
   }
   formatNumber(num: number): string {
     return num < 10 ? '0' + num : num + '';

@@ -1,14 +1,16 @@
 import {
   Component,
   ElementRef,
+  Inject,
   OnInit,
+  PLATFORM_ID,
   Renderer2,
   ViewChild,
 } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { SocialsComponent } from './components/socials/socials.component';
 import { AboutComponent } from './components/about/about.component';
 import { MainComponent } from './components/main/main.component';
@@ -40,7 +42,11 @@ export class AppComponent implements OnInit {
   isDark: boolean = false;
   randStars: string[] = [];
 
-  constructor(private renderer: Renderer2) {}
+  constructor(
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
@@ -53,9 +59,13 @@ export class AppComponent implements OnInit {
   }
 
   toogleTheme() {
-    const body = document.body;
-    const themeBtn = document.getElementById('themeBtn');
-    const weather = document.getElementById('weather');
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const body = this.document.body;
+    const themeBtn = this.document.getElementById('themeBtn');
+    const weather = this.document.getElementById('weather');
 
     if (!weather) {
       alert('Theme can not be changed at this time');
@@ -91,7 +101,7 @@ export class AppComponent implements OnInit {
     if (typeof window === 'undefined') return; // skip on server
 
     for (let index = 0; index < (window.innerWidth < 820 ? 120: 80); index++) {
-      const style = document.createElement('style');
+      const style = this.document.createElement('style');
       const left = Math.floor(Math.random() * 100);
       const top = Math.floor(Math.random() * 100);
       const randFloat = Math.floor(Math.random() * 200);
@@ -123,8 +133,8 @@ export class AppComponent implements OnInit {
       }
       `;
 
-      document.head.appendChild(style);
-      const div = document.createElement('div');
+      this.document.head.appendChild(style);
+      const div = this.document.createElement('div');
       div.id = `star_${index}`;
       div.style.width = window.innerWidth < 820 ? "2px": "5px"
       div.style.height = window.innerWidth < 820 ? "2px": "5px"
@@ -153,10 +163,10 @@ export class AppComponent implements OnInit {
     }
   }
   flashRandomStars(): void {
-    if (typeof window === 'undefined') return; // skip on server
+    if (!isPlatformBrowser(this.platformId)) return;
     this.createRandomIds();
     this.randStars.forEach((starId) => {
-      const div = document.getElementById(starId);
+      const div = this.document.getElementById(starId);
       if (!div) {
         return;
       }
@@ -169,8 +179,12 @@ export class AppComponent implements OnInit {
     });
   }
   isRouteActive(route: string): void {
-    const clickedRoute = document.getElementById(route);
-    const navLinksNodeList = document.querySelectorAll('.nav-link'); // NodeList
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const clickedRoute = this.document.getElementById(route);
+    const navLinksNodeList = this.document.querySelectorAll('.nav-link'); // NodeList
     if (!clickedRoute) {
       return;
     }

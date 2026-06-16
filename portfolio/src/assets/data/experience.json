@@ -5,7 +5,7 @@
     "type": "Hybrid",
     "logo_path": "assets/images/csir.png",
     "job_type": "Internship",
-    "role": "Software Developer Intern",
+    "role": "Software Developer",
     "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
     "technologies": [
       "Angular",
@@ -23,7 +23,7 @@
     "type": "Remote",
     "logo_path": "assets/images/techM.png",
     "job_type": "Internship",
-    "role": "Business Analyst Intern",
+    "role": "Business Analyst",
     "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
     "technologies": [
       "Requirements Gathering",
