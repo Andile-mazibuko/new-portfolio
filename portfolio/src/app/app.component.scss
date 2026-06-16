@@ -50,7 +50,7 @@ mat-icon {
 
 .route-cont {
   width: 100%;
-  width: 100%;
+  // height: 100vh;
   top: 0%;
   left: 0%;
   z-index: 5;
@@ -61,11 +61,12 @@ mat-icon {
   );
 }
 .footer {
-  position: relative;
+  // position: relative;
   display: flex;
   margin-top: 5%;
   width: 100%;
   height: 200px;
+  // z-index: 5;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;

@@ -1,7 +1,8 @@
 .cont {
   overflow: hidden;
   width: 100%;
-  position: fixed;
+  // min-height: 100vh;
+  // position: fixed;
   margin-bottom: 15%;
   // background: var(
   //   --bg-color
@@ -18,7 +19,7 @@
 .content {
   // position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 50vh;
   width: 50vw;
   margin-left: 10%;
   margin-top: 0;
@@ -30,7 +31,7 @@
   animation: leftToRight 1s ease-in-out;
   overflow: hidden;
   // z-index: 2;
-  margin-bottom: 15%;
+  // margin-bottom: 15%;
   //margin-bottom: 15vh;
 }
 p,
