@@ -33,6 +33,7 @@ export interface About {
   cellphone: string;
   email: string;
   address: string;
+  key_points?: { name: string; value: string; icon: string }[];
 }
 export interface Project {
   name: string;

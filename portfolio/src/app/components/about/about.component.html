@@ -36,12 +36,15 @@
           </div>
           
           <div class="text-sum">
-            <h2>
-              <mat-icon class="center">school</mat-icon>Education
-            </h2>
-            <p>
-              
-            </p>
+            <div *ngFor="let point of about.key_points" class="sum-card">
+              <mat-icon>{{ point.icon }}</mat-icon>
+             
+              <div class="sum-text">
+                <h3>{{ point.name }}</h3>
+                <span>{{ point.value }}</span>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
