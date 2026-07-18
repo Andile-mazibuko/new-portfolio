@@ -8,7 +8,11 @@
     "cellphone": "063 597 0787",
     "summary": "Full Stack Developer passionate about building modern web experiences with real-world project experience, including e-commerce platforms and admin dashboards. I specialize in responsive UI, secure backend development, and database-driven solutions, always focused on writing clean code and delivering impactful software.",
     "email": "andilelethumusa@gmail.com",
-    "address": "Arcadia, Johan street"
+    "address": "Arcadia, Johan street",
+    "key_points":[
+      {"name": "Computer Science Graduate", "value": ""},
+      {"name": "Full Stack Developer", "value": "Proficient in both frontend and backend development, with experience in creating scalable and maintainable web applications."}
+    ]
   },
   "skills": [
     {
