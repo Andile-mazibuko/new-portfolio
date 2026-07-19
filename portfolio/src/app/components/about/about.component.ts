@@ -8,6 +8,7 @@ import { ExperienceService } from '../../services/experience.service';
 import { AboutService } from '../../services/about.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FooterComponent } from "../footer/footer.component";
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-about',
@@ -19,7 +20,8 @@ import { FooterComponent } from "../footer/footer.component";
     MatTabsModule,
     CommonModule,
     MatProgressBarModule,
-    FooterComponent
+    FooterComponent,
+    MatDividerModule
 ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',

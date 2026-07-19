@@ -20,36 +20,54 @@
         <div class="img-area center">
           <img src="assets/images/andile.jpg" alt="" />
         </div>
+
         <div class="text-h-cont">
           <div class="text-area">
             <h1>
-              <!-- <mat-icon class="center">contact_page</mat-icon> -->
-             About Me <span class="text-primary">.</span>
+              About Me
             </h1>
-            <h2>
-              <!-- <mat-icon class="center">contact_page</mat-icon> -->
-             Full Stack Developer
-            </h2>
+            <h4 classs="greet">
+              Hi, I'm {{ about.firstName +" " + about.lastName}} <span class="text-primary">.</span>
+            </h4>
+            <h2>Full Stack Developer</h2>
             <p>
               {{ about.summary }}
             </p>
+            <div class="sum-cards">
+              <div *ngFor="let card of about.summary_cards" class="sum-card">
+                <!-- <div class="card-icon"> -->
+                  <mat-icon>{{ card.icon }}</mat-icon>
+                <!-- </div> -->
+                <div class="sum-text">
+                  <h3>{{ card.value }}</h3>
+                  <!-- <h2>{{ card.description }}</h2> -->
+                  <span>{{ card.title }}</span>
+                  <!-- <span>{{ card.subtitle }}</span> -->
+                </div>
+
+              </div>
+            </div>
           </div>
-          
+
           <div class="text-sum">
             <div *ngFor="let point of about.key_points" class="sum-card">
               <mat-icon>{{ point.icon }}</mat-icon>
-             
+
               <div class="sum-text">
                 <h3>{{ point.name }}</h3>
                 <span>{{ point.value }}</span>
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="center">My Journey</h2>
+      <div class="divider">
+        <mat-divider></mat-divider>
+        <h2 class="center">MY JOURNEY</h2>
+        <mat-divider></mat-divider>
+      </div>
+
       <div class="exp-section center">
         <mat-card *ngFor="let exp of experiences" class="exp">
           <mat-card-header>
@@ -80,8 +98,13 @@
         </mat-card>
       </div>
 
+      <div class="divider">
+        <mat-divider></mat-divider>
+        <h2 class="center">TECH STACK</h2>
+        <mat-divider></mat-divider>
+      </div>
       <div class="skills-tab">
-        <h2 class="center">Tech stack</h2>
+        <!-- <h2 class="center">Tech stack</h2> -->
 
         <!--FOR DESKTOP APPS-->
         <mat-tab-group animationDuration="1000ms">

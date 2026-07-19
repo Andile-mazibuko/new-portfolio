@@ -9,12 +9,54 @@
     "summary": "Full Stack Developer passionate about building modern web experiences with real-world project experience, including e-commerce platforms and admin dashboards. I specialize in responsive UI, secure backend development, and database-driven solutions, always focused on writing clean code and delivering impactful software.",
     "email": "andilelethumusa@gmail.com",
     "address": "Arcadia, Johan street",
-    "key_points":[
-      {"name": "Computer Science Graduate", "value": "NQF 06", "icon":"school"},
-      {"name": "2+ Years of Working Expirience", "value": "Industry Experience","icon":"work"},
-      {"name": "Problem Solver", "value": "Creative Solutions","icon":"construction"},
-      {"name": "Team Player", "value": "","icon":"group"},
-      {"name": "4+ years of Coding", "value":"Coding Since 2020","icon":"code"}
+    "key_points": [
+      {
+        "name": "Computer Science Graduate",
+        "value": "NQF 06",
+        "icon": "school"
+      },
+      {
+        "name": "2+ Years of Working Expirience",
+        "value": "Industry Experience",
+        "icon": "work"
+      },
+      {
+        "name": "Problem Solver",
+        "value": "Creative Solutions",
+        "icon": "construction"
+      },
+      { "name": "Team Player", "value": "", "icon": "group" },
+      {
+        "name": "4+ years of Coding",
+        "value": "Coding Since 2020",
+        "icon": "code"
+      }
+    ],
+    "summary_cards": [
+      {
+        "title": "Internships",
+        "value": "2+",
+        "subtitle": "Professional Experience",
+        "icon": "work_history"
+      },
+      {
+        "title": "Technologies",
+        "value": "20+",
+        "subtitle": "Worked With",
+        "icon": "terminal"
+      },
+      {
+        "title": "Projects",
+        "value": "10+",
+        "subtitle": "Completed",
+        "icon": "folder"
+      },
+      {
+        "title": "Started Coding",
+        "value": "2020",
+        "subtitle": "My Coding Journey",
+        "icon": "schedule"
+      }
     ]
   },
   "skills": [

@@ -34,6 +34,7 @@ export interface About {
   email: string;
   address: string;
   key_points?: { name: string; value: string; icon: string }[];
+  summary_cards?: { title: string; description: string; icon: string, value: string, subtitle: string }[];
 }
 export interface Project {
   name: string;
