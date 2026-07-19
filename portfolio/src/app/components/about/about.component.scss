@@ -198,7 +198,7 @@ mat-icon {
   width: 300px;
   overflow: hidden;
   margin-left: 5%;
-  margin-right: 0 !important;
+  margin-right: 0 ;
   border-radius: 150px;
   align-items: baseline;
   box-shadow: var(--box-shadow);
@@ -298,12 +298,49 @@ mat-tab-group {
   .about {
     flex-direction: column;
   }
-  .text-area {
-    width: 90vw;
+  .img-area {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: yellow !important;
   }
+  .text-h-cont {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    .text-sum {
+      width: 100%;
+      margin: 0;
+      width: 100%;
+      margin: 0;
+      flex-direction: column;
+      .sum-card {
+        width: 90%;
+        margin: 5px auto !important;
+        mat-icon {
+          width: 20% !important;
+        }
+      }
+    }
+  }
+  .text-area {
+    width: 100vw;
+    .sum-cards {
+      display: none;
+    }
+  }
+
   h1 {
     margin-top: 10px;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
   }
   .img-area {
     margin: 0 auto;
