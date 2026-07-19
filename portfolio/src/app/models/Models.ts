@@ -6,6 +6,7 @@ export interface Experience {
   company: string;
   startDate: string;
   endDate: string;
+  startYear: number;
   type: string;
   logo_path: string;
   job_type: string;

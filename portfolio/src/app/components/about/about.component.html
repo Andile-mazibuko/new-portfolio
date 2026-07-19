@@ -23,11 +23,10 @@
 
         <div class="text-h-cont">
           <div class="text-area">
-            <h1>
-              About Me
-            </h1>
+            <h1>About Me</h1>
             <h4 classs="greet">
-              Hi, I'm {{ about.firstName +" " + about.lastName}} <span class="text-primary">.</span>
+              Hi, I'm {{ about.firstName + " " + about.lastName }}
+              <span class="text-primary">.</span>
             </h4>
             <h2>Full Stack Developer</h2>
             <p>
@@ -36,7 +35,7 @@
             <div class="sum-cards">
               <div *ngFor="let card of about.summary_cards" class="sum-card">
                 <!-- <div class="card-icon"> -->
-                  <mat-icon>{{ card.icon }}</mat-icon>
+                <mat-icon>{{ card.icon }}</mat-icon>
                 <!-- </div> -->
                 <div class="sum-text">
                   <h3>{{ card.value }}</h3>
@@ -44,7 +43,6 @@
                   <span>{{ card.title }}</span>
                   <!-- <span>{{ card.subtitle }}</span> -->
                 </div>
-
               </div>
             </div>
           </div>
@@ -71,15 +69,14 @@
       <div class="exp-section center">
         <div class="exps-cont">
           <div class="even-cont">
-            <div *ngFor="let exp of evenExperiences;" class="exp">
-              
+            <div *ngFor="let exp of evenExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
                 <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
               </div>
 
               <div class="more-details">
-                <div class="img-cont"> 
+                <div class="img-cont">
                   <img [src]="exp.logo_path" alt="company logo" />
                 </div>
                 <div class="text">
@@ -96,21 +93,27 @@
                 </div>
               </div>
             </div>
-            
           </div>
-          <div class="center-cont">
 
+          <div class="center-cont">
+            <div class="c-exp" *ngFor="let exp of experiences">
+              <div class="t-line"></div>
+              <div class="y-cont">
+                {{ exp.startYear }}
+              </div>
+              <div class="b-line"></div>
+            </div>
           </div>
+
           <div class="odd-cont">
-            <div *ngFor="let exp of oddExperiences;" class="exp">
-              
+            <div *ngFor="let exp of oddExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
                 <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
               </div>
 
               <div class="more-details">
-                <div class="img-cont"> 
+                <div class="img-cont">
                   <img [src]="exp.logo_path" alt="company logo" />
                 </div>
                 <div class="text">
@@ -122,7 +125,7 @@
 
               <div class="techs-gained">
                 <div class="tech" *ngFor="let tech of exp.technologies">
-                  <img [src]="tech.path" alt="skill logo" />
+                  <img *ngIf="tech.path != ''" [src]="tech.path" alt="" />
                   <h4>{{ tech.name }}</h4>
                 </div>
               </div>
@@ -164,7 +167,7 @@
         <h2 class="center">TECH STACK</h2>
         <mat-divider></mat-divider>
       </div>
-      
+
       <div class="skills-tab">
         <!-- <h2 class="center">Tech stack</h2> -->
 
@@ -234,7 +237,7 @@
               </mat-card>
             </div>
           </mat-tab>
-        </mat-tab-group> 
+        </mat-tab-group>
 
         <!--ONLY FOR MOBILE DEVICES-->
         <div class="skills-cont center mobile-tech-stack">
@@ -252,7 +255,6 @@
             </div>
           </mat-card>
         </div>
-
       </div>
     </div>
   </div>

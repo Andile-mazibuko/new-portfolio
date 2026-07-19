@@ -2,6 +2,7 @@
   {
     "company": "Tshwane University of Technology",
     "startDate": "2026",
+    "startYear":2026,
     "endDate": "present",
     "type": "education",
     "logo_path": "assets/images/tut.png",
@@ -17,7 +18,7 @@
       },
       {
         "name": "SQL",
-        "path": "assets/images/skills/css3-alt.svg",
+        "path": "assets/images/skills/sql.svg",
         "type": "backend",
         "percentage": 90
       },
@@ -35,7 +36,7 @@
       },
       {
         "name": "JavaScript",
-        "path": "assets/images/skills/javascript.svg",
+        "path": "assets/images/skills/js.svg",
         "type": "frontend",
         "percentage": 80
       },
@@ -52,6 +53,7 @@
     "company": "Council for Scientific and Industrial Research",
     "startDate": "Mar 2025",
     "endDate": "present",
+     "startYear":2025,
     "type": "Hybrid",
     "logo_path": "assets/images/csir.png",
     "job_type": "Internship",
@@ -112,6 +114,7 @@
     "company": "Tech Mahindra",
     "startDate": "Nov 2023",
     "endDate": "Nov 2024",
+     "startYear":2023,
     "type": "Remote",
     "logo_path": "assets/images/techM.png",
     "job_type": "Internship",
@@ -120,37 +123,19 @@
     "technologies": [
       {
         "name": "Requirements Gathering",
-        "path": "",
+        "path": "assets/images/skills/doc.svg",
         "type": "backend",
         "percentage": 80
       },
       {
         "name": "Documentation",
-        "path": "",
-        "type": "backend",
-        "percentage": 80
-      },
-      {
-        "name": "UI Prototyping",
-        "path": "",
-        "type": "frontend",
-        "percentage": 80
-      },
-      {
-        "name": "Agile Methodologies",
-        "path": "",
-        "type": "backend",
-        "percentage": 80
-      },
-      {
-        "name": "Stakeholder Communication",
-        "path": "",
+        "path": "assets/images/skills/doc.svg",
         "type": "backend",
         "percentage": 80
       },
       {
         "name": "Ms Projects",
-        "path": "",
+        "path": "assets/images/skills/cloud.svg",
         "type": "backend",
         "percentage": 80
       },
@@ -170,11 +155,49 @@
     "company": "Tshwane University of Technology",
     "startDate": "2020",
     "endDate": "2023",
+     "startYear":2020,
     "type": "education",
     "logo_path": "assets/images/tut.png",
     "job_type": "Full-time",
     "role": "Diploma in Computer Science",
     "description": "Studied foundational and advanced topics in computer science including programming, databases, and software engineering.",
-    "technologies": ["Java", "SQL", "HTML", "CSS", "JavaScript", "PLSQL"]
+    "technologies": [
+      {
+        "name": "Java",
+        "path": "assets/images/skills/java.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "SQL",
+        "path": "assets/images/skills/sql.svg",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "HTML",
+        "path": "assets/images/skills/html5.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "CSS",
+        "path": "assets/images/skills/css3-alt.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "JavaScript",
+        "path": "assets/images/skills/js.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "PLSQL",
+        "path": "assets/images/skills/sql.svg",
+        "type": "backend",
+        "percentage": 80
+      }
+    ]
   }
 ]
