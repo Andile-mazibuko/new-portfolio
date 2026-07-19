@@ -72,7 +72,11 @@
             <div *ngFor="let exp of evenExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
-                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <p >{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <div class="active-indicator center" *ngIf="exp.endDate == 'present'">
+                  <div class="circle"></div>
+                  <span>Active</span>
+                </div>
               </div>
 
               <div class="more-details">
@@ -99,7 +103,9 @@
             <div class="c-exp" *ngFor="let exp of experiences">
               <div class="t-line"></div>
               <div class="y-cont">
-                {{ exp.startYear }}
+                <div [ngClass]="exp.odd? 'transparent':'l-pointer'"></div>
+                <div class="year center">{{ exp.startYear }}</div>
+                <div [ngClass]="!exp.odd? 'transparent':'r-pointer'"></div>
               </div>
               <div class="b-line"></div>
             </div>
@@ -109,7 +115,11 @@
             <div *ngFor="let exp of oddExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
-                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <p >{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <div class="active-indicator center" *ngIf="exp.endDate == 'present'">
+                  <div class="circle"></div>
+                  <span>Active</span>
+                </div>
               </div>
 
               <div class="more-details">
