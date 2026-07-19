@@ -1,6 +1,56 @@
 [
   {
-    "startDate": "March 2025",
+    "company": "Tshwane University of Technology",
+    "startDate": "2026",
+    "endDate": "present",
+    "type": "education",
+    "logo_path": "assets/images/tut.png",
+    "job_type": "Full-time",
+    "role": "Adv Diploma in Computer Science",
+    "description": "Studied foundational and advanced topics in computer science including programming, databases, and software engineering.",
+    "technologies": [
+      {
+        "name": "Java",
+        "path": "assets/images/skills/java.ico",
+        "type": "frontend",
+        "percentage": 90
+      },
+      {
+        "name": "SQL",
+        "path": "assets/images/skills/css3-alt.svg",
+        "type": "backend",
+        "percentage": 90
+      },
+      {
+        "name": "HTML",
+        "path": "assets/images/skills/html5.svg",
+        "type": "frontend",
+        "percentage": 90
+      },
+      {
+        "name": "CSS",
+        "path": "assets/images/skills/css3-alt.svg",
+        "type": "frontend",
+        "percentage": 90
+      },
+      {
+        "name": "JavaScript",
+        "path": "assets/images/skills/javascript.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "Python",
+        "path": "assets/images/skills/py.svg",
+        "type": "backend",
+        "percentage": 80
+      }
+    ]
+  },
+
+  {
+    "company": "Council for Scientific and Industrial Research",
+    "startDate": "Mar 2025",
     "endDate": "present",
     "type": "Hybrid",
     "logo_path": "assets/images/csir.png",
@@ -8,41 +58,123 @@
     "role": "Software Developer",
     "description": "Worked on full-stack development, contributed to internal tools, and learned agile practices.",
     "technologies": [
-      "Angular",
-      "Python",
-      "Postman",
-      "Firebase",
-      "PostGreSQL",
-      "Power Apps",
-      "Power Automate"
+      {
+        "name": "Angular",
+        "path": "assets/images/skills/angular.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "Python",
+        "path": "assets/images/skills/py.svg",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "TypeScript",
+        "path": "assets/images/skills/ts.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "Postman",
+        "path": "assets/images/skills/postman.svg",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "Firebase",
+        "path": "assets/images/skills/firebase.svg",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "PostGreSQL",
+        "path": "assets/images/skills/postgresql.svg",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "Power Apps",
+        "path": "assets/images/skills/powerapps.svg",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "Power Automate",
+        "path": "assets/images/skills/powerautomate.svg",
+        "type": "backend",
+        "percentage": 80
+      }
     ]
   },
   {
-    "startDate": "November 2023",
-    "endDate": "November 2024",
+    "company": "Tech Mahindra",
+    "startDate": "Nov 2023",
+    "endDate": "Nov 2024",
     "type": "Remote",
     "logo_path": "assets/images/techM.png",
     "job_type": "Internship",
     "role": "Business Analyst",
     "description": "Collaborated on software requirements gathering, documentation, and assisted in UI prototyping.",
     "technologies": [
-      "Requirements Gathering",
-      "Ms Projects",
-      "R",
-      "SQL",
-      "Power BI",
-      "RPA",
-      "Cloud Computing"
+      {
+        "name": "Requirements Gathering",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "Documentation",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "UI Prototyping",
+        "path": "",
+        "type": "frontend",
+        "percentage": 80
+      },
+      {
+        "name": "Agile Methodologies",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "Stakeholder Communication",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      },
+      {
+        "name": "Ms Projects",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      },
+      { "name": "R", "path": "", "type": "backend", "percentage": 80 },
+      { "name": "SQL", "path": "", "type": "backend", "percentage": 80 },
+      { "name": "Power BI", "path": "", "type": "backend", "percentage": 80 },
+      { "name": "RPA", "path": "", "type": "backend", "percentage": 80 },
+      {
+        "name": "Cloud Computing",
+        "path": "",
+        "type": "backend",
+        "percentage": 80
+      }
     ]
   },
   {
-    "startDate": "January 2020",
-    "endDate": "March 2024",
+    "company": "Tshwane University of Technology",
+    "startDate": "2020",
+    "endDate": "2023",
     "type": "education",
     "logo_path": "assets/images/tut.png",
     "job_type": "Full-time",
     "role": "Diploma in Computer Science",
     "description": "Studied foundational and advanced topics in computer science including programming, databases, and software engineering.",
-    "technologies": ["Java", "SQL", "HTML", "CSS", "JavaScrpit", "PLSQL"]
+    "technologies": ["Java", "SQL", "HTML", "CSS", "JavaScript", "PLSQL"]
   }
 ]

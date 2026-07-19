@@ -30,6 +30,8 @@ export class AboutComponent implements OnInit {
   // Cards diplayed under the About title
   skills: CardSkill[] = [];
   experiences: Experience[] = [];
+  oddExperiences: Experience[] = [];
+  evenExperiences: Experience[] = [];
   frontEndSkills: Skill[] = [];
   backEndSkills: Skill[] = [];
   tools: Skill[] = [];
@@ -69,13 +71,19 @@ export class AboutComponent implements OnInit {
       },
     ];
     this.populateExpArray();
+    this.oddExperiences = this.experiences.filter((exp) => exp.odd);
+    this.evenExperiences = this.experiences.filter((exp) => !exp.odd);
+    // console.log(this.experiences);
   }
 
   //get Data from the json file and store it inside the array
   populateExpArray(): void {
     this.exp.getExpiriences().subscribe((data: Experience[]) => {
-      this.experiences = data;
-    });
+        this.experiences = data.map((exp, index) => ({
+          ...exp,
+          odd: index % 2 !== 0
+        }));
+      });
   }
 
   getSkiils(): void {

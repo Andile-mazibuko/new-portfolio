@@ -69,7 +69,68 @@
       </div>
 
       <div class="exp-section center">
-        <mat-card *ngFor="let exp of experiences" class="exp">
+        <div class="exps-cont">
+          <div class="even-cont">
+            <div *ngFor="let exp of evenExperiences;" class="exp">
+              
+              <div class="top">
+                <mat-icon>calendar_today</mat-icon>
+                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+              </div>
+
+              <div class="more-details">
+                <div class="img-cont"> 
+                  <img [src]="exp.logo_path" alt="company logo" />
+                </div>
+                <div class="text">
+                  <h1>{{ exp.company }}</h1>
+                  <h2>{{ exp.role }}</h2>
+                  <p>{{ exp.description }}</p>
+                </div>
+              </div>
+
+              <div class="techs-gained">
+                <div class="tech" *ngFor="let tech of exp.technologies">
+                  <img [src]="tech.path" alt="skill logo" />
+                  <h4>{{ tech.name }}</h4>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="center-cont">
+
+          </div>
+          <div class="odd-cont">
+            <div *ngFor="let exp of oddExperiences;" class="exp">
+              
+              <div class="top">
+                <mat-icon>calendar_today</mat-icon>
+                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+              </div>
+
+              <div class="more-details">
+                <div class="img-cont"> 
+                  <img [src]="exp.logo_path" alt="company logo" />
+                </div>
+                <div class="text">
+                  <h1>{{ exp.company }}</h1>
+                  <h2>{{ exp.role }}</h2>
+                  <p>{{ exp.description }}</p>
+                </div>
+              </div>
+
+              <div class="techs-gained">
+                <div class="tech" *ngFor="let tech of exp.technologies">
+                  <img [src]="tech.path" alt="skill logo" />
+                  <h4>{{ tech.name }}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <mat-card *ngFor="let exp of experiences" class="exp">
           <mat-card-header>
             <mat-card-title-group>
               <mat-card-title>{{ exp.role }}</mat-card-title>
@@ -95,7 +156,7 @@
               </mat-card>
             </div>
           </mat-card-content>
-        </mat-card>
+        </mat-card> -->
       </div>
 
       <div class="divider">
@@ -103,6 +164,7 @@
         <h2 class="center">TECH STACK</h2>
         <mat-divider></mat-divider>
       </div>
+      
       <div class="skills-tab">
         <!-- <h2 class="center">Tech stack</h2> -->
 
@@ -172,7 +234,7 @@
               </mat-card>
             </div>
           </mat-tab>
-        </mat-tab-group>
+        </mat-tab-group> 
 
         <!--ONLY FOR MOBILE DEVICES-->
         <div class="skills-cont center mobile-tech-stack">
@@ -190,6 +252,7 @@
             </div>
           </mat-card>
         </div>
+
       </div>
     </div>
   </div>

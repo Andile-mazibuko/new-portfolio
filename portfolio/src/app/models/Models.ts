@@ -3,6 +3,7 @@ export interface CardSkill {
   name: string;
 }
 export interface Experience {
+  company: string;
   startDate: string;
   endDate: string;
   type: string;
@@ -10,7 +11,8 @@ export interface Experience {
   job_type: string;
   role: string;
   description: string;
-  technologies: string[];
+  technologies: Skill[];
+  odd?: boolean; // Optional property to indicate if the experience is odd or even
 }
 export interface Skill {
   name: string;
