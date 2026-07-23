@@ -28,7 +28,7 @@ import {MatDividerModule} from '@angular/material/divider';
 })
 export class AboutComponent implements OnInit {
   // Cards diplayed under the About title
-  skills: CardSkill[] = [];
+  // skills: CardSkill[] = [];
   experiences: Experience[] = [];
   oddExperiences: Experience[] = [];
   evenExperiences: Experience[] = [];
@@ -38,38 +38,12 @@ export class AboutComponent implements OnInit {
   allSkills: Skill[] = []; // To be used for mobile devices only
   about!: About
 
-  //My passion - displayed on the home route
-  smallDescription =
-    'Full Stack Developer passionate about building modern web experiences';
-
   constructor(private exp: ExperienceService, private aboutServ: AboutService) {}
 
   ngOnInit(): void {
     this.getSkiils();
     this.getUserAbout()
-    // add skills on init
-    this.skills = [
-      {
-        icon: 'code',
-        name: 'Full Stack Developer',
-      },
-      {
-        icon: 'tv',
-        name: 'Anime',
-      },
-      {
-        icon: 'sports_esports',
-        name: 'Gaming',
-      },
-      {
-        icon: 'headphones',
-        name: 'Code with Music',
-      },
-      {
-        icon: 'school',
-        name: 'CS Graduate',
-      },
-    ];
+
     this.populateExpArray();
     this.oddExperiences = this.experiences.filter((exp) => exp.odd);
     this.evenExperiences = this.experiences.filter((exp) => !exp.odd);

@@ -98,13 +98,13 @@
       },
       {
         "name": "Power Apps",
-        "path": "assets/images/skills/powerapps.svg",
+        "path": "",
         "type": "frontend",
         "percentage": 80
       },
       {
         "name": "Power Automate",
-        "path": "assets/images/skills/powerautomate.svg",
+        "path": "",
         "type": "backend",
         "percentage": 80
       }

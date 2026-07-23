@@ -25,7 +25,7 @@
         "value": "Creative Solutions",
         "icon": "construction"
       },
-      { "name": "Team Player", "value": "", "icon": "group" },
+      { "name": "Team Player", "value": "Team Player", "icon": "group" },
       {
         "name": "4+ years of Coding",
         "value": "Coding Since 2020",

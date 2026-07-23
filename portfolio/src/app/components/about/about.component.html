@@ -32,6 +32,10 @@
             <p>
               {{ about.summary }}
             </p>
+            
+            <p>
+              {{ about.summary }}
+            </p>
             <div class="sum-cards">
               <div *ngFor="let card of about.summary_cards" class="sum-card">
                 <!-- <div class="card-icon"> -->
@@ -47,13 +51,23 @@
             </div>
           </div>
 
-          <div class="text-sum">
-            <div *ngFor="let point of about.key_points" class="sum-card">
-              <mat-icon>{{ point.icon }}</mat-icon>
+          <div class="cards-container">
+            <div class="pointer">
+              <div *ngFor="let point of about.key_points" class="sum-pointer">
+                <div class="bar"></div>
+                <div class="circle"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
 
-              <div class="sum-text">
-                <h3>{{ point.name }}</h3>
-                <span>{{ point.value }}</span>
+            <div class="text-sum">
+              <div *ngFor="let point of about.key_points" class="sum-card">
+                <mat-icon>{{ point.icon }}</mat-icon>
+
+                <div class="sum-text">
+                  <h3>{{ point.name }}</h3>
+                  <span>{{ point.value }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -62,7 +76,9 @@
 
       <div class="divider">
         <mat-divider></mat-divider>
+        <div class="circle"></div>
         <h2 class="center">MY JOURNEY</h2>
+        <div class="circle"></div>
         <mat-divider></mat-divider>
       </div>
 
@@ -72,8 +88,11 @@
             <div *ngFor="let exp of evenExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
-                <p >{{ exp.startDate }} - {{ exp.endDate }}</p>
-                <div class="active-indicator center" *ngIf="exp.endDate == 'present'">
+                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <div
+                  class="active-indicator center"
+                  *ngIf="exp.endDate == 'present'"
+                >
                   <div class="circle"></div>
                   <span>Active</span>
                 </div>
@@ -103,9 +122,9 @@
             <div class="c-exp" *ngFor="let exp of experiences">
               <div class="t-line"></div>
               <div class="y-cont">
-                <div [ngClass]="exp.odd? 'transparent':'l-pointer'"></div>
+                <div [ngClass]="exp.odd ? 'transparent' : 'l-pointer'"></div>
                 <div class="year center">{{ exp.startYear }}</div>
-                <div [ngClass]="!exp.odd? 'transparent':'r-pointer'"></div>
+                <div [ngClass]="!exp.odd ? 'transparent' : 'r-pointer'"></div>
               </div>
               <div class="b-line"></div>
             </div>
@@ -115,8 +134,11 @@
             <div *ngFor="let exp of oddExperiences" class="exp">
               <div class="top">
                 <mat-icon>calendar_today</mat-icon>
-                <p >{{ exp.startDate }} - {{ exp.endDate }}</p>
-                <div class="active-indicator center" *ngIf="exp.endDate == 'present'">
+                <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
+                <div
+                  class="active-indicator center"
+                  *ngIf="exp.endDate == 'present'"
+                >
                   <div class="circle"></div>
                   <span>Active</span>
                 </div>
@@ -174,7 +196,9 @@
 
       <div class="divider">
         <mat-divider></mat-divider>
+        <div class="circle"></div>
         <h2 class="center">TECH STACK</h2>
+        <div class="circle"></div>
         <mat-divider></mat-divider>
       </div>
 
