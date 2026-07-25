@@ -19,8 +19,9 @@ import { interval } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
 import { SummaryComponent } from '../summary/summary.component';
 import { CategoriesComponent } from '../categories/categories.component';
-import { FooterComponent } from "../footer/footer.component";
+import { FooterComponent } from '../footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -30,8 +31,9 @@ import { isPlatformBrowser } from '@angular/common';
     SocialsComponent,
     MatCardModule,
     SummaryComponent,
-    FooterComponent
-],
+    FooterComponent,
+    MatIconModule,
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
@@ -43,7 +45,7 @@ export class MainComponent implements OnInit {
     private aboutServ: AboutService,
     private ngZone: NgZone,
     private changeDetector: ChangeDetectorRef,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
   about!: About;
   userSkills: Skill[] = [];
@@ -59,7 +61,7 @@ export class MainComponent implements OnInit {
   randTop!: string;
   randDisplay: number = 0;
   arrCount = 0;
- 
+
   ngOnInit(): void {
     this.aboutServ.setUserAbout();
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
@@ -79,7 +81,10 @@ export class MainComponent implements OnInit {
 
         this.reArrangeSkills();
         this.displaySkill = this.displaySkills[this.randDisplay];
-        nameCardCont?.style.setProperty('animation', 'opacityTrans 3s ease-in-out');
+        nameCardCont?.style.setProperty(
+          'animation',
+          'opacityTrans 3s ease-in-out',
+        );
       } else {
         this.reArrangeSkills();
         this.displaySkill = this.displaySkills[this.randDisplay];
@@ -89,32 +94,32 @@ export class MainComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.ngZone.runOutsideAngular(() => {
         this.intervalId = setInterval(() => {
-        this.reArrangeSkills();
-        this.displaySkill = this.displaySkills[this.randDisplay];
-        this.randLeft = Math.floor(Math.random() * 90) + '%';
-        this.randTop = 10 + Math.floor(Math.random() * 90) + '%'; // to not display anything above the nav bar
-        //console.log(this.displaySkills)
-        this.changeDetector.detectChanges(); // Detect changes and update the array on html side
-        this.secondsCounter++;
+          this.reArrangeSkills();
+          this.displaySkill = this.displaySkills[this.randDisplay];
+          this.randLeft = Math.floor(Math.random() * 90) + '%';
+          this.randTop = 10 + Math.floor(Math.random() * 90) + '%'; // to not display anything above the nav bar
+          //console.log(this.displaySkills)
+          this.changeDetector.detectChanges(); // Detect changes and update the array on html side
+          this.secondsCounter++;
 
-        // if (this.secondsCounter % 3 === 0) {
-        //   this.componentContainer.clear();
+          // if (this.secondsCounter % 3 === 0) {
+          //   this.componentContainer.clear();
 
-        //   if (this.arrCount === this.summaryComponents.length-1) {
-        //     this.componentContainer.createComponent(
-        //       this.summaryComponents[this.arrCount]
-        //     );
+          //   if (this.arrCount === this.summaryComponents.length-1) {
+          //     this.componentContainer.createComponent(
+          //       this.summaryComponents[this.arrCount]
+          //     );
 
-        //     this.arrCount = 0;
-        //   }else{
-        //     this.componentContainer.createComponent(
-        //       this.summaryComponents[this.arrCount]
-        //     );
-        //     this.arrCount++;
-        //   }
-          
-        // }
-      }, 5000);
+          //     this.arrCount = 0;
+          //   }else{
+          //     this.componentContainer.createComponent(
+          //       this.summaryComponents[this.arrCount]
+          //     );
+          //     this.arrCount++;
+          //   }
+
+          // }
+        }, 5000);
       });
     }
   }
@@ -132,9 +137,10 @@ export class MainComponent implements OnInit {
     this.dialog.open(EmailComponent, {
       enterAnimationDuration: '1s',
       exitAnimationDuration: '1s',
+      hasBackdrop: true,
       width: 'auto',
-      panelClass: 'dialogClass',
-      backdropClass: 'dialogBackdrop',
+      // panelClass: 'dialogClass',
+      // backdropClass: 'dialogBackdrop',
     });
   }
 
@@ -145,7 +151,7 @@ export class MainComponent implements OnInit {
     this.displaySkills = []; // empty the array first
     for (let i = 0; i < 4; i++) {
       let randomN = Math.floor(
-        Math.random() * (this.userSkills.length - 0 + 1) + 0
+        Math.random() * (this.userSkills.length - 0 + 1) + 0,
       );
 
       let randomSkill: Skill = this.userSkills[randomN];
