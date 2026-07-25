@@ -42,22 +42,21 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSkiils();
-    this.getUserAbout()
-
+    this.getUserAbout();
     this.populateExpArray();
-    this.oddExperiences = this.experiences.filter((exp) => exp.odd);
-    this.evenExperiences = this.experiences.filter((exp) => !exp.odd);
-    // console.log(this.experiences);
   }
 
   //get Data from the json file and store it inside the array
   populateExpArray(): void {
     this.exp.getExpiriences().subscribe((data: Experience[]) => {
-        this.experiences = data.map((exp, index) => ({
-          ...exp,
-          odd: index % 2 !== 0
-        }));
-      });
+      this.experiences = data.map((exp, index) => ({
+        ...exp,
+        odd: index % 2 !== 0,
+      }));
+
+      this.oddExperiences = this.experiences.filter((exp) => exp.odd);
+      this.evenExperiences = this.experiences.filter((exp) => !exp.odd);
+    });
   }
 
   getSkiils(): void {
