@@ -69,8 +69,8 @@ export class MainComponent implements OnInit {
     });
     this.randLeft = 10 + Math.floor(Math.random() * 90) - 10 + '%';
     this.randTop = Math.floor(Math.random() * 90) + '%';
-    this.randDisplay = Math.floor(Math.random() * 4);
-
+    
+    this.randDisplay = Math.floor(Math.random() * 8);
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
       if (isPlatformBrowser(this.platformId)) {
@@ -149,7 +149,7 @@ export class MainComponent implements OnInit {
    */
   reArrangeSkills(): void {
     this.displaySkills = []; // empty the array first
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i <= 8; i++) {
       let randomN = Math.floor(
         Math.random() * (this.userSkills.length - 0 + 1) + 0,
       );
