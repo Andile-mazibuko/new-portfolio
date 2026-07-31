@@ -107,32 +107,6 @@
 
 }
 
-.designed-by {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  .heart {
-    color: #ff6b6b;
-    animation: heartbeat 1.5s ease infinite;
-  }
-
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-  }
-}
-
-
 @media (max-width: 820px) {
 
 

@@ -17,21 +17,6 @@
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
-.link-label {
-  width: 100%;
-  display: flex;
-  text-decoration: none;
-  font-style: normal;
-  color: transparent;
-  transition: ease-in-out 1s;
-}
-.socials a:hover .link-label {
-  justify-content: center;
-  animation: ease-in-out;
-  color: var(--font-color);
-  transition: transform 0.3s ease, font-size 0.3s ease;
-  transition: ease-in-out 1s;
-}
 i {
   width: 50px;
   font-size: xx-large;
