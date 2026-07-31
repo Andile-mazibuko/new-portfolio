@@ -18,7 +18,7 @@
 
       <div class="about">
         <div class="img-area center">
-          <img src="assets/images/andile.jpg" alt="" />
+          <img src="assets/images/andile.jpg" alt="" loading="lazy" />
         </div>
 
         <div class="text-h-cont">
@@ -98,7 +98,7 @@
 
               <div class="more-details">
                 <div class="img-cont">
-                  <img [src]="exp.logo_path" alt="company logo" />
+                  <img [src]="exp.logo_path" alt="company logo" loading="lazy" />
                 </div>
                 <div class="text">
                   <h1>{{ exp.company }}</h1>
@@ -109,7 +109,7 @@
 
               <div class="techs-gained">
                 <div class="tech" *ngFor="let tech of exp.technologies">
-                  <img [src]="tech.path" alt="skill logo" />
+                  <img [src]="tech.path" alt="skill logo" loading="lazy" />
                   <h4>{{ tech.name }}</h4>
                 </div>
               </div>
@@ -144,7 +144,7 @@
 
               <div class="more-details">
                 <div class="img-cont">
-                  <img [src]="exp.logo_path" alt="company logo" />
+                  <img [src]="exp.logo_path" alt="company logo" loading="lazy" />
                 </div>
                 <div class="text">
                   <h1>{{ exp.company }}</h1>
@@ -155,7 +155,7 @@
 
               <div class="techs-gained">
                 <div class="tech" *ngFor="let tech of exp.technologies">
-                  <img *ngIf="tech.path != ''" [src]="tech.path" alt="" />
+                  <img *ngIf="tech.path != ''" [src]="tech.path" alt="" loading="lazy" />
                   <h4>{{ tech.name }}</h4>
                 </div>
               </div>
@@ -215,7 +215,7 @@
 
             <div class="skills-cont center">
               <mat-card class="center" *ngFor="let skill of backEndSkills">
-                <img mat-card-image [src]="skill.path" alt="" />
+                <img mat-card-image [src]="skill.path" alt="" loading="lazy" />
                 <mat-card-subtitle class="center">
                   {{ skill.name }}
                 </mat-card-subtitle>
@@ -237,7 +237,7 @@
 
             <div class="skills-cont center">
               <mat-card class="center" *ngFor="let skill of frontEndSkills">
-                <img mat-card-image [src]="skill.path" alt="" />
+                <img mat-card-image [src]="skill.path" alt="" loading="lazy" />
                 <mat-card-subtitle class="center">
                   {{ skill.name }}
                 </mat-card-subtitle>
@@ -258,7 +258,7 @@
             </ng-template>
             <div class="skills-cont center">
               <mat-card class="center" *ngFor="let skill of tools">
-                <img mat-card-image [src]="skill.path" alt="" />
+                <img mat-card-image [src]="skill.path" alt="" loading="lazy" />
                 <mat-card-subtitle class="center">
                   {{ skill.name }}
                 </mat-card-subtitle>
@@ -274,7 +274,7 @@
         <!--ONLY FOR MOBILE DEVICES-->
         <div class="skills-cont center mobile-tech-stack">
           <mat-card class="center" *ngFor="let skill of allSkills">
-            <img mat-card-image [src]="skill.path" alt="" />
+            <img mat-card-image [src]="skill.path" alt="" loading="lazy" />
             <mat-card-subtitle class="center">
               {{ skill.name }}
             </mat-card-subtitle>
