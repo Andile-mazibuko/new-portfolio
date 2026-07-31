@@ -1,9 +1,4 @@
 
-/*
-DEBUGING PURPOSE
-* {
-  outline: 1px solid rgba(255, 0, 0, 0.3); 
-}*/
 .no-display{
   display: none;
 }
@@ -34,7 +29,6 @@ form {
 mat-form-field {
   width: 80%;
   margin-left: 10%;
-  // border: 2px red !important;
   border-color: var(--theme-icon);
 }
 mat-form-field .mat-form-field-required-marker {
@@ -44,7 +38,6 @@ button{
   margin: 20px 10px;
 }
 mat-label,input,mat-icon,textarea{
-  //color: var(--font-color) !important;
-   color: var(--theme-icon)
+  color: var(--theme-icon)
 }
 

@@ -1,6 +1,5 @@
 
 .socials {
-  // margin-top: 2%;
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -30,16 +29,12 @@
   justify-content: center;
   animation: ease-in-out;
   color: var(--font-color);
-  //background-color: blue!important;
-  // padding: 0 10px;
   transition: transform 0.3s ease, font-size 0.3s ease;
   transition: ease-in-out 1s;
 }
 i {
   width: 50px;
   font-size: xx-large;
-  // margin-right: 10px;
-  // background-color: yellow;
   color: var(--font-color);
 }
 .bi-instagram {

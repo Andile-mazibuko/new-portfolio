@@ -1,21 +1,14 @@
 .cont {
   overflow: hidden;
   width: 100%;
-  // min-height: 100vh;
-  // position: fixed;
   margin-top: 5%;
   margin-bottom: 15%;
-  // background: var(
-  //   --bg-color
-  // );
-  // background-color: yellow !important;
 }
 .change-arr {
   width: 50%;
 
   margin-left: 50%;
   height: 25vh;
-  //margin-top: 30%;
 }
 .content {
   // position: relative;
@@ -25,20 +18,13 @@
   margin-left: 10%;
   margin-top: 0;
   display: flex;
-  // align-items: center;
-  // background-color: rebeccapurple;
   flex-direction: column;
   justify-content: center;
-  // padding: 0 20px;
   animation: leftToRight 1s ease-in-out;
   overflow: hidden;
-  // z-index: 2;
-  // margin-bottom: 15%;
-  //margin-bottom: 15vh;
 }
 
 .avail-indicator {
-  // background-color: red;
   width: 25%;
   height: 4%;
   margin-left: 20%;
@@ -88,7 +74,6 @@ p {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
-  // margin-bottom: 30px;
   color: var(--sec-font-color);
 }
 h1 {
@@ -100,7 +85,6 @@ h1 {
   align-items: center !important;
   color: var(--font-color);
   font-weight: 600;
-  // background-color: red;
   .dot{
     display: flex;
     align-self: end;
@@ -128,7 +112,6 @@ h4 {
   // font-style: italic;
   margin-bottom: 2px !important;
   margin-top: 10px;
-  // font-size: bold !important;
   font-weight: bolder;
 }
 .socials {
@@ -153,14 +136,11 @@ h4 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  // background-color: red;
   overflow: hidden;
   img {
     height: 90%;
     margin-left: 10%;
     margin-top: 10%;
-    // filter: drop-shadow(0px 0px 30px var(--theme-icon-fade));
-    // box-shadow: var(--theme-shadow);
     animation:
       rgbLight 6s infinite ease-in-out,
       rotateImage 10s normal;
@@ -202,22 +182,11 @@ h4 {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   clip-path: circle();
-  // animation:
-  //   rotateImage 10s normal,
-  //   floatEffect 1s ease-in-out infinite;
   transition: ease-in-out 0.5s;
 }
 
-// .skill-cont:hover {
-//   width: 80px;
-//   height: 80px;
-//   transition: ease-in-out 0.5s;
-// }
 .skill-cont:nth-child(3),
 .skill-cont:nth-child(2) {
-  // animation:
-  //   rotateImage 10s normal,
-  //   floatEffect 2s ease-in-out infinite;
 }
 
 .skill-cont img {
@@ -265,9 +234,7 @@ h4 {
 .skill-cards {
   // width: 100%;
   display: flex;
-  // flex-wrap: wrap;
   margin-bottom: 2%;
-  //
 }
 .skill-cards mat-card {
   width: fit-content;
@@ -275,7 +242,6 @@ h4 {
   margin: 0 0.5%;
   display: flex;
   text-align: start !important;
-  // background: var(--card-color);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   color: var(--font-color) !important;
@@ -288,7 +254,6 @@ h4 {
 }
 
 .skill-cards mat-card:nth-child(even) {
-  //  animation: bounce 2s ease-in-out infinite !important;
 }
 // only appear on mobile device
 .random-skill {
@@ -296,9 +261,7 @@ h4 {
 }
 .flip-cards {
   width: 100%;
-  // margin-left: 20%;
   height: 30%;
-  //
   border-radius: 10px;
   justify-content: center;
   bottom: 30%;
@@ -394,13 +357,6 @@ h4 {
     align-items: center;
     text-align: center;
   }
-  // .btn {
-  //   width: 40% !important;
-  //   height: 50px;
-  //   border-radius: 50px !important;
-  //   margin-left: 0 !important;
-  // }
-  // // Will only appear on mobile devices
   .random-skill {
     position: absolute;
     width: 50px !important;
@@ -410,7 +366,6 @@ h4 {
     z-index: 10; // above all
     opacity: 0.1;
     align-items: center;
-    //
     animation: pop-up 0.4s !important;
   }
   .random-skill img {

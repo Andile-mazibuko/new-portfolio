@@ -7,9 +7,7 @@
 }
 .img-area img {
   height: 80%;
-  //filter: drop-shadow(0 0 20px rgba(35, 255, 255, 0.349));
   animation: rgbLight 20s ease-in-out infinite;
-  //box-shadow: var();
 }
 .content {
   width: 40vw;
@@ -24,7 +22,6 @@ h1 {
 }
 .bot {
   height: 200px;
-  //
   display: flex;
   justify-content: center;
   align-items: center;

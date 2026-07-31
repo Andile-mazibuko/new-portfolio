@@ -24,9 +24,7 @@ export class ContactComponent implements OnInit {
 
     this.aboutServ.getUserAbout().subscribe((resp: About) => {
       this.about = resp;
-      //console.log(this.about);
     });
-     //this.child.isVisible = false
   }
   
 }
