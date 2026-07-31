@@ -26,7 +26,7 @@
   --box-shadow:
     0 0 30px #b4b4b4c4, 0 0 30px #ebc801a6;
   --theme-icon: #e6b000;
-  --theme-icon-fade: #ffd54a3d;
+  --theme-icon-fade: #ffd54a88;
   /*--theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
     0 0 100px rgba(255, 251, 0, 0.4);*/
   /*--theme-shadow: 0 0 40px 10px #ffffff88,
@@ -175,7 +175,15 @@ p {
   background: var(--bg-gradient);
   font-size: larger;
 }
-@keyframes rgbLight {
+
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: var(--font-color);
+}
+/*@keyframes rgbLight {
   0% {
     filter: drop-shadow(0 0 10px red);
   }
@@ -187,6 +195,20 @@ p {
   }
   100% {
     filter: drop-shadow(0 0 10px yellow);
+  }
+}*/
+@keyframes rgbLight {
+  0% {
+    filter: drop-shadow(0px 0px 30px var(--theme-icon-fade));
+  }
+  33% {
+    filter: drop-shadow(0px 0px 20px var(--theme-icon-fade));
+  }
+  66% {
+    filter: drop-shadow(0px 0px 30px var(--theme-icon-fade));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 20px var(--theme-icon-fade));
   }
 }
 

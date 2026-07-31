@@ -1,8 +1,17 @@
 <div class="body">
   <div class="cont">
     <div class="content">
-      <!-- <h4>HELLO, I'M</h4> -->
-      <h1 class="h1">{{ about.firstName + " " + about.lastName }}</h1>
+       
+      <div class="avail-indicator center">
+        <div class="circle center">
+          <div class="inside-circle"></div>
+        </div>
+        <p>Available for Opportunities</p>
+       </div>
+       
+      <h4>HELLO, I'M</h4>
+      <h1 class="h1">{{ about.firstName }}</h1>
+      <h1 class="h1 lastName"> {{ about.lastName }} <div class="dot"></div></h1>
       <h2>
         {{ about.profession }}
       </h2>
