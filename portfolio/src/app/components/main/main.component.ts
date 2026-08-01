@@ -128,6 +128,14 @@ export class MainComponent implements OnInit {
       clearInterval(this.intervalId);
     }
   }
+
+  getSkillImagePath(skill?: Skill): string {
+    return skill?.path?.trim() ? skill.path : 'assets/images/skills/linux.svg';
+  }
+
+  getSkillDisplayName(skill?: Skill): string {
+    return skill?.name?.trim() ? skill.name : 'Linux OS';
+  }
   ngAfterViewInit() {
     // this.componentContainer.createComponent(SummaryComponent);
   }

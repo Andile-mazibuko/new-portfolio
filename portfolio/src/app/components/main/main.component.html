@@ -29,36 +29,36 @@
 
     <div class="img-area">
       <div class="skill-cont top-left">
-        <img [src]="displaySkills[0]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[0]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[0])" alt="" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[0]) }}</span>
       </div>
       <div class="skill-cont left-middle">
-        <img [src]="displaySkills[5]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[5]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[5])" alt="44" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[5]) }}</span>
       </div>
       <div class="skill-cont top-right">
-        <img [src]="displaySkills[1]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[1]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[1])" alt="" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[1]) }}</span>
       </div>
       <div class="skill-cont top-middle">
-        <img [src]="displaySkills[6]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[6]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[6])" alt="" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[6]) }}</span>
       </div>
       <div class="skill-cont bott-left">
-        <img [src]="displaySkills[2]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[2]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[2])" alt="" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[2]) }}</span>
       </div>
       <div class="skill-cont bott-middle">
-        <img [src]="displaySkills[7]?.path" alt="" loading="lazy"/>
-        <span class="skill-label">{{ displaySkills[7]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[7])" alt="" loading="lazy"/>
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[7]) }}</span>
       </div>
       <div class="skill-cont bott-right">
-        <img [src]="displaySkills[3]?.path" alt="" loading="lazy" />
-        <span class="skill-label">{{ displaySkills[3]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[3])" alt="" loading="lazy" />
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[3]) }}</span>
       </div>
       <div class="skill-cont right-middle">
-        <img [src]="displaySkills[8]?.path" alt="" loading="lazy" />
-        <span class="skill-label">{{ displaySkills[8]?.name }}</span>
+        <img [src]="getSkillImagePath(displaySkills[8])" alt="" loading="lazy" />
+        <span class="skill-label">{{ getSkillDisplayName(displaySkills[8]) }}</span>
       </div>
       <div class="main-img">
         <img src="assets/images/copy.png" alt="" loading="lazy" />
@@ -70,7 +70,7 @@
       [style.top]="randTop"
       class="random-skill center"
     >
-      <img [src]="displaySkill?.path" alt="" loading="lazy"/>
+      <img [src]="getSkillImagePath(displaySkill)" alt="" loading="lazy"/>
     </div>
   </div>
   <app-footer></app-footer>
