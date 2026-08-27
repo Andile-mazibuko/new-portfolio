@@ -210,6 +210,24 @@ a:hover,
   overflow: hidden !important;
   opacity: 0.9;
 }
+.weather6 {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background: #c9c8c2;
+  z-index: -5;
+  top: 25%;
+  left: -5%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // animation: moveUpTheme 5s ease-in, floatEffect 3s ease-in-out infinite;
+  box-shadow: var(--theme-shadow);
+  overflow: hidden !important;
+  opacity: 0.9;
+}
 
 .change-theme-weather {
   position: absolute;
@@ -374,6 +392,9 @@ weather.style.top = '70%';
     display: flex;
     float: right;
     //margin: 0 auto;
+  }
+  .planet {
+    display: none;
   }
 }
 

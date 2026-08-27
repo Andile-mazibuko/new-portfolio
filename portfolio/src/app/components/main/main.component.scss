@@ -51,6 +51,10 @@
   }
 }
 
+.mobile-name {
+  display: none;
+}
+
 p,
 h1,
 h2,
@@ -78,15 +82,20 @@ h1 {
   align-items: center !important;
   color: var(--font-color);
   font-weight: 600;
-  .dot{
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: var(--font-color);
     display: flex;
     align-self: end;
     margin-bottom: 15px;
   }
 }
+
 .lastName {
   color: var(--theme-icon);
-  
 }
 h2 {
   font-size: 1.7rem;
@@ -247,7 +256,7 @@ h4 {
     color: var(--font-color);
     font-weight: 600;
   }
-  p{
+  p {
     // background-color: red;
     width: 65%;
   }
@@ -268,6 +277,9 @@ h4 {
     align-items: normal !important;
     margin-left: 0;
   }
+  .avail-indicator {
+    display: none !important;
+  }
   p {
     margin-left: 10%;
     margin: 5% auto !important;
@@ -276,12 +288,22 @@ h4 {
   }
   .img-area {
     height: 35vh;
+    width: 35vh;
+    margin: 5% auto;
     display: flex;
     justify-content: center;
     align-items: end; //TODO: SET TO BOTTOM
-    margin-top: 0;
+    // margin-top: 10% !important;
     padding: 0;
-    animation: rightToLeft 1s ease-in-out;
+    animation: none !important;
+  }
+  .mobile-name {
+    display: inline-block;
+    color: var(--font-color);
+    margin-right: 5px;
+  }
+  .f-name {
+    display: none;
   }
   .socials {
     margin: 0 auto;
@@ -290,7 +312,7 @@ h4 {
   }
   img {
     height: 70%;
-    animation: rgbLight 3s infinite linear;
+    animation: none !important;
   }
   .skill-cont {
     display: none;
@@ -301,7 +323,32 @@ h4 {
   }
   h1 {
     margin-top: 0%;
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0% !important;
+    height: 4vh !important;
+    // background-color: red !important;
+    font-size: 4vh !important;
+    // display: none;
+  }
+  .dot {
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 2.5px !important;
+    margin: 5px 7px !important;
+    background-color: var(--font-color);
+    display: flex;
+    align-self: end;
+  }
+  h4{
     display: none;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0% !important;
   }
   h2,
   p,
@@ -314,6 +361,15 @@ h4 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    .btn{
+      width: 35% !important;
+      height: 4vh;
+      border-radius: 6px !important;
+      margin-left: 0 !important;
+      font-size: 0.8rem !important;
+      font-weight: 700;
+      margin: 0 5px !important;
+    }
   }
   .random-skill {
     position: absolute;
