@@ -1,20 +1,6 @@
 <div class="body">
   <div class="cont">
     <div class="intro">
-      <!-- <h1 class="center">About Me<span class="text-primary">.</span></h1>
-      <div class="center description">
-        <h2>{{ smallDescription }}</h2>
-      </div>
-      <div class="cards">
-        <mat-card *ngFor="let skill of skills">
-          <mat-card-content class="center">
-            <mat-icon class="center">
-              {{ skill.icon }}
-            </mat-icon>
-            {{ skill.name }}
-          </mat-card-content>
-        </mat-card>
-      </div> -->
 
       <div class="about">
         <div class="img-area center">
@@ -25,8 +11,8 @@
           <div class="text-area">
             <h1>About Me</h1>
             <h4 classs="greet">
-              Hi, I'm {{ about.firstName + " " + about.lastName }}
-              <span class="text-primary">.</span>
+              <span class="g">Hi, I'm</span> <span class="f_n">{{" "+ about.firstName}}</span> <span class="l_n">{{" "+about.lastName }}</span> 
+              <!-- <span class="text-primary">.</span> -->
             </h4>
             <h2>Full Stack Developer</h2>
             <p>
@@ -35,15 +21,13 @@
             
         
             <div class="sum-cards">
-              <div *ngFor="let card of about.summary_cards" class="sum-card">
-                <!-- <div class="card-icon"> -->
+              <div *ngFor="let card of about.strengths" class="sum-card">
+
                 <mat-icon>{{ card.icon }}</mat-icon>
-                <!-- </div> -->
+
                 <div class="sum-text">
-                  <h3>{{ card.value }}</h3>
-                  <!-- <h2>{{ card.description }}</h2> -->
-                  <span>{{ card.title }}</span>
-                  <!-- <span>{{ card.subtitle }}</span> -->
+                  <h3>{{ card.name }}</h3>
+                 
                 </div>
               </div>
             </div>
@@ -103,7 +87,7 @@
                 <div class="text">
                   <h1>{{ exp.company }}</h1>
                   <h2>{{ exp.role }}</h2>
-                  <p>{{ exp.description }}</p>
+                  <p class="description">{{ exp.description }}</p>
                 </div>
               </div>
 
@@ -149,7 +133,7 @@
                 <div class="text">
                   <h1>{{ exp.company }}</h1>
                   <h2>{{ exp.role }}</h2>
-                  <p>{{ exp.description }}</p>
+                  <p class="description">{{ exp.description }}</p>
                 </div>
               </div>
 
@@ -163,33 +147,6 @@
           </div>
         </div>
 
-        <!-- <mat-card *ngFor="let exp of experiences" class="exp">
-          <mat-card-header>
-            <mat-card-title-group>
-              <mat-card-title>{{ exp.role }}</mat-card-title>
-              <mat-card-subtitle>{{ exp.job_type }}</mat-card-subtitle>
-              <mat-card-subtitle>{{ exp.type }}</mat-card-subtitle>
-              <img
-                mat-card-image
-                [src]="exp.logo_path"
-                alt="Image of a Shiba Inu"
-              />
-            </mat-card-title-group>
-          </mat-card-header>
-          <mat-card-content>
-            <p>{{ exp.startDate }} - {{ exp.endDate }}</p>
-            <p>
-              {{ exp.description }}
-            </p>
-            <div class="cards">
-              <mat-card *ngFor="let tech of exp.technologies">
-                <mat-card-content>
-                  {{ tech }}
-                </mat-card-content>
-              </mat-card>
-            </div>
-          </mat-card-content>
-        </mat-card> -->
       </div>
 
       <div class="divider">
@@ -201,7 +158,6 @@
       </div>
 
       <div class="skills-tab">
-        <!-- <h2 class="center">Tech stack</h2> -->
 
         <!--FOR DESKTOP APPS-->
         <mat-tab-group animationDuration="1000ms">

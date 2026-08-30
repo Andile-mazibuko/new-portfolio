@@ -9,6 +9,13 @@
     "summary": "Full Stack Developer passionate about building modern web experiences with real-world project experience, including e-commerce platforms and admin dashboards. I specialize in responsive UI, secure backend development, and database-driven solutions, always focused on writing clean code and delivering impactful software.",
     "email": "andilelethumusa@gmail.com",
     "address": "Arcadia, Johan street",
+    "strengths": [
+      { "name": "Problem Solver", "icon": "construction" },
+      { "name": "Creativity", "icon": "lightbulb" },
+      { "name": "Team player", "icon": "group" },
+      { "name": "Critical Thinking", "icon": "psychology" }
+      
+    ],
     "key_points": [
       {
         "name": "Computer Science Graduate",
@@ -21,41 +28,15 @@
         "icon": "work"
       },
       {
-        "name": "Problem Solver",
-        "value": "Creative Solutions",
+        "name": "10+ Technologies",
+        "value": "Worked With",
         "icon": "construction"
       },
-      { "name": "Team Player", "value": "Team Player", "icon": "group" },
+      { "name": "5+ Projects ", "value": "Completed", "icon": "terminal" },
       {
         "name": "4+ years of Coding",
         "value": "Coding Since 2020",
         "icon": "code"
-      }
-    ],
-    "summary_cards": [
-      {
-        "title": "Internships",
-        "value": "2+",
-        "subtitle": "Professional Experience",
-        "icon": "work_history"
-      },
-      {
-        "title": "Technologies",
-        "value": "20+",
-        "subtitle": "Worked With",
-        "icon": "terminal"
-      },
-      {
-        "title": "Projects",
-        "value": "10+",
-        "subtitle": "Completed",
-        "icon": "folder"
-      },
-      {
-        "title": "Started Coding",
-        "value": "2020",
-        "subtitle": "My Coding Journey",
-        "icon": "schedule"
       }
     ]
   },

@@ -36,8 +36,8 @@ export interface About {
   cellphone: string;
   email: string;
   address: string;
+  strengths?: { name: string; icon: string }[];
   key_points?: { name: string; value: string; icon: string }[];
-  summary_cards?: { title: string; description: string; icon: string, value: string, subtitle: string }[];
 }
 export interface Project {
   name: string;

@@ -22,6 +22,7 @@ h1 {
   margin: 0 !important;
   color: var(--theme-icon);
 }
+
 h2 {
   // color: var(--tert-font-color);
   color: var(--sec-font-color) !important;
@@ -51,7 +52,6 @@ mat-icon {
   align-items: center;
   margin-top: 70px;
   overflow: visible;
-  
 }
 
 .text-h-cont {
@@ -178,13 +178,13 @@ mat-icon {
     letter-spacing: 1px;
   }
   .circle {
-      width: 7px;
-      height: 7px;
-      border: 2px solid var(--theme-icon);
-      border-radius: 50%; // Better than clip-path for circles
-      background: var(--theme-icon);
-      flex-shrink: 0;
-    }
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--theme-icon);
+    border-radius: 50%; // Better than clip-path for circles
+    background: var(--theme-icon);
+    flex-shrink: 0;
+  }
   mat-divider {
     width: 5%;
     height: 1px;
@@ -267,7 +267,6 @@ mat-icon {
   }
   .t-line {
     border-radius: 0 0 1px 1px;
-    
   }
   .y-cont {
     // background-color: red;
@@ -389,9 +388,9 @@ mat-icon {
         margin: 2px 0 !important;
         // font-style: ;
       }
-      p{
+      p {
         // background-color: red;
-        margin: 0 0 !important
+        margin: 0 0 !important;
       }
     }
   }
@@ -431,14 +430,6 @@ mat-icon {
   }
 }
 
-// .exp-section .exp {
-//   width: 40%;
-//   background-color: var(--nav-bg-color);
-//   color: var(--sec-font-color) !important;
-//   margin: 0.5%;
-//   backdrop-filter: blur(10px) !important;
-//   -webkit-backdrop-filter: blur(10px) !important;
-// }
 .exp-section .cards mat-card {
   background: var(--card-sec-color) !important;
 }
@@ -513,23 +504,49 @@ mat-tab-group {
     margin: 0;
   }
   .about {
+    margin-top: 0;
+    padding-top: 15px;
     flex-direction: column;
   }
   .img-area {
-    margin: 0 auto;
-    margin-bottom: 50px;
-    background-color: yellow !important;
+    margin: 20px auto !important;
+    border-radius: 150px;
+    height: 150px;
+    width: 150px;
+  }
+  .cards-container {
+    width: 100%;
+    margin: 0;
+    .pointer {
+      display: none;
+    }
+    .text-sum {
+      width: 100%;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      .sum-card {
+        width:  97% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        min-height: 97%;
+        
+      }
+    }
   }
   .text-h-cont {
     width: 100%;
     margin: 0;
     flex-direction: column;
     align-items: center;
+
     .text-sum {
       width: 100%;
       margin: 0;
       width: 100%;
       margin: 0;
+
       flex-direction: column;
       .sum-card {
         width: 90%;
@@ -548,16 +565,25 @@ mat-tab-group {
   }
 
   h1 {
-    margin-top: 10px;
+    // margin-top: 10px;
     margin-bottom: 0;
-    display: flex;
+    display: none;
     justify-content: center;
   }
   h4 {
     margin-top: 0;
     margin-bottom: 10px;
     display: flex;
+    // background-color: yellow;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .g {
+      font-size: small;
+    }
+    .l_n {
+      color: var(--theme-icon);
+    }
   }
   .img-area {
     margin: 0 auto;
@@ -576,10 +602,31 @@ mat-tab-group {
   h2 {
     font-size: large;
   }
-  .exp-section .exp {
+  .exp-section {
+    flex: 1;
+    .exps-cont{
+      max-height: 40%;
+      width: 100%;
+      .description{
+        display: none;
+      }
+    }
+  }
+  .exp {
     width: 94%;
     background-color: var(--nav-bg-color);
+
     margin: 0.5%;
+    max-height: 10px !important;
+    .top{
+      background-color: yellow;
+    }
+    .more-details{
+      background-color: red;
+    }
+    .techs-gained{
+      background-color: blue;
+    }
   }
 
   .exp-section mat-card img {
