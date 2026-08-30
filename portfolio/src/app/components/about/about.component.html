@@ -9,7 +9,7 @@
 
         <div class="text-h-cont">
           <div class="text-area">
-            <h1>About Me</h1>
+            <h1 class="ab">About Me</h1>
             <h4 classs="greet">
               <span class="g">Hi, I'm</span> <span class="f_n">{{" "+ about.firstName}}</span> <span class="l_n">{{" "+about.lastName }}</span> 
               <!-- <span class="text-primary">.</span> -->
@@ -93,7 +93,7 @@
 
               <div class="techs-gained">
                 <div class="tech" *ngFor="let tech of exp.technologies">
-                  <img [src]="tech.path" alt="skill logo" loading="lazy" />
+                  <img [src]="tech.path" alt="" loading="lazy" />
                   <h4>{{ tech.name }}</h4>
                 </div>
               </div>

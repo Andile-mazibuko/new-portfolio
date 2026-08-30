@@ -176,7 +176,16 @@ p {
   font-size: larger;
 }
 
-
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: var(--font-color);
+    display: flex;
+    align-self: end;
+    margin-bottom: 15px;
+  }
 /*@keyframes rgbLight {
   0% {
     filter: drop-shadow(0 0 10px red);
