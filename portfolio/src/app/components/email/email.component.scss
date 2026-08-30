@@ -5,7 +5,7 @@
 .form {
   width: 100%;
   height: 100%;
-  background-color: var(--footer-background);
+  background-color: var(--font-color);
   overflow: hidden;
 }
 .form::-webkit-scrollbar{
@@ -32,7 +32,15 @@ mat-form-field {
   border-color: var(--theme-icon);
 }
 button{
+  width: 80%;
+  height: 4vh;
   margin: 20px 10px;
+  background-color: var(--theme-icon);
+  font-weight: 600;
+  mat-icon{
+    color: black;
+
+  }
 }
 mat-label,input,mat-icon,textarea{
   color: var(--theme-icon)

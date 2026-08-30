@@ -1,34 +1,42 @@
 <div class="form">
   <div class="close">
-    <button mat-button type="button" (click)="closeForm()" [disabled]="isDisabled" id="close-form">
+    <button
+      mat-button
+      type="button"
+      (click)="closeForm()"
+      [disabled]="isDisabled"
+      id="close-form"
+    >
       <mat-icon> close </mat-icon>
     </button>
   </div>
   <form [formGroup]="formGroup" action="">
     <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" />
+      <mat-icon matPrefix>person</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input matInput type="email" formControlName="email"  />
+      <input matInput type="email" formControlName="email" />
       <mat-icon matPrefix>mail</mat-icon>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Subject Line</mat-label>
       <mat-icon matPrefix>subject</mat-icon>
-      <input matInput type="text" formControlName="subject"  />
+      <input matInput type="text" formControlName="subject" />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Message</mat-label>
-      <textarea
-        matInput
-        rows="5"
-        formControlName="message"
-        required
-      ></textarea>
+      <textarea matInput rows="5" formControlName="message" required></textarea>
     </mat-form-field>
 
     <div class="center">
-      <button mat-button type="button" (click)="sendEmail()">Send email</button>
+      <button mat-button type="button" (click)="sendEmail()">
+        <mat-icon>send</mat-icon> Send email
+      </button>
     </div>
   </form>
 </div>
