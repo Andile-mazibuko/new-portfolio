@@ -5,7 +5,7 @@
 .form {
   width: 100%;
   height: 100%;
-  background-color: var(--font-color);
+  background: linear-gradient(135deg, var(--nav-bg-color) 0%, rgba(0, 0, 0, 0.3) 100%);
   overflow: hidden;
 }
 .form::-webkit-scrollbar{
@@ -17,6 +17,28 @@
   justify-content: end;
   color: var(--font-color) !important;
   margin: 10px 0;
+  .title{
+    //flex: 1;
+    width: 80%;
+    display: flex;
+    align-self: center;
+    height: 100%;
+    .icon-container{
+      width: 5%;
+      height: 90%;
+      margin: auto 0;
+      border-radius: 2px;
+      background-color: var(--theme-icon-fade);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-icon{
+        color: var(--theme-icon);
+        font-size: 20px;
+        // margin: auto auto;
+      }
+    }
+  }
 }
 .close button {
   background-color: transparent !important;
@@ -30,6 +52,9 @@ mat-form-field {
   width: 80%;
   margin-left: 10%;
   border-color: var(--theme-icon);
+}
+#close-form{
+  width: 10%;
 }
 button{
   width: 80%;
