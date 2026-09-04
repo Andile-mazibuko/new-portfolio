@@ -63,8 +63,10 @@ form {
 }
 mat-form-field {
   width: 80%;
- 
+  margin-top: 10px;
   margin-left: 10%;
+  background-color: var(--footer-bg-color);
+  border-radius: 10px;
   border-color: var(--theme-icon);
   input, textarea {
     color: var(--font-color) !important;
@@ -88,3 +90,7 @@ mat-label,input,mat-icon,textarea{
   color: var(--theme-icon)
 }
 
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}

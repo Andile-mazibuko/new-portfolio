@@ -4,11 +4,12 @@ import { AboutService } from '../../services/about.service';
 import { About } from '../../models/Models';
 import { SocialsComponent } from '../socials/socials.component';
 import { FooterComponent } from "../footer/footer.component";
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [EmailComponent, SocialsComponent, FooterComponent],
+  imports: [EmailComponent, SocialsComponent, FooterComponent,MatIconModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
