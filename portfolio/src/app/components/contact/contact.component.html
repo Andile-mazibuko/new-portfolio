@@ -1,15 +1,19 @@
-<div class="cont">
-  <div class="route-head">
-    <h1 class="center">Let’s build something great together</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur.</p>
-  </div>
-  <div class="content">
-    <div class="form-container center">
-      <app-email [isDisabled]="isDisabledVal"></app-email>
+<div class="body">
+  <div class="cont">
+    <div class="route-head">
+      <h1 class="center">Let’s build something great together</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+        consequuntur.
+      </p>
     </div>
-    <div class="socials">
+    <div class="content">
+      <div class="form-container center">
+        <app-email [isDisabled]="isDisabledVal"></app-email>
+      </div>
+      <div class="socials">
         <div class="contact-img">
-          <img src="assets/images/contact.png" alt="" loading="lazy">
+          <img src="assets/images/contact.png" alt="" loading="lazy" />
         </div>
         <h2 class="center">Get in touch</h2>
         <div class="contact-info">
@@ -26,6 +30,8 @@
             <app-socials></app-socials>
           </div>
         </div>
+      </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>

@@ -3,11 +3,12 @@ import { EmailComponent } from '../email/email.component';
 import { AboutService } from '../../services/about.service';
 import { About } from '../../models/Models';
 import { SocialsComponent } from '../socials/socials.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [EmailComponent,SocialsComponent],
+  imports: [EmailComponent, SocialsComponent, FooterComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
