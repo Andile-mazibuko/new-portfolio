@@ -5,11 +5,12 @@ import { About } from '../../models/Models';
 import { SocialsComponent } from '../socials/socials.component';
 import { FooterComponent } from "../footer/footer.component";
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [EmailComponent, SocialsComponent, FooterComponent,MatIconModule],
+  imports: [EmailComponent, SocialsComponent, FooterComponent,MatIconModule,MatDividerModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })

@@ -26,7 +26,7 @@
   --box-shadow:
     0 0 30px #b4b4b4c4, 0 0 30px #ebc801a6;
   --theme-icon: #daa700;
-  --theme-icon-fade: #c295001f;
+  --theme-icon-fade: #5c52301f;
   /*--theme-shadow: 0 0 500px rgba(244, 250, 255, 0.534),
     0 0 100px rgba(255, 251, 0, 0.4);*/
   /*--theme-shadow: 0 0 40px 10px #ffffff88,
@@ -180,6 +180,35 @@ p {
     align-self: end;
     margin-bottom: 15px;
   }
+  .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: 20px 0;
+  h2 {
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    letter-spacing: 1px;
+  }
+  .circle {
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--theme-icon);
+    border-radius: 50%; // Better than clip-path for circles
+    background: var(--theme-icon);
+    flex-shrink: 0;
+  }
+  mat-divider {
+    width: 5%;
+    height: 1px;
+    background-color: var(--theme-icon);
+    // margin: 0 10px;
+    opacity: 0.5;
+  }
+}
 /*@keyframes rgbLight {
   0% {
     filter: drop-shadow(0 0 10px red);
