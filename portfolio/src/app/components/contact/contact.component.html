@@ -1,8 +1,8 @@
 <div class="body">
   <div class="cont">
     <div class="top center">
-        <mat-icon>construction</mat-icon>
-        <p>Let's Work Together</p>
+      <mat-icon>construction</mat-icon>
+      <p>Let's Work Together</p>
     </div>
     <h1>Let's Build Something</h1>
     <h1 class="sub-t">Great Together .</h1>
@@ -11,12 +11,20 @@
       <div class="form-container center">
         <app-email [isDisabled]="isDisabledVal"></app-email>
       </div>
-      
+
       <div class="socials">
-        <div class="contact-img">
-          <img src="assets/images/contact.png" alt="" loading="lazy" />
+        <div class="top-container">
+          <div class="top-left">
+            <div class="icon-container">
+              <mat-icon class="center">headset_mic</mat-icon>
+            </div>
+            <h2>Get in touch</h2>
+          </div>
+          <div class="contact-img">
+            <img src="assets/images/contact.png" alt="" loading="lazy" />
+          </div>
         </div>
-        <h2 class="center">Get in touch</h2>
+
         <div class="contact-info">
           <div class="info">
             <i class="bi bi-envelope-at"></i> <span>{{ about.email }}</span>
