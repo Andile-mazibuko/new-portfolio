@@ -68,7 +68,7 @@ mat-form-field {
   margin-left: 5%;
   background-color: rgba(10, 10, 10, 0.884);
   border-radius: 5px;
-  border-color: var(--theme-icon);
+  border-color: var(--theme-icon) !important;
   input, textarea {
     color: var(--font-color) !important;
   }
@@ -88,7 +88,7 @@ button{
   }
 }
 mat-label,input,mat-icon,textarea{
-  color: var(--theme-icon)
+  color: var(--sec-font-color)
 }
 
 
