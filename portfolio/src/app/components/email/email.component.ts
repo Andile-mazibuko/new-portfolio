@@ -69,6 +69,17 @@ export class EmailComponent implements OnInit {
   }
 
   sendEmail(): void {
+
+    // do not allow sending email if the form is not valid
+    if (this.formGroup.invalid) {
+      this.snackBar.open('Please fill in all required fields.', '', {
+        duration: 3000,
+        verticalPosition: 'top',
+      });
+      return;
+    }
+
+    // send email using emailjs if the form is valid
     emailjs.send(
       this.emailjskeys.serviceId, 
       this.emailjskeys.templateId, 
