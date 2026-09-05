@@ -1,6 +1,11 @@
 
+:host {
+  display: block;
+  width: 100%;
+}
+
 .socials {
-  width: 50%;
+  width: 100% !important;
   display: flex;
   justify-content: space-between;
   animation: opacityTrans 5s ease-in-out;
