@@ -11,12 +11,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { SocialsComponent } from './components/socials/socials.component';
-import { AboutComponent } from './components/about/about.component';
-import { MainComponent } from './components/main/main.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 import { MatCardModule } from '@angular/material/card';
-import { FooterComponent } from './components/footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
@@ -27,11 +23,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     CommonModule,
     RouterLink,
-    SocialsComponent,
     MatCardModule,
-    MainComponent,
-    AboutComponent,
-    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -49,8 +41,8 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
-    //Create 100 stars not equal in size
+    // get the active route and add the active-route class to it
+    this.isRouteActive(window.location.pathname.split('/')[1]);
   }
   ngAfterViewInit() {
     
