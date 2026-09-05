@@ -55,7 +55,6 @@ p {
   max-height: 100%;
   border-radius: 10px;
   background-color: var(--nav-bg-color);
-  animation: popup 2s ease-in-out;
 }
 
 .top-container {
@@ -194,7 +193,6 @@ p {
   border-radius: 10px;
   overflow: hidden;
   justify-content: end !important;
-  animation: popup 2s normal;
   height: fit-content;
 }
 
