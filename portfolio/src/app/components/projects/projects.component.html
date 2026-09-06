@@ -1,35 +1,43 @@
 <div class="body">
   <div class="cont">
-    <h1 class="center">Featured Projects</h1>
-    <div class="projects-cont">
-      <mat-card *ngFor="let project of projects">
-        <div class="project-image-container">
-          <img
-            [style]="
-              project.projectTpe === 'Web-App'
-                ? 'width: 100%; height: 100%; object-fit: cover;'
-                : ''
-            "
-            mat-card-image
-            [src]="project.filePaths[0]"
-            alt="{{ project.name }} image"
-            loading="lazy"
-          />
-        </div>
+    <div class="title">
+      <h1 class="center">
+        My <span> Projects</span>
+        <div class="dot"></div>
+      </h1>
+      <p>A collection of projects I've built over the past few years</p>
+    </div>
 
-        <div class="project-name">
-          <h1>{{ project.name }}</h1>
-        </div>
-        <div class="project-desc">
-          <p>{{ project.description }}</p>
-        </div>
-        <div class="actions">
-          <button mat-raised-button class="explore-btn">Explore</button>
-          <button mat-raised-button class="view-project">
-            <mat-icon> visibility </mat-icon>
-          </button>
-        </div>
-      </mat-card>
+    <div class="temp-box center">
+      <div class="icon-container center">
+        <img src="assets/images/concerned_error.png" alt="" loading="lazy" />
+      </div>
+
+      <h1 class="center">Projects <span>Coming soon</span></h1>
+
+      <p>
+        I'm currently putting the finishing touches on this section. In the
+        meantime, you can explore my projects on GitHub.
+      </p>
+
+      <div class="btn-container center">
+        <button class="btn center">
+          <i class="bi bi-github"></i>
+          <span>View My GitHub</span>
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+
+      <div class="divider">
+        <mat-divider></mat-divider>
+        <div class="circle"></div>
+        <h2 class="center">Coming soon</h2>
+        <div class="circle"></div>
+        <mat-divider></mat-divider>
+      </div>
+
+      <p>Projects Will Be Added Soon</p>
+
     </div>
   </div>
   <app-footer></app-footer>

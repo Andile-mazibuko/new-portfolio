@@ -6,11 +6,12 @@ import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../models/Models';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../footer/footer.component";
+import { MatDividerModule } from "@angular/material/divider";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatButtonModule, CommonModule, FooterComponent],
+  imports: [MatCardModule, MatIconModule, MatButtonModule, CommonModule, FooterComponent, MatDividerModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

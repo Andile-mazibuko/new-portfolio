@@ -1,157 +1,96 @@
 .cont {
-  display: block;
-  overflow: hidden;
-  overflow: scroll;
-  top: 3%;
-  height: 97%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-top: 1%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 15px;
+    color: var(--font-color);
+  }
 }
 h1 {
-  font-size: 2.5rem;
+  margin-top: 0%;
   width: 100%;
-  margin: 3% 0;
-  color: var(--sec-font-color);
-  font-weight: 900;
-}
-
-.projects-cont {
-  display: flex;
-  width: 80%;
-  margin: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-
-  mat-card {
-    width: 20%;
-    height: 40vh;
-    overflow: hidden;
-    border-radius: 20px;
-    cursor: pointer;
-    gap: 0;
-    background-color: var(--nav-bg-color);
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    display: block;
-
-    .project-image-container {
-      height: 50%;
-      width: 90%;
-      margin: auto;
-      margin-top: 15px;
-      object-fit: cover;
-      border-radius: 15px;
-
-      img {
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.7;
-      }
-    }
-
-    .project-name,
-    .project-desc {
-      width: 90%;
-      margin: 0 auto;
-
-      h1 {
-        font-size: 1.5rem;
-        color: var(--font-color);
-        font-weight: 800;
-        margin-top: 15px;
-      }
-      p {
-        margin-bottom: 10%;
-      }
-    }
-    .actions {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      
-      .explore-btn {
-        margin-left: 0 !important;
-        width: 80%;
-        background: var(--btn-color) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        color: white !important;
-      }
-      .view-project{
-        width: 5%;
-        
-      }
-    }
+  margin-left: 0;
+  font-size: 50px;
+  height: 50px;
+  font-weight: 800;
+  padding: 0% !important;
+  color: var(--font-color);
+  align-items: center;
+  span {
+    color: var(--theme-icon);
+    margin-left: 10px;
   }
-  mat-card:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+  .dot {
+    margin: 5px 5px;
   }
 }
+.temp-box {
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: var(--nav-bg-color);
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  padding-bottom: 2%;
+  .icon-container {
+    height: 200px;
+    img {
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
 
+  p {
+    color: var(--sec-font-color);
+    font-size: 15px;
+    width: 50%;
+    margin-top: 1%;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-// Remove margin from all buttons
-button {
-  margin: 0 !important;
-}
-
-
-@media (max-width: 820px) {
-  .projects-cont {
+  .btn-container {
     width: 100%;
-    margin: auto;
-    gap: 10px;
-
-    mat-card {
-      width: 90%;
-      height: auto;
-      display: block;
-
-      .project-image-container {
-        height: 200px;
-        width: 100%;
-        margin-top: 0;
+    margin-top: 5%;
+    .btn {
+      border: 2px solid var(--theme-icon);
+      align-items: center;
+      width: 30% !important;
+      height: 5vh;
+      border-radius: 8px !important;
+      margin-left: 0 !important;
+      font-size: 0.8rem !important;
+      font-weight: 700;
+      margin: 0% 5px !important;
+      color: var(--font-color);
+      mat-icon {
+        // font-weight: bold;
+        color: var(--theme-icon);
+        margin-left: 6px;
       }
-
-      .project-name,
-      .project-desc {
-        width: 100%;
-        margin: 0 auto;
-
-        h1 {
-          font-size: 1.5rem;
-          color: var(--font-color);
-          font-weight: 800;
-          margin-top: 15px;
-        }
-        p {
-          margin-bottom: 10%;
-        }
-      }
-      .actions {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        
-        .explore-btn {
-          margin-left: 0 !important;
-          width: 80%;
-          background: var(--btn-color) !important;
-          backdrop-filter: blur(10px) !important;
-          -webkit-backdrop-filter: blur(10px) !important;
-          color: white !important;
-        }
-        .view-project{
-          width: 5%;
-          
-        }
-      }
-    }
-    mat-card:hover {
-      transform: scale(1.05);
-      transition: all 0.3s ease-in-out;
     }
   }
+}
+
+.bi {
+  font-size: 20px;
+  margin: auto 10px;
+}
+.divider{
+  margin: 3% 0;
+  mat-divider{
+    width: 20%;
+  }
+
 }
