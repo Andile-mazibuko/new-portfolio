@@ -43,8 +43,21 @@ h1 {
   margin-top: 2%;
   margin-bottom: 6%;
   padding-bottom: 2%;
+
+  h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
   .icon-container {
-    height: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px auto;
+    margin-top: 40px;
+    border: 1px solid var(--theme-icon);
+    background-color: var(--theme-icon-fade);
     img {
       height: 100%;
       margin: 0 auto;
@@ -92,5 +105,42 @@ h1 {
   mat-divider{
     width: 20%;
   }
+  h2{
+    color: var(--sec-font-color);
+    margin: 0 10px;
+    font-size: 15px;
+  }
 
+}
+
+@media (max-width: 820px) {
+  .cont {
+    margin-top: 20%;
+  }
+  .temp-box {
+    width: 80%;
+    h1{
+      font-size: 20px;
+    }
+    p{
+      width: 90%;
+      font-size: 12px;
+    }
+    .btn-container{
+      .btn{
+        width: 60% !important;
+        // height: 4vh;
+        font-size: 0.7rem !important;
+      }
+    }
+  }
+  .divider{
+    margin: 5% 0;
+    mat-divider{
+      width: 15%;
+    }
+    h2{
+      font-size: 12px;
+    }
+  }
 }
