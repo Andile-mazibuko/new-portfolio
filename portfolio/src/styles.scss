@@ -41,6 +41,7 @@
   );
   --theme-shadow: 0 0 500px rgb(196, 196, 196), 0 0 100px rgb(255, 255, 255);
   --footer-background: rgb(27, 27, 27);
+  --form-field-bg-color:rgba(10, 10, 10, 0.884);
 }
 
 .light-theme {
@@ -59,7 +60,8 @@
   --box-shadow:
     0 0 100px rgba(33, 149, 243, 0.815), 0 0 100px rgba(135, 243, 33, 0.4);
 
-  --theme-icon: rgba(0, 0, 0, 0.466);
+  --theme-icon: #006D8F;
+  --theme-icon-fade: #006e8f57;
   --weather-colors: radial-gradient(
     circle at center,
     #fff700,
@@ -69,6 +71,7 @@
   );
   --theme-shadow: 0 0 500px rgb(255, 238, 0), 0 0 100px rgba(72, 255, 0, 0.4);
   --footer-background: rgb(217, 252, 255);
+  --form-field-bg-color:rgb(255, 255, 255);
 }
 
 html,
