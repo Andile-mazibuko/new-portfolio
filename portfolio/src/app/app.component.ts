@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
+    if (!isPlatformBrowser(this.platformId) || typeof window === 'undefined') {
       return;
     }
     // get the active route and add the active-route class to it
@@ -58,15 +58,17 @@ export class AppComponent implements OnInit {
 
     const body = this.document.body;
     const themeBtn = this.document.getElementById('themeBtn');
-    const weather = this.document.getElementById('weather');
+    const weatherElements = this.document.querySelectorAll('.weather, .planet');
 
-    if (!weather) {
+    if (!weatherElements.length) {
       alert('Theme can not be changed at this time');
       return;
     }
     body.classList.add('changeTheme');
-    weather.classList.remove('weather');
-    weather.classList.add('change-theme-weather');
+    weatherElements.forEach((weather) => {
+      weather.classList.remove('weather');
+      weather.classList.add('change-theme-weather');
+    });
 
     setTimeout(() => {
       this.isDark = !this.isDark;
@@ -81,8 +83,10 @@ export class AppComponent implements OnInit {
       }
       // weather.style.left = '30%';
       // weather.style.top = '10%';
-      weather.classList.remove('change-theme-weather');
-      weather.classList.add('weather');
+      weatherElements.forEach((weather) => {
+        weather.classList.remove('change-theme-weather');
+        weather.classList.add('weather');
+      });
     }, 2000);
   }
 
