@@ -16,34 +16,12 @@ import { MatDividerModule } from "@angular/material/divider";
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
-  projects: Project[] = [];
-  constructor(
-    private projServ: ProjectsService,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
-  titleColors: string[] = ['Orangered', '', 'Lime'];
+  
 
   ngOnInit(): void {
-    this.titleColors = ['Orangered', '', 'Lime'];
-    this.projServ.getProjects().subscribe((data: Project[]) => {
-      this.projects = data;
 
-      
-      
-    });
-    // Change Header colors to match the primary color of a project
-    if (isPlatformBrowser(this.platformId)) {
-      for (let index = 0; index < this.projects.length; index++) {
-        const header = document.getElementById(this.projects[index].name);
-        if (header) {
-          header.style.color = this.titleColors[index];
-        }
-      }
-    }
   }
-  formatNumber(num: number): string {
-    return num < 10 ? '0' + num : num + '';
-  }
+
   openGitHub() {
     window.open('https://github.com/Andile-mazibuko', '_blank', 'noopener,noreferrer');
   }

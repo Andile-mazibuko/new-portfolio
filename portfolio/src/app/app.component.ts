@@ -13,7 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -37,15 +36,17 @@ export class AppComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
     // get the active route and add the active-route class to it
     this.isRouteActive(window.location.pathname.split('/')[1]);
   }
   ngAfterViewInit() {
-    
     this.createRandomStars();
     this.flashRandomStars();
   }
@@ -63,7 +64,7 @@ export class AppComponent implements OnInit {
       alert('Theme can not be changed at this time');
       return;
     }
-    body.classList.add('changeTheme')
+    body.classList.add('changeTheme');
     weather.classList.remove('weather');
     weather.classList.add('change-theme-weather');
 
@@ -86,13 +87,13 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * Generate 120 stars for mobile devices 
+   * Generate 120 stars for mobile devices
    * Generate 80 for other types of devices
    */
   createRandomStars() {
     if (typeof window === 'undefined') return; // skip on server
 
-    for (let index = 0; index < (window.innerWidth < 820 ? 120: 80); index++) {
+    for (let index = 0; index < (window.innerWidth < 820 ? 120 : 80); index++) {
       const style = this.document.createElement('style');
       const left = Math.floor(Math.random() * 100);
       const top = Math.floor(Math.random() * 100);
@@ -103,15 +104,15 @@ export class AppComponent implements OnInit {
         { 
           opacity: 1; transform: scale(1);
           z-index: 5;
-          width: ${window.innerWidth < 820 ? "2px": "5px"};
-          height:${ window.innerWidth < 820 ? "2px": "5px"};
+          width: ${window.innerWidth < 820 ? '2px' : '5px'};
+          height:${window.innerWidth < 820 ? '2px' : '5px'};
         }
         50% 
         { 
           opacity: 0.3; transform: scale(1.2); 
           z-index: -6;
-          width: ${window.innerWidth < 820 ? "5px": "8px"};
-          height:${ window.innerWidth < 820 ? "5px": "8px"};
+          width: ${window.innerWidth < 820 ? '5px' : '8px'};
+          height:${window.innerWidth < 820 ? '5px' : '8px'};
           
         }
       }
@@ -128,8 +129,8 @@ export class AppComponent implements OnInit {
       this.document.head.appendChild(style);
       const div = this.document.createElement('div');
       div.id = `star_${index}`;
-      div.style.width = window.innerWidth < 820 ? "2px": "5px"
-      div.style.height = window.innerWidth < 820 ? "2px": "5px"
+      div.style.width = window.innerWidth < 820 ? '2px' : '5px';
+      div.style.height = window.innerWidth < 820 ? '2px' : '5px';
       div.style.borderRadius = '50%';
       div.style.background = '#ffffffff';
       div.style.position = 'absolute';
@@ -146,7 +147,7 @@ export class AppComponent implements OnInit {
    */
   createRandomIds(): void {
     if (typeof window === 'undefined') return; // skip on server
-    
+
     for (let index = 0; index < 30; index++) {
       const randDivId = 'star_' + Math.floor(Math.random() * 80);
       if (!this.randStars.includes(randDivId)) {

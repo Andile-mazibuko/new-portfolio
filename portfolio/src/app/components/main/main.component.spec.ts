@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -8,10 +11,10 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainComponent]
-    })
-    .compileComponents();
-    
+      imports: [MainComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideAnimationsAsync()],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

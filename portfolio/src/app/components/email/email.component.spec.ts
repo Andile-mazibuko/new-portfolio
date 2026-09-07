@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { EmailComponent } from './email.component';
 
@@ -8,12 +9,13 @@ describe('EmailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmailComponent]
-    })
-    .compileComponents();
-    
+      imports: [EmailComponent],
+      providers: [provideAnimationsAsync()],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(EmailComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 
