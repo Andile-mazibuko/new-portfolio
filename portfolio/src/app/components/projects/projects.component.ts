@@ -44,4 +44,7 @@ export class ProjectsComponent implements OnInit {
   formatNumber(num: number): string {
     return num < 10 ? '0' + num : num + '';
   }
+  openGitHub() {
+    window.open('https://github.com/Andile-mazibuko', '_blank', 'noopener,noreferrer');
+  }
 }
