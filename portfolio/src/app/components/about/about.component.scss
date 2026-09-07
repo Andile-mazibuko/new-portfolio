@@ -88,6 +88,7 @@ mat-icon {
   .sum-card {
     width: 90%;
     height: 15%;
+    padding: 0;
   }
 }
 .cards-container {
@@ -145,16 +146,29 @@ mat-icon {
       color: var(--theme-icon);
     }
     .sum-text {
-      margin-left: 5%;
+      margin-left: 0;
+      padding: 0;
       flex: 1;
-      h3 {
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      h3,
+      span {
         margin: 0 !important;
         padding: 0 !important;
+        min-width: 0;
+        max-height: 50%;
+        overflow: hidden;
+        line-height: 1.2;
+      }
+      h3 {
         font-weight: 600;
         font-size: small !important;
         color: var(--font-color);
       }
       span {
+        display: block;
         width: 100%;
         font-size: small !important;
         color: var(--sec-font-color);
