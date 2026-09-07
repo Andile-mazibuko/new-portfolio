@@ -102,23 +102,6 @@ export class MainComponent implements OnInit {
           this.changeDetector.detectChanges(); // Detect changes and update the array on html side
           this.secondsCounter++;
 
-          // if (this.secondsCounter % 3 === 0) {
-          //   this.componentContainer.clear();
-
-          //   if (this.arrCount === this.summaryComponents.length-1) {
-          //     this.componentContainer.createComponent(
-          //       this.summaryComponents[this.arrCount]
-          //     );
-
-          //     this.arrCount = 0;
-          //   }else{
-          //     this.componentContainer.createComponent(
-          //       this.summaryComponents[this.arrCount]
-          //     );
-          //     this.arrCount++;
-          //   }
-
-          // }
         }, 5000);
       });
     }
@@ -146,20 +129,18 @@ export class MainComponent implements OnInit {
       enterAnimationDuration: '1s',
       exitAnimationDuration: '1s',
       hasBackdrop: true,
-      width: 'auto',
-      // panelClass: 'dialogClass',
-      // backdropClass: 'dialogBackdrop',
+      width: 'auto'
     });
   }
 
   /**
-   *Generate 4 unique skills to display on the main
+   *Generate 8 unique skills to display on the main
    */
   reArrangeSkills(): void {
     this.displaySkills = []; // empty the array first
-    for (let i = 0; i <= 8; i++) {
+    for (let i = 0; i < Math.min(9, this.userSkills.length); i++) {
       let randomN = Math.floor(
-        Math.random() * (this.userSkills.length - 0 + 1) + 0,
+        Math.random() * this.userSkills.length,
       );
 
       let randomSkill: Skill = this.userSkills[randomN];
