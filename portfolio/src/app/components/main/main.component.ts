@@ -69,7 +69,7 @@ export class MainComponent implements OnInit {
     });
     this.randLeft = 10 + Math.floor(Math.random() * 90) - 10 + '%';
     this.randTop = Math.floor(Math.random() * 90) + '%';
-    
+
     this.randDisplay = Math.floor(Math.random() * 8);
     this.aboutServ.getSkills().subscribe((resp: Skill[]) => {
       this.userSkills = resp;
@@ -101,7 +101,6 @@ export class MainComponent implements OnInit {
           //console.log(this.displaySkills)
           this.changeDetector.detectChanges(); // Detect changes and update the array on html side
           this.secondsCounter++;
-
         }, 5000);
       });
     }
@@ -129,7 +128,7 @@ export class MainComponent implements OnInit {
       enterAnimationDuration: '1s',
       exitAnimationDuration: '1s',
       hasBackdrop: true,
-      width: 'auto'
+      width: 'auto',
     });
   }
 
@@ -139,9 +138,7 @@ export class MainComponent implements OnInit {
   reArrangeSkills(): void {
     this.displaySkills = []; // empty the array first
     for (let i = 0; i < Math.min(9, this.userSkills.length); i++) {
-      let randomN = Math.floor(
-        Math.random() * this.userSkills.length,
-      );
+      let randomN = Math.floor(Math.random() * this.userSkills.length);
 
       let randomSkill: Skill = this.userSkills[randomN];
       // Check if skill is already in an array and generate a new one if true
@@ -152,5 +149,12 @@ export class MainComponent implements OnInit {
       }
       this.numbers.push(randomN);
     }
+  }
+
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/documents/new doc.pdf';
+    link.download = 'new doc.pdf';
+    link.click();
   }
 }
